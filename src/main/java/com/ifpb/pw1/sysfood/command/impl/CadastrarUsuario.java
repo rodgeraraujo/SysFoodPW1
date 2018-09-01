@@ -18,18 +18,21 @@ public class CadastrarUsuario implements Command {
         String email = req.getParameter("email");
         String profissao = req.getParameter("profissao");
         String sexo = req.getParameter("sexo");
+        Part part = req.getPart("fotoPerfil");
         String descricao = req.getParameter("descricao");
         String telefone = req.getParameter("telefone");
-        Part part = req.getPart("fotoPerfil");
         String senha = req.getParameter("senha");
 
-        byte[] foto = new byte[(int) part.getSize()];
+        System.out.println(senha);
+        System.out.println(nome);
+
+        byte[] fotoPerfil = new byte[(int) part.getSize()];
         InputStream stream = part.getInputStream();
-        stream.read(foto);
+        stream.read(fotoPerfil);
         stream.close();
 
         GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario();
-            Boolean cadastrar = gerenciadorUsuario.cadastrar(nome, email,profissao, sexo, foto, descricao, telefone, senha);
+            Boolean cadastrar = gerenciadorUsuario.cadastrar(nome, email,profissao, sexo, fotoPerfil, descricao, telefone, senha);
 
         if(cadastrar){
             res.setStatus(200);

@@ -5,10 +5,10 @@ import java.util.Base64;
 import java.util.Objects;
 
 public class Usuario {
-    private int id;
+    private Integer id;
     private String nome;
     private String email;
-    private String profisao;
+    private String profissao;
     private String sexo;
     private byte[] fotoPerfil;
     private String descricao;
@@ -18,12 +18,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String nome, String email, String profisao, String sexo, byte[] fotoPerfil,
+    public Usuario(int id, String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
                    String descricao, String telefone, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
-        this.profisao = profisao;
+        this.profissao = profissao;
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
@@ -31,11 +31,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Usuario(byte[] fotoPerfil, String nome, String email, String profissao, String sexo, String descricao,
+    public Usuario(String nome, String email, String profissao, String sexo, byte[] fotoPerfil, String descricao,
                    String telefone, String senha) {
         this.nome = nome;
         this.email = email;
-        this.profisao = profisao;
+        this.profissao = profissao;
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
@@ -67,12 +67,12 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getProfisao() {
-        return profisao;
+    public String getProfissao() {
+        return profissao;
     }
 
-    public void setProfisao(String profisao) {
-        this.profisao = profisao;
+    public void setProfissao(String profisao) {
+        this.profissao = profisao;
     }
 
     public String getSexo() {
@@ -113,6 +113,21 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", profissao='" + profissao + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", fotoPerfil=" + Arrays.toString(fotoPerfil) +
+                ", descricao='" + descricao + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 
     public String imageBase64(){

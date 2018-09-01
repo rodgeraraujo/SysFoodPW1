@@ -6,7 +6,7 @@ public class DataBase {
     private String password;
 
     public DataBase() {
-        this.url = "jdbc:postgresql://127.0.0.1:5432/sysfoodpw1";
+        this.url = "jdbc:postgresql://127.0.0.1:5432/sysfood";
         this.user = "postgres";
         this.password = "123456";
     }

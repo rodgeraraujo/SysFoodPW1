@@ -22,18 +22,19 @@ public class UsuarioDaoBD implements UsuarioDao {
 
     @Override
     public Boolean criar(Usuario novo) throws PersistenciaException {
-        String sql = "INSERT INTO usuario (nome, email, profissao, sexo, fotoperfil, descricao, telefone, senha) " +
+        String sql = "INSERT INTO usuario (nome, email, profissao, sexo, fotoPerfil, descricao, telefone, senha) " +
                 "VALUES (?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNome());
             st.setString(2, novo.getEmail());
-            st.setString(3, novo.getProfisao());
+            st.setString(3, novo.getProfissao());
             st.setString(4, novo.getSexo());
             st.setBytes(5, novo.getFotoPerfil());
             st.setString(6, novo.getDescricao());
             st.setString(7, novo.getTelefone());
             st.setString(8, novo.getSenha());
+
             boolean inserted = st.executeUpdate() > 0;
             conexao.close();
             return inserted;

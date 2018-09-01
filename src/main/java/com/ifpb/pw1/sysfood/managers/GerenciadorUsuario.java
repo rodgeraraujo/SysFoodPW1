@@ -18,7 +18,8 @@ public class GerenciadorUsuario {
 
     public Boolean cadastrar(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
                              String descricao, String telefone, String senha){
-        Usuario usuario = new Usuario(fotoPerfil, nome, email, profissao, sexo, descricao, telefone, senha);
+        Usuario usuario = new Usuario(nome, email, profissao, sexo, fotoPerfil, descricao, telefone, senha);
+
         try {
             return dao.criar(usuario);
         } catch (PersistenciaException e) {
