@@ -41,9 +41,10 @@
           <label for="profissao">Pofissão</label>
         </div>
         <div class="input-field col l6">
-          <input id="sexo_m" name="sexo" type="radio" class="validate" required>
+          <input id="sexo_m" name="sexo" value="M" type="radio" class="validate" required>
           <label for="sexo_m">Masculino</label>
-          <input id="sexo_f" name="sexo" type="radio" class="validate" required>
+
+          <input id="sexo_f" name="sexo" value="F" type="radio" class="validate" required>
           <label for="sexo_f">Feminino</label>
         </div>
       </div>

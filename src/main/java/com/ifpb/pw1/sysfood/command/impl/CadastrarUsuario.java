@@ -23,9 +23,6 @@ public class CadastrarUsuario implements Command {
         String telefone = req.getParameter("telefone");
         String senha = req.getParameter("senha");
 
-        System.out.println(senha);
-        System.out.println(nome);
-
         byte[] fotoPerfil = new byte[(int) part.getSize()];
         InputStream stream = part.getInputStream();
         stream.read(fotoPerfil);

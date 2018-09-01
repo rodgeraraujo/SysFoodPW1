@@ -9,7 +9,7 @@
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
-            <a href="index.jsp" class="brand-   logo">SiSGER</a>
+            <a href="index.jsp" class="brand-   logo">SysFood</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.jsp">Usuarios</a></li>
             </ul>
