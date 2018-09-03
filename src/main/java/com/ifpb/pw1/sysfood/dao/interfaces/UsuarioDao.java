@@ -7,4 +7,8 @@ import javax.persistence.PersistenceException;
 
 public interface UsuarioDao {
     Boolean criar(Usuario novo) throws PersistenciaException;
+    Usuario buscar(String email) throws PersistenciaException;
+    Boolean autentica(String email, String senha) throws PersistenciaException;
+
 }
+

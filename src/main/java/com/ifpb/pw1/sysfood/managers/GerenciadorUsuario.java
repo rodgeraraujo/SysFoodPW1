@@ -16,9 +16,18 @@ public class GerenciadorUsuario {
         dao = factory.getDaoUsuario();
     }
 
+    public Boolean autenticar(String email, String senha){
+        try{
+            return  dao.autentica(email, senha);
+        }catch (PersistenciaException e){
+            return false;
+        }
+    }
+
     public Boolean cadastrar(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
                              String descricao, String telefone, String senha){
         Usuario usuario = new Usuario(nome, email, profissao, sexo, fotoPerfil, descricao, telefone, senha);
+
 
         try {
             return dao.criar(usuario);
