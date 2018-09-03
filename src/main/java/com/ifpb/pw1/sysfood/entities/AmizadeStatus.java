@@ -1,4 +1,5 @@
 package com.ifpb.pw1.sysfood.entities;
 
-public class AmizadeStatus {
+public enum AmizadeStatus {
+    PEDENTE,RECUZADA, ACEITA;
 }
