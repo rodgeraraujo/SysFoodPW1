@@ -12,14 +12,20 @@ public class Usuario {
     private String sexo;
     private byte[] fotoPerfil;
     private String descricao;
+    private String rua;
+    private String numero;
+    private String cidade;
+    private String estado;
+    private String cep;
     private String telefone;
     private String senha;
+
 
     public Usuario() {
     }
 
     public Usuario(int id, String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
-                   String descricao, String telefone, String senha) {
+                   String descricao,String rua, String numero, String cidade, String estado, String cep, String telefone, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -27,18 +33,28 @@ public class Usuario {
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
+        this.rua = rua;
+        this.numero = numero;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
         this.telefone = telefone;
         this.senha = senha;
     }
 
-    public Usuario(String nome, String email, String profissao, String sexo, byte[] fotoPerfil, String descricao,
-                   String telefone, String senha) {
+    public Usuario(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
+                   String descricao,String rua, String numero, String cidade, String estado, String cep, String telefone, String senha) {
         this.nome = nome;
         this.email = email;
         this.profissao = profissao;
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
+        this.rua = rua;
+        this.numero = numero;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
         this.telefone = telefone;
         this.senha = senha;
     }
@@ -113,6 +129,46 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
     @Override

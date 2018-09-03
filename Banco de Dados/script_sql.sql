@@ -1,4 +1,4 @@
-CREATE DATABASE sysfood;
+--CREATE DATABASE sysfood;
 
 CREATE TABLE usuario(
     id serial,
@@ -8,11 +8,16 @@ CREATE TABLE usuario(
     sexo CHARACTER(1),
     fotoperfil bytea NOT NULL,
     descricao VARCHAR(200),
+    rua VARCHAR(50),
+    numero VARCHAR(10),
+    cidade VARCHAR(50),
+    estado CHARACTER(2),
+    cep VARCHAR(15),
     telefone VARCHAR(20),
     senha VARCHAR(50) NOT NULL,
     CONSTRAINT usuario_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_email_key UNIQUE (email)
-)
+);
 
 CREATE TABLE estabelecimento(
     id serial,
@@ -29,7 +34,7 @@ CREATE TABLE estabelecimento(
     email_usuario VARCHAR(50) NOT NULL,
     CONSTRAINT estabelecimento_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_email_key FOREIGN KEY (email_usuario) REFERENCES  usuario(email)
-)
+);
 
 
 CREATE TABLE solicitacao(
@@ -41,7 +46,7 @@ CREATE TABLE solicitacao(
     CONSTRAINT solicitacao_pkey PRIMARY KEY (id),
     CONSTRAINT remetente_id_key FOREIGN KEY (idRemetente) REFERENCES usuario(id),
     CONSTRAINT destintario_id_key FOREIGN KEY (idDestinatario) REFERENCES  usuario(id)
-)
+);
 
 CREATE TABLE comida(
     id serial, 
@@ -52,7 +57,7 @@ CREATE TABLE comida(
     dataPublicacao TIMESTAMP,
     CONSTRAINT comida_pkey PRIMARY KEY (id),
     CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES estabelecimento(id)
-)
+);
 
 CREATE TABLE publicacao(
     id serial, 
@@ -62,9 +67,8 @@ CREATE TABLE publicacao(
     foto bytea,
     dataPublicacao TIMESTAMP,
     CONSTRAINT publicacao_pkey PRIMARY KEY (id),
-    CONSTRAINT usuario_nome_key FOREIGN KEY (nomeUsuario) REFERENCES usuario(nome),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES  usuario(id)
-)
+);
 
 
 CREATE TABLE recomendacao(
@@ -74,7 +78,7 @@ CREATE TABLE recomendacao(
     CONSTRAINT recomendacao_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES usuario(id),
     CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES  estabelecimento(id)
-)
+);
 
 CREATE TABLE avaliarEstabelecimento(
     id serial, 
@@ -85,7 +89,7 @@ CREATE TABLE avaliarEstabelecimento(
     CONSTRAINT avaliarEstabelecimento_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES usuario(id),
     CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES  estabelecimento(id)
-)
+);
 
 CREATE TABLE avaliarComida(
     id serial, 
@@ -98,7 +102,7 @@ CREATE TABLE avaliarComida(
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES usuario(id),
     CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES  estabelecimento(id),
     CONSTRAINT comida_id_key FOREIGN KEY (idComida) REFERENCES  comida(id)
-)
+);
 
 -- CREATE TABLE amizadeStatus(
 --     id serial, 

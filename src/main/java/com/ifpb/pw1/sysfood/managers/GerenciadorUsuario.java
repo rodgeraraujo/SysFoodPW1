@@ -25,8 +25,10 @@ public class GerenciadorUsuario {
     }
 
     public Boolean cadastrar(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
-                             String descricao, String telefone, String senha){
-        Usuario usuario = new Usuario(nome, email, profissao, sexo, fotoPerfil, descricao, telefone, senha);
+                             String descricao,String rua, String numero, String cidade, String estado, String cep,
+                             String telefone, String senha){
+        Usuario usuario = new Usuario(nome, email, profissao, sexo, fotoPerfil, descricao, rua, numero, cidade, estado,
+                cep, telefone, senha);
 
 
         try {

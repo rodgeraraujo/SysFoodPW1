@@ -13,7 +13,7 @@
 <head>
   <title>Sysfood - Usuários</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">--%>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -41,11 +41,31 @@
           <label for="profissao">Pofissão</label>
         </div>
         <div class="input-field col l6">
-          <input id="sexo_m" name="sexo" value="M" type="radio" class="validate" required>
-          <label for="sexo_m">Masculino</label>
+        <input placeholder="Rua" id="rua" name="rua" type="text" class="validate" required>
+        <label for="rua">Rua</label>
+      </div>
+        <div class="input-field col l6">
+          <input placeholder="Numero" id="numero" name="numero" type="text" class="validate" required>
+          <label for="numero">Número</label>
+        </div>
+        <div class="input-field col l6">
+          <input placeholder="Cidade" id="cidade" name="cidade" type="text" class="validate" required>
+          <label for="cidade">Cidade</label>
+        </div>
+        <div class="input-field col l6">
+          <input placeholder="Estado" id="estado" name="estado" type="text" class="validate" required>
+          <label for="estado">Estado</label>
+        </div>
+        <div class="input-field col l6">
+          <input placeholder="CEP" id="cep" name="cep" type="text" class="validate" required>
+          <label for="cep">CEP</label>
+        </div>
+        <div class="input-field col l6">
+          <input class="mdc-radio__native-control" id="radio-1" name="sexo" value="M" type="radio" class="validate" required>
+          <label for="radio-1">Masculino</label>
 
-          <input id="sexo_f" name="sexo" value="F" type="radio" class="validate" required>
-          <label for="sexo_f">Feminino</label>
+          <input class="mdc-radio__native-control" id="radio-2" name="sexo" value="F" type="radio" class="validate" required>
+          <label for="radio-2">Feminino</label>
         </div>
       </div>
       <div class="row">
