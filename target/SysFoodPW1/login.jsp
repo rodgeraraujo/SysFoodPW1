@@ -13,38 +13,77 @@
     <title>Sysfood - Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">--%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
 <jsp:include page="navbar.jsp"/>
-<div class="container">
-    <h4>Usuários</h4>
-    <div class="row">
-        <div class="col l6">
-            <div class="row">
+<%--<div class="container">--%>
+    <%--<h4>Usuários</h4>--%>
+    <%--<div class="row">--%>
+        <%--<div class="col l6">--%>
+            <%--<div class="row">--%>
 
-                <form method="post" enctype="multipart/form-data"
-                      action="/front?action=LoginUsuario" class="col l5 offset-l1">
-                <h5>Login</h5>
-                    <div class="row">
-                        <div class="input-field col l6">
-                            <input placeholder="E-mail" id="email" name="email" type="email" class="validate" required>
-                            <label for="email">E-mail</label>
-                        <div class="input-field col l6">
-                            <input placeholder="Senha" id="senha" name="senha" type="password" class="validate" required>
-                            <label for="Senha">Senha</label>
-                        </div>
-                    </div>
+                <%--<form method="post" enctype="multipart/form-data"--%>
+                      <%--action="/front?action=LoginController" class="col l5 offset-l1">--%>
+                <%--<h5>Login</h5>--%>
+                    <%--<div class="row">--%>
+                        <%--<div class="input-field col l6">--%>
+                            <%--<input placeholder="E-mail" id="email" name="email" type="email" class="validate" required>--%>
+                            <%--<label for="email">E-mail</label>--%>
+                        <%--<div class="input-field col l6">--%>
+                            <%--<input placeholder="Senha" id="senha" name="senha" type="password" class="validate" required>--%>
+                            <%--<label for="Senha">Senha</label>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
 
-                    <button class="btn-large waves-effect waves-light" type="submit" name="action">LOGIN
-                        <i class="material-icons right">send</i>
-                    </button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                    <%--<button class="btn-large waves-effect waves-light" type="submit" name="action">LOGIN--%>
+                        <%--<i class="material-icons right">send</i>--%>
+                    <%--</button>--%>
+                    <%--</div>--%>
+                <%--</form>--%>
+            <%--</div>--%>
+        <%--</div>--%>
 
+        <%
+            String email=(String)session.getAttribute("email");
+
+            //redirect user to home page if already logged in
+            if(email!=null){
+                response.sendRedirect("home.jsp");
+            }
+
+            String status=request.getParameter("status");
+
+            if(status!=null){
+                if(status.equals("false")){
+                    out.print("Incorrect login details!");
+                }
+                else{
+                    out.print("Some error occurred!");
+                }
+            }
+        %>
+
+        <form action="/front?action=LoginController">
+            <table cellpadding="5">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><input type="text" name="email" required/></td>
+                </tr>
+
+                <tr>
+                    <td><b>Password:</b></td>
+                    <td><input type="password" name="password" required/></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Login"/></td>
+                </tr>
+
+            </table>
+        </form>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <%--<jsp:include page="errorToast.jsp"/>--%>

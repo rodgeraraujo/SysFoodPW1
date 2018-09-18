@@ -42,9 +42,6 @@ public class UsuarioDaoBD implements UsuarioDao {
             st.setString(12, novo.getTelefone());
             st.setString(13, novo.getSenha());
 
-            System.out.println(novo.getNumero());
-            System.out.println(novo.getRua());
-
             boolean inserted = st.executeUpdate() > 0;
             conexao.close();
             return inserted;

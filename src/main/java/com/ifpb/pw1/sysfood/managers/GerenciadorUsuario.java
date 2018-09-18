@@ -16,20 +16,19 @@ public class GerenciadorUsuario {
         dao = factory.getDaoUsuario();
     }
 
-    public Boolean autenticar(String email, String senha){
-        try{
-            return  dao.autentica(email, senha);
-        }catch (PersistenciaException e){
-            return false;
-        }
-    }
+//    public Boolean autenticar(String email, String senha){
+//        try{
+//            return  dao.autentica(email, senha);
+//        }catch (PersistenciaException e){
+//            return false;
+//        }
+//    }
 
     public Boolean cadastrar(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
                              String descricao,String rua, String numero, String cidade, String estado, String cep,
                              String telefone, String senha){
         Usuario usuario = new Usuario(nome, email, profissao, sexo, fotoPerfil, descricao, rua, numero, cidade, estado,
                 cep, telefone, senha);
-
 
         try {
             return dao.criar(usuario);

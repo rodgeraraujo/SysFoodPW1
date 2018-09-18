@@ -1,6 +1,7 @@
 package com.ifpb.pw1.sysfood.servlets;
 
 import com.ifpb.pw1.sysfood.command.Command;
+import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -13,7 +14,7 @@ import java.io.IOException;
 @WebServlet("/front")
 @MultipartConfig
 public class FrontController extends HttpServlet {
-    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, PersistenciaException {
         request.setCharacterEncoding("UTF-8");
 
         String action = request.getParameter("action");
@@ -29,13 +30,21 @@ public class FrontController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request,response);
+        try {
+            processRequest(request,response);
+        } catch (PersistenciaException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request,response);
+        try {
+            processRequest(request,response);
+        } catch (PersistenciaException e) {
+            e.printStackTrace();
+        }
     }
 
 }
