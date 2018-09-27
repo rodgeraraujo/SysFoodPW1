@@ -26,7 +26,7 @@
             <%--<div class="row">--%>
 
                 <%--<form method="post" enctype="multipart/form-data"--%>
-                      <%--action="/front?action=LoginController" class="col l5 offset-l1">--%>
+                      <%--action="/front?action=Login" class="col l5 offset-l1">--%>
                 <%--<h5>Login</h5>--%>
                     <%--<div class="row">--%>
                         <%--<div class="input-field col l6">--%>
@@ -49,24 +49,14 @@
         <%
             String email=(String)session.getAttribute("email");
 
-            //redirect user to home page if already logged in
+            //redireciona o usuario para a pagina home caso logado
             if(email!=null){
                 response.sendRedirect("home.jsp");
             }
 
-            String status=request.getParameter("status");
-
-            if(status!=null){
-                if(status.equals("false")){
-                    out.print("Incorrect login details!");
-                }
-                else{
-                    out.print("Some error occurred!");
-                }
-            }
         %>
 
-        <form action="/front?action=LoginController">
+        <form method="post" action="/front?action=Login">
             <table cellpadding="5">
                 <tr>
                     <td><b>Email:</b></td>
@@ -75,7 +65,7 @@
 
                 <tr>
                     <td><b>Password:</b></td>
-                    <td><input type="password" name="password" required/></td>
+                    <td><input type="password" name="senha" required/></td>
                 </tr>
 
                 <tr>

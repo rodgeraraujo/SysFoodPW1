@@ -4,11 +4,12 @@ import com.ifpb.pw1.sysfood.dao.connect.ConFactory;
 import com.ifpb.pw1.sysfood.dao.connect.DataBase;
 import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
+import com.ifpb.pw1.sysfood.entities.LoginBean;
 import com.ifpb.pw1.sysfood.entities.Usuario;
-import com.sun.org.apache.bcel.internal.generic.Select;
+import org.postgresql.core.ConnectionFactory;
 
-import javax.persistence.PersistenceException;
 import java.sql.*;
+import java.util.logging.Logger;
 
 public class UsuarioDaoBD implements UsuarioDao {
     private DataBase props;
@@ -51,18 +52,21 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
-    public Usuario buscar(String email) throws PersistenciaException {
-        String sql = "SELECT * FROM usuario WHERE email = '" + email + "'";
+    public Usuario buscar(String email) throws PersistenciaException, SQLException {
+        Usuario usuario = null;
+        String sql = "SELECT * FROM usuario WHERE email = ?";
+        PreparedStatement st = null;
 
-        try{
-            Statement st = conexao.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            Usuario usuario = null;
-            if(rs.next()){
+            try{
+                st = this.conexao.prepareStatement(sql);
+                st.setString(1,email);
+
+                ResultSet rs = st.executeQuery(sql);
+                if(rs.next()){
                 usuario = new Usuario();
-                //usuario.setId(rs.getInt("id"));
-                usuario.setDescricao(rs.getNString("descricao"));
-                usuario.setEmail(rs.getNString("email"));
+                usuario.setId(rs.getInt("id"));
+                usuario.setDescricao(rs.getString("descricao"));
+                usuario.setEmail(rs.getString("email"));
                 usuario.setFotoPerfil(rs.getBytes("fotoperfil"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setProfissao(rs.getString("profissao"));
@@ -70,23 +74,42 @@ public class UsuarioDaoBD implements UsuarioDao {
                 usuario.setSexo(rs.getString("sexo"));
                 usuario.setTelefone(rs.getNString("telefone"));
             }
-            System.out.println(usuario.getSenha());
-            //System.out.println(usuario.getNome());
+            st.close();
+            //rs.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.getStackTrace();
+        }finally {
+            return usuario;
+        }
+
+    }
+
+
+    @Override
+    public Boolean autenticar(String email, String senha) {
+        System.out.println("3");
+        String sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+
+        try{
+            PreparedStatement st = conexao.prepareStatement(sql);
+            st.setString(1, email);
+            st.setString(2, senha);
+
+            ResultSet rs = st.executeQuery(sql);
+
+            boolean updated = st.executeUpdate() > 0;
+
+            System.out.println("2");
+            if(rs.next()){
+                return true;
+            }
             st.close();
             rs.close();
             conexao.close();
-            return usuario;
         } catch (SQLException e) {
-            throw new PersistenciaException(e);
+            e.getStackTrace();
         }
-    }
-
-    @Override
-    public Boolean autentica(String email, String senha) throws PersistenciaException {
-        Usuario usuario = buscar(email);
-        if(usuario.getEmail() == null){
-            return false;
-        }
-        return (usuario.getEmail() == email && usuario.getSenha() == senha);
+        return false;
     }
 }

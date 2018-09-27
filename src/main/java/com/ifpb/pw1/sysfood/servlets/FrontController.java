@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/front")
 @MultipartConfig
 public class FrontController extends HttpServlet {
-    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, PersistenciaException {
+    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException,
+            ServletException, PersistenciaException, SQLException {
         request.setCharacterEncoding("UTF-8");
 
         String action = request.getParameter("action");
@@ -34,6 +36,8 @@ public class FrontController extends HttpServlet {
             processRequest(request,response);
         } catch (PersistenciaException e) {
             e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -43,6 +47,8 @@ public class FrontController extends HttpServlet {
         try {
             processRequest(request,response);
         } catch (PersistenciaException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
