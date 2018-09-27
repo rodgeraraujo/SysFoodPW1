@@ -5,9 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConFactory {
-    public static Connection getConnection(String url, String user, String password) throws ClassNotFoundException, SQLException {
-        Class.forName("org.postgresql.Driver");
-        Connection conn = DriverManager.getConnection(url, user, password);
+    public static Connection getConnection(String url, String user, String password) {
+        Connection conn = null;
+        try {
+            Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection(url, user, password);
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("Não foi possível estabelecer conexão com o banco de dados.");
+        }
         return conn;
     }
 }

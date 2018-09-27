@@ -1,6 +1,7 @@
 package com.ifpb.pw1.sysfood.command.impl;
 
 import com.ifpb.pw1.sysfood.command.Command;
+import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 import com.ifpb.pw1.sysfood.managers.GerenciadorUsuario;
 
 import javax.servlet.RequestDispatcher;
@@ -13,7 +14,7 @@ import java.io.InputStream;
 
 public class CadastrarUsuario implements Command {
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException, PersistenciaException {
         String nome = req.getParameter("nome");
         String email = req.getParameter("email");
         String profissao = req.getParameter("profissao");

@@ -5,7 +5,7 @@ import java.util.Base64;
 import java.util.Objects;
 
 public class Usuario {
-    private Integer id;
+    private int id;
     private String nome;
     private String email;
     private String profissao;
@@ -25,7 +25,8 @@ public class Usuario {
     }
 
     public Usuario(int id, String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
-                   String descricao,String rua, String numero, String cidade, String estado, String cep, String telefone, String senha) {
+                   String descricao,String rua, String numero, String cidade, String estado, String cep,
+                   String telefone, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;

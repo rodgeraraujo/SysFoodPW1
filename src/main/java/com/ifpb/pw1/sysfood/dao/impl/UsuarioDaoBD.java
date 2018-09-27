@@ -53,62 +53,56 @@ public class UsuarioDaoBD implements UsuarioDao {
 
     @Override
     public Usuario buscar(String email) throws PersistenciaException, SQLException {
-        Usuario usuario = null;
-        String sql = "SELECT * FROM usuario WHERE email = ?";
-        PreparedStatement st = null;
 
-            try{
-                st = this.conexao.prepareStatement(sql);
-                st.setString(1,email);
+        String sql = "SELECT * FROM usuario WHERE email = '"+email+"'";
+        PreparedStatement stmt = conexao.prepareStatement(sql);
+        //stmt.setString(1, email);
+        ResultSet resultado = stmt.executeQuery();
 
-                ResultSet rs = st.executeQuery(sql);
-                if(rs.next()){
-                usuario = new Usuario();
-                usuario.setId(rs.getInt("id"));
-                usuario.setDescricao(rs.getString("descricao"));
-                usuario.setEmail(rs.getString("email"));
-                usuario.setFotoPerfil(rs.getBytes("fotoperfil"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setProfissao(rs.getString("profissao"));
-                usuario.setSenha(rs.getString("senha"));
-                usuario.setSexo(rs.getString("sexo"));
-                usuario.setTelefone(rs.getNString("telefone"));
-            }
-            st.close();
-            //rs.close();
+        if(resultado.next()){
+            Usuario u = new Usuario(
+                    resultado.getInt("id"),
+                    resultado.getString("nome"),
+                    resultado.getString("email"),
+                    resultado.getString("profissao"),
+                    resultado.getString("sexo"),
+                    resultado.getBytes("fotoPerfil"),
+                    resultado.getString("descricao"),
+                    resultado.getString("rua"),
+                    resultado.getString("numero"),
+                    resultado.getString("cidade"),
+                    resultado.getString("estado"),
+                    resultado.getString("cep"),
+                    resultado.getString("telefone"),
+                    resultado.getString("senha")
+            );
+
+            System.out.println("User from dao: " + u);
+            resultado.close();
+            stmt.close();
             conexao.close();
-        } catch (SQLException e) {
-            e.getStackTrace();
-        }finally {
-            return usuario;
+            return u;
         }
+        return null;
 
     }
 
 
     @Override
-    public Boolean autenticar(String email, String senha) {
+    public Boolean autenticar(String email, String senha) throws SQLException {
         System.out.println("3");
-        String sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
-
-        try{
-            PreparedStatement st = conexao.prepareStatement(sql);
-            st.setString(1, email);
-            st.setString(2, senha);
-
-            ResultSet rs = st.executeQuery(sql);
-
-            boolean updated = st.executeUpdate() > 0;
-
+        if (email != "" && senha != "") {
             System.out.println("2");
-            if(rs.next()){
+            String sql = "SELECT * FROM Usuario WHERE email = ? AND senha = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, email);
+            stmt.setString(2, senha);
+            if (stmt.executeQuery().next()) {
+                System.out.println("2.1");
+                stmt.close();
+                conexao.close();
                 return true;
             }
-            st.close();
-            rs.close();
-            conexao.close();
-        } catch (SQLException e) {
-            e.getStackTrace();
         }
         return false;
     }
