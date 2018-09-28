@@ -17,13 +17,12 @@ import java.util.logging.Logger;
 public class Logout implements Command {
 
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException,
-            PersistenciaException, SQLException {
+    public void execute(HttpServletRequest req, HttpServletResponse res) {
         try {
             HttpSession session = req.getSession();
             session.removeAttribute("usuario");
 
-            res.sendRedirect("index.jsp");
+            res.sendRedirect("index.jsp?logout=true");
         } catch (IOException ex) {
             Logger.getLogger(Logout.class.getName()).log(Level.SEVERE, null, ex);
         }

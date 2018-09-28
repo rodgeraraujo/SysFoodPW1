@@ -78,4 +78,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <%--<jsp:include page="errorToast.jsp"/>--%>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    var erro = "${param.erro}";
+    if (erro == 1) {
+        swal("Erro!", "Usuário não encontrado!", "error");
+    } else if(erro == 2){
+        swal("Erro!", "Não possivel autenticar o usuário!", "error");
+    }
+    var mensagem = "${param.mensagem}";
+    if(mensagem == "1"){
+        swal("OK!","A conta foi excluida.","success");
+    }
+</script>
 </html>

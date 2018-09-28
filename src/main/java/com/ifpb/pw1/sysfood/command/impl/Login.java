@@ -10,6 +10,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,14 +31,13 @@ public class Login extends HttpServlet implements Command {
             } else if (gerencia.autenticar(request.getParameter("email"), request.getParameter("senha"))) {
                 System.out.println("1");
 
-                //bug ao buscar usuário atual, erro no prepared statement
                 Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
                 session.setAttribute("usuario", usuarioAtual);
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("home2.jsp");
                 dispatcher.forward(request, response);
             } else {
-                response.sendRedirect("index.jsp?erro=1");
+                response.sendRedirect("login.jsp?erro=2");
             }
         } catch (SQLException | IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

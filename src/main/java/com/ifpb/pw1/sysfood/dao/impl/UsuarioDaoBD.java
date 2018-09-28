@@ -52,44 +52,52 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
-    public Usuario buscar(String email) throws PersistenciaException, SQLException {
+    public Usuario buscar(String email) {
 
-        String sql = "SELECT * FROM usuario WHERE email = '"+email+"'";
-        PreparedStatement stmt = conexao.prepareStatement(sql);
-        //stmt.setString(1, email);
-        ResultSet resultado = stmt.executeQuery();
+        System.out.println(email);
 
-        if(resultado.next()){
-            Usuario u = new Usuario(
-                    resultado.getInt("id"),
-                    resultado.getString("nome"),
-                    resultado.getString("email"),
-                    resultado.getString("profissao"),
-                    resultado.getString("sexo"),
-                    resultado.getBytes("fotoPerfil"),
-                    resultado.getString("descricao"),
-                    resultado.getString("rua"),
-                    resultado.getString("numero"),
-                    resultado.getString("cidade"),
-                    resultado.getString("estado"),
-                    resultado.getString("cep"),
-                    resultado.getString("telefone"),
-                    resultado.getString("senha")
-            );
+        try {
+            String sql = "SELECT * FROM Usuario WHERE email = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, email);
+            ResultSet resultado = stmt.executeQuery();
 
-            System.out.println("User from dao: " + u);
+            if(resultado.next()){
+                Usuario u = new Usuario(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("email"),
+                        resultado.getString("profissao"),
+                        resultado.getString("sexo"),
+                        resultado.getBytes("fotoPerfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("telefone"),
+                        resultado.getString("senha")
+                );
+                resultado.close();
+                stmt.close();
+                conexao.close();
+                return u;
+            }
             resultado.close();
             stmt.close();
             conexao.close();
-            return u;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
-
     }
 
 
     @Override
     public Boolean autenticar(String email, String senha) throws SQLException {
+
         System.out.println("3");
         if (email != "" && senha != "") {
             System.out.println("2");
@@ -99,10 +107,12 @@ public class UsuarioDaoBD implements UsuarioDao {
             stmt.setString(2, senha);
             if (stmt.executeQuery().next()) {
                 System.out.println("2.1");
-                stmt.close();
-                conexao.close();
+                //stmt.close();
+                //conexao.close();
                 return true;
             }
+            stmt.close();
+            conexao.close();
         }
         return false;
     }
