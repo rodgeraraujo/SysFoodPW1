@@ -22,7 +22,7 @@ public class Logout implements Command {
             HttpSession session = req.getSession();
             session.removeAttribute("usuario");
 
-            res.sendRedirect("index.jsp?logout=true");
+            res.sendRedirect("login.jsp?value=2");
         } catch (IOException ex) {
             Logger.getLogger(Logout.class.getName()).log(Level.SEVERE, null, ex);
         }

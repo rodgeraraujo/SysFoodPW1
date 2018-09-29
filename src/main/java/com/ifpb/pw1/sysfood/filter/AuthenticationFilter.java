@@ -33,7 +33,7 @@ public class AuthenticationFilter implements Filter {
             ((HttpServletResponse) response).sendRedirect("index.jsp");
 
         } else {
-            ((HttpServletResponse) response).sendRedirect("home2.jsp");
+            ((HttpServletResponse) response).sendRedirect("home.jsp?success=1");
             chain.doFilter(request, response);
 
         }

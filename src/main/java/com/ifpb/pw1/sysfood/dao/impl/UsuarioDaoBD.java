@@ -8,7 +8,13 @@ import com.ifpb.pw1.sysfood.entities.LoginBean;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 import org.postgresql.core.ConnectionFactory;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Base64;
+import java.util.Base64.Decoder;
 import java.util.logging.Logger;
 
 public class UsuarioDaoBD implements UsuarioDao {
@@ -52,10 +58,7 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
-    public Usuario buscar(String email) {
-
-        System.out.println(email);
-
+    public Usuario buscar(String email) throws IOException {
         try {
             String sql = "SELECT * FROM Usuario WHERE email = ?";
             PreparedStatement stmt = conexao.prepareStatement(sql);
@@ -79,6 +82,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("telefone"),
                         resultado.getString("senha")
                 );
+
                 resultado.close();
                 stmt.close();
                 conexao.close();
@@ -98,15 +102,12 @@ public class UsuarioDaoBD implements UsuarioDao {
     @Override
     public Boolean autenticar(String email, String senha) throws SQLException {
 
-        System.out.println("3");
         if (email != "" && senha != "") {
-            System.out.println("2");
             String sql = "SELECT * FROM Usuario WHERE email = ? AND senha = ?";
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, email);
             stmt.setString(2, senha);
             if (stmt.executeQuery().next()) {
-                System.out.println("2.1");
                 //stmt.close();
                 //conexao.close();
                 return true;

@@ -5,11 +5,12 @@ import com.ifpb.pw1.sysfood.entities.LoginBean;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 
 import javax.persistence.PersistenceException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public interface UsuarioDao {
     Boolean criar(Usuario novo) throws PersistenciaException;
-    Usuario buscar(String email) throws PersistenciaException, SQLException;
+    Usuario buscar(String email) throws PersistenciaException, SQLException, IOException;
     Boolean autenticar(String email, String senha) throws PersistenciaException, SQLException;
 }
 

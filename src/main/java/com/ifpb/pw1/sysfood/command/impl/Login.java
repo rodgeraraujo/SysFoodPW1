@@ -27,14 +27,12 @@ public class Login extends HttpServlet implements Command {
             Usuario u = (Usuario) session.getAttribute("usuario");
 
             if (u != null) {
-                response.sendRedirect("home2.jsp");
+                response.sendRedirect("home.jsp?success=1");
             } else if (gerencia.autenticar(request.getParameter("email"), request.getParameter("senha"))) {
-                System.out.println("1");
-
                 Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
                 session.setAttribute("usuario", usuarioAtual);
 
-                RequestDispatcher dispatcher = request.getRequestDispatcher("home2.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?success=1");
                 dispatcher.forward(request, response);
             } else {
                 response.sendRedirect("login.jsp?erro=2");

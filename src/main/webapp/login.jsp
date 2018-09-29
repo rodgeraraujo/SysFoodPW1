@@ -78,17 +78,35 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <%--<jsp:include page="errorToast.jsp"/>--%>
 </body>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
 <script>
-    var erro = "${param.erro}";
-    if (erro == 1) {
-        swal("Erro!", "Usuário não encontrado!", "error");
-    } else if(erro == 2){
-        swal("Erro!", "Não possivel autenticar o usuário!", "error");
+    var value = "${param.value}";
+
+    if (value == 1) {
+        const toast = swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+
+        toast({
+            type: 'error',
+            title: 'Não possivel autenticar o usuário!'
+        })
     }
-    var mensagem = "${param.mensagem}";
-    if(mensagem == "1"){
-        swal("OK!","A conta foi excluida.","success");
+    if (value == 2) {
+        const toast = swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+
+        toast({
+            type: 'success',
+            title: 'Deslogado com sucesso!'
+        })
     }
 </script>
 </html>

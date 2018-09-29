@@ -8,9 +8,7 @@
         <title>Login Success Page</title>
     </head>
     <body>
-    <%
-        Usuario u = (Usuario) session.getAttribute("usuario");
-    %>
+
         <h3>Login Success</h3>
         <h4>Bem vindo <%= u.getNome()%></h4>
         <img src="<%= u.getFotoPerfil()%>" alt="">

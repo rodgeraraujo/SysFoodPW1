@@ -7,6 +7,7 @@ import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
 import com.ifpb.pw1.sysfood.entities.LoginBean;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class GerenciadorUsuario {
@@ -29,11 +30,10 @@ public class GerenciadorUsuario {
     }
 
     public boolean autenticar(String email, String senha) throws SQLException, PersistenciaException {
-        System.out.println("4");
         return dao.autenticar(email, senha);
     }
 
-    public Usuario buscaUsuario(String email) throws SQLException, PersistenciaException {
+    public Usuario buscaUsuario(String email) throws SQLException, PersistenciaException, IOException {
         return dao.buscar(email);
     }
 
