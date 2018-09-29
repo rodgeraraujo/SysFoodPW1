@@ -4,18 +4,11 @@ import com.ifpb.pw1.sysfood.dao.connect.ConFactory;
 import com.ifpb.pw1.sysfood.dao.connect.DataBase;
 import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
-import com.ifpb.pw1.sysfood.entities.LoginBean;
+import com.ifpb.pw1.sysfood.entities.Publicacao;
 import com.ifpb.pw1.sysfood.entities.Usuario;
-import org.postgresql.core.ConnectionFactory;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.*;
-import java.util.Base64;
-import java.util.Base64.Decoder;
-import java.util.logging.Logger;
 
 public class UsuarioDaoBD implements UsuarioDao {
     private DataBase props;
@@ -117,4 +110,26 @@ public class UsuarioDaoBD implements UsuarioDao {
         }
         return false;
     }
+
+    @Override
+    public boolean salvarPublicacao(Publicacao novo) throws PersistenciaException {
+        String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto) " +
+                "VALUES (?,?,?,?,?)";
+        try {
+            PreparedStatement st = conexao.prepareStatement(sql);
+            st.setString(1,novo.getNomeUsuario());
+            st.setString(2,novo.getConteudo());
+            st.setInt(3,novo.getIdUsuario());
+            st.setObject(4,novo.getDataPublicacao());
+            st.setBytes(5,novo.getFoto());
+
+
+            boolean inserted = st.executeUpdate() > 0;
+            conexao.close();
+            return inserted;
+        } catch (SQLException e) {
+            throw new PersistenciaException(e);
+        }
+    }
+
 }

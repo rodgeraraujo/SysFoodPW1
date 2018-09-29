@@ -5,6 +5,7 @@ import com.ifpb.pw1.sysfood.dao.factory.Factory;
 import com.ifpb.pw1.sysfood.dao.interfaces.FactoryDao;
 import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
 import com.ifpb.pw1.sysfood.entities.LoginBean;
+import com.ifpb.pw1.sysfood.entities.Publicacao;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 
 import java.io.IOException;
@@ -36,5 +37,10 @@ public class GerenciadorUsuario {
     public Usuario buscaUsuario(String email) throws SQLException, PersistenciaException, IOException {
         return dao.buscar(email);
     }
+
+    public void salvaPublicacao(Publicacao novo) throws PersistenciaException {
+        dao.salvarPublicacao(novo);
+    }
+
 
 }

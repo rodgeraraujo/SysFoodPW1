@@ -38,6 +38,7 @@
     <body id="wall">
         <%
             Usuario u = (Usuario) session.getAttribute("usuario");
+
         %>
         <!--Header with Nav -->
         <header class="text-right">
@@ -148,6 +149,7 @@
             </p>
         </div>
         <!-- Close #posts -->
+
         <!-- Modal container for settings--->
         <%--<div class="content-posts active" id="posts">--%>
             <%--<div id="posts-container" class="container-fluid container-posts">--%>
@@ -259,6 +261,15 @@
                 <%--<img src="./profile/load.gif" alt="loader">--%>
             <%--</div>--%>
         </div>
+
+        <form action="post" action="/front?action=Publicacao">
+            <div>
+                <input type="text">
+                <input type="date">
+                <input type="file">
+                <input type="submit">
+            </div>
+        </form>
         </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
     <script>

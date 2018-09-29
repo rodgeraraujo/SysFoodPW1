@@ -23,6 +23,9 @@ public class Publicacao {
         this.foto = foto;
     }
 
+    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, String fotoPublicacao) {
+    }
+
     public int getId() {
         return id;
     }
