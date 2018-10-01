@@ -1,3 +1,4 @@
+<%@ page import="com.ifpb.pw1.sysfood.entities.Usuario" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lucas
@@ -17,7 +18,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<%
+    Usuario u = (Usuario) session.getAttribute("usuario");
 
+    if  (u != null) {
+        response.sendRedirect("home.jsp");
+    }
+
+%>
 <jsp:include page="navbar.jsp"/>
 <%--<div class="container">--%>
     <%--<h4>Usuários</h4>--%>
@@ -45,16 +53,6 @@
                 <%--</form>--%>
             <%--</div>--%>
         <%--</div>--%>
-
-        <%
-            String email=(String)session.getAttribute("email");
-
-            //redireciona o usuario para a pagina home caso logado
-            if(email!=null){
-                response.sendRedirect("home.jsp");
-            }
-
-        %>
 
         <form method="post" action="/front?action=Login">
             <table cellpadding="5">

@@ -15,7 +15,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><%= u.getNome()%> | Profile!</title>
+    <title>${sessionScope.usuario.nome} | Profile!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
@@ -122,9 +122,9 @@
         <a href="profile.jsp" title="Profile">
             <img src="profile/user.jpg" alt="User name" class="img-circle img-user">
         </a>
-        <h2 class="text-center hidden-xs"><a href="https://socialyte.codeplus.it/personal-profile.html" title="Profile"><%=u.getNome()%></a></h2>
+        <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
-            <i><%=u.getDescricao()%></i>
+            <i>${sessionScope.usuario.descricao}</i>
         </p>
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
@@ -256,13 +256,12 @@
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <ul class="profile-data">
-                            <li><b>Nome:</b> <%=u.getNome()%></li>
-                            <li><b>Email:</b>  <%=u.getEmail()%></li>
-                            <li><b>Profissão:</b> <%=u.getProfissao()%></li>
-                            <li><b>Telefone:</b> <%=u.getTelefone()%></li>
-                            <li><b>Sexo:</b> <%=u.getSexo()%></li>
-                            <li><b>Telefone:</b> <%=u.getTelefone()%></li>
-                            <li><b>Endereco:</b> <%=u.getRua()+", "+u.getNumero()+", "+u.getCep()+", "+u.getCidade()+" - "+u.getEstado()%></li>
+                            <li><b>Nome:</b> ${sessionScope.usuario.nome}</li>
+                            <li><b>Email:</b>  ${sessionScope.usuario.email}</li>
+                            <li><b>Profissão:</b> ${sessionScope.usuario.profissao}</li>
+                            <li><b>Telefone:</b> ${sessionScope.usuario.telefone}</li>
+                            <li><b>Sexo:</b> ${sessionScope.usuario.sexo}</li>
+                            <li><b>Endereco:</b> ${sessionScope.usuario.rua}, ${sessionScope.usuario.numero}, ${sessionScope.usuario.cep}, ${sessionScope.usuario.cidade} - ${sessionScope.usuario.estado}</li>
                         </ul>
                         <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
                     </div>

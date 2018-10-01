@@ -16,7 +16,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>SysFood | Welcome!</title>
+        <title>SysFood | Welcome ${sessionScope.usuario.nome}!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
@@ -38,6 +38,10 @@
     <body id="wall">
         <%
             Usuario u = (Usuario) session.getAttribute("usuario");
+
+            if  (u == null) {
+                response.sendRedirect("index.jsp");
+            }
 
         %>
         <!--Header with Nav -->
@@ -143,48 +147,56 @@
             <a href="profile.jsp" title="Profile">
                 <img src="profile/user.jpg" alt="User name" class="img-circle img-user">
             </a>
-            <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile"><%= u.getNome() %></a></h2>
+            <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
             <p class="text-center user-description hidden-xs">
-                <i> <%= u.getDescricao()%></i>
+                <i>${sessionScope.usuario.descricao}</i>
             </p>
         </div>
         <!-- Close #posts -->
-
         <!-- Modal container for settings--->
-        <%--<div class="content-posts active" id="posts">--%>
-            <%--<div id="posts-container" class="container-fluid container-posts">--%>
-
-                <%--<div class="card-post">--%>
-                    <%--<div class="row">--%>
-                        <%--<div class="col-xs-3 col-sm-2">--%>
-                            <%--<a href="profile.jsp" title="Profile">--%>
-                                <%--<img src="<%= new String(u.getFotoPerfil()) %>" alt="User name" class="img-circle img-user">--%>
-                            <%--</a>--%>
-                        <%--</div>--%>
-                        <%--<div class="col-xs-9 col-sm-10 info-user">--%>
-                            <%--<h3><a href="profile.jsp" title="Profile"><%= u.getNome() %></a></h3>--%>
-                            <%--<p><i>2h</i></p>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                    <%--<div class="row">--%>
-                        <%--<div class="col-sm-8 col-sm-offset-2 data-post">--%>
-                            <%--<p>Lorem Ipsum Dolor si amet</p>--%>
-                            <%--<div class="reaction">--%>
-                                <%--<img draggable="false" class="emoji" alt="❤" src="./profile/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="./Wall Template_files/1f603.png"> 54--%>
-                            <%--</div>--%>
-                            <%--<div class="comments">--%>
-                                <%--<div class="more-comments">View more comments</div>--%>
-                                <%--<ul>--%>
-                                    <%--<li><b>User1</b> Lorem Ipsum Dolor si amet</li>--%>
-                                    <%--<li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="./profile/1f602.png"></li>--%>
-                                <%--</ul>--%>
-                                <%--<form>--%>
-                                    <%--<input type="text" class="form-control" placeholder="Add a comment">--%>
-                                <%--</form>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
+        <div class="content-posts active" id="posts">
+            <div id="posts-container" class="container-fluid container-posts">
+                <div class="card-post">
+                    <form method="post" action="/front?action=Publicacao">
+                        <div>
+                            <input type="text">
+                            <input type="date">
+                            <input type="file">
+                            <input type="submit" value="Post">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-post">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2">
+                            <a href="profile.jsp" title="Profile">
+                                <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
+                            </a>
+                        </div>
+                        <div class="col-xs-9 col-sm-10 info-user">
+                            <h3><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h3>
+                            <p><i>2h</i></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 data-post">
+                            <p>Lorem Ipsum Dolor si amet</p>
+                            <div class="reaction">
+                                <img draggable="false" class="emoji" alt="❤" src="./profile/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="./Wall Template_files/1f603.png"> 54
+                            </div>
+                            <div class="comments">
+                                <div class="more-comments">View more comments</div>
+                                <ul>
+                                    <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
+                                    <li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="./profile/1f602.png"></li>
+                                </ul>
+                                <form>
+                                    <input type="text" class="form-control" placeholder="Add a comment">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <%--<div class="card-post">--%>
                     <%--<div class="row">--%>
@@ -254,22 +266,14 @@
                             <%--</div>--%>
                         <%--</div>--%>
                     <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!--Close #posts-container-->--%>
+                </div>
+            </div>
+            <!--Close #posts-container-->
             <%--<div id="loading">--%>
                 <%--<img src="./profile/load.gif" alt="loader">--%>
             <%--</div>--%>
         </div>
 
-        <form action="post" action="/front?action=Publicacao">
-            <div>
-                <input type="text">
-                <input type="date">
-                <input type="file">
-                <input type="submit">
-            </div>
-        </form>
         </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
     <script>
