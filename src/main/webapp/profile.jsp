@@ -12,9 +12,10 @@
 <%
     GerenciadorUsuario gerencia = new GerenciadorUsuario();
     Usuario u = (Usuario) session.getAttribute("usuario");
+    String id = request.getParameter("id");
 
-    if  (request.getParameter("id") != null){
-        Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
+    if  (id != null){
+        Usuario usuarioAtual = gerencia.buscarId(id);
         session.setAttribute("usuario", usuarioAtual);
 
         System.out.println(usuarioAtual);

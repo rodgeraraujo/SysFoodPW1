@@ -10,6 +10,8 @@ import com.ifpb.pw1.sysfood.entities.Usuario;
 import java.io.IOException;
 import java.sql.*;
 
+import static java.lang.Integer.parseInt;
+
 public class UsuarioDaoBD implements UsuarioDao {
     private DataBase props;
     private Connection conexao;
@@ -91,7 +93,6 @@ public class UsuarioDaoBD implements UsuarioDao {
         return null;
     }
 
-
     @Override
     public Boolean autenticar(String email, String senha) throws SQLException {
 
@@ -131,6 +132,48 @@ public class UsuarioDaoBD implements UsuarioDao {
         } catch (SQLException e) {
             throw new PersistenciaException(e);
         }
+    }
+
+    @Override
+    public Usuario buscarId(String id) throws IOException {
+        try {
+            String sql = "SELECT * FROM Usuario WHERE id = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, id);
+            ResultSet resultado = stmt.executeQuery();
+
+            if(resultado.next()){
+
+                String nome = resultado.getString("nome");
+                String email = resultado.getString("email");
+                String profissao = resultado.getString("profissao");
+                String sexo = resultado.getString("sexo");
+                byte[] fotoPerfil = resultado.getBytes("fotoPerfil");
+                String descricao = resultado.getString("descricao");
+                String rua = resultado.getString("rua");
+                String numero = resultado.getString("numero");
+                String cidade = resultado.getString("cidade");
+                String estado = resultado.getString("estado");
+                String cep = resultado.getString("cep");
+                String telefone = resultado.getString("telefone");
+                String senha = resultado.getString("senha");
+
+                Usuario u = new Usuario(parseInt(id), nome, email, profissao, sexo, fotoPerfil, descricao,
+                        rua, numero, cidade, estado, cep, telefone, senha);
+
+                resultado.close();
+                stmt.close();
+                conexao.close();
+                return u;
+            }
+            resultado.close();
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

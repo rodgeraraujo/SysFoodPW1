@@ -34,9 +34,14 @@ public class GerenciadorUsuario {
         return dao.autenticar(email, senha);
     }
 
-    public Usuario buscaUsuario(String email) throws SQLException, PersistenciaException, IOException {
-        return dao.buscar(email);
+    public Usuario buscaUsuario(String value) throws SQLException, PersistenciaException, IOException {
+        return dao.buscar(value);
     }
+
+    public Usuario buscarId(String value) throws SQLException, PersistenciaException, IOException {
+        return dao.buscarId(value);
+    }
+
 
     public void salvaPublicacao(Publicacao novo) throws PersistenciaException {
         dao.salvarPublicacao(novo);

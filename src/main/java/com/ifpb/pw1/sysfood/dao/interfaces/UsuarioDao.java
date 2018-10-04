@@ -12,5 +12,6 @@ public interface UsuarioDao {
     Usuario buscar(String email) throws PersistenciaException, SQLException, IOException;
     Boolean autenticar(String email, String senha) throws PersistenciaException, SQLException;
     boolean salvarPublicacao(Publicacao novo) throws PersistenciaException;
+    Usuario buscarId(String value) throws IOException;
 }
 
