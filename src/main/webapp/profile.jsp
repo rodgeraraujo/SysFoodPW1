@@ -1,4 +1,5 @@
-<%@ page import="com.ifpb.pw1.sysfood.entities.Usuario" %><%--
+<%@ page import="com.ifpb.pw1.sysfood.entities.Usuario" %>
+<%@ page import="com.ifpb.pw1.sysfood.managers.GerenciadorUsuario" %><%--
   Created by IntelliJ IDEA.
   User: Roger
   Date: 25/09/2018
@@ -9,7 +10,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="m" uri="/WEB-INF/myTags" %>
 <%
+    GerenciadorUsuario gerencia = new GerenciadorUsuario();
     Usuario u = (Usuario) session.getAttribute("usuario");
+
+    if  (request.getParameter("id") != null){
+        Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
+        session.setAttribute("usuario", usuarioAtual);
+
+        System.out.println(usuarioAtual);
+    } else{
+        response.sendRedirect("login.jsp");
+    }
 %>
 <!DOCTYPE html>
 <html>
