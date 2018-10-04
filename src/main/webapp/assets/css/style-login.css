@@ -51,10 +51,10 @@ body :-ms-input-placeholder {
   background: #50a3a2;
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   width: 100%;
-  height: 400px;
+  height: 580px;
   margin-top: -200px;
   overflow: hidden;
 }
@@ -104,7 +104,7 @@ form input:hover {
 form input:focus {
   background-color: white;
   width: 300px;
-  color: #8E929E;
+  color: #53e3a6;
 }
 form input[type="submit"] {
   -webkit-appearance: none;
@@ -138,7 +138,7 @@ form input[type="submit"]:hover {
   display: block;
   width: 40px;
   height: 40px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.15);
   bottom: -160px;
   -webkit-animation: square 25s infinite;
   animation: square 25s infinite;
