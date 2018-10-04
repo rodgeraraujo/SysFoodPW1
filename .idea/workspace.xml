@@ -7,18 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a450eb6-a08b-4201-8c36-2d7b8de43db3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style-login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/logintest.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Publicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Publicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Publicacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/entities/Publicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/entities/Publicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Publicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Publicacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/navbar.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -162,64 +156,35 @@
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="187">
+              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicacaoController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java">
+      <file leaf-file-name="logintest.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/logintest.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Publicacao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Publicacao.java">
+      <file leaf-file-name="FrontController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/servlets/FrontController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding>
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#974#975#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1205#1206#0" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-                <element signature="e#1291#1292#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#1391#1392#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
-                <element signature="e#1501#1502#0" expanded="true" />
-                <element signature="e#1541#1542#0" expanded="true" />
-                <element signature="e#1573#1574#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioDaoBD.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java">
+      <file leaf-file-name="style-login.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style-login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="119" column="50" lean-forward="true" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+            <state relative-caret-position="187">
+              <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -255,6 +220,9 @@
       <find>banner</find>
       <find>Usuario</find>
       <find>Usuário</find>
+      <find>button</find>
+      <find>background</find>
+      <find>width:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -263,7 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/myTags.tld" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/CadastraUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Comida.java" />
@@ -288,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/establishment.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/settings.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/managers/GerenciadorLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/servlets/FrontController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Usuario.java" />
@@ -311,8 +277,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Publicacao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Publicacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/logintest.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/style-login.css" />
       </list>
     </option>
   </component>
@@ -393,62 +362,7 @@
               <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sysfood" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
@@ -456,6 +370,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,20 +402,20 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\WEB-INF\tags" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.ifpb.pw1.sysfood.command.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets\profile\js" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\profile" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\js" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\css" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\WEB-INF\tags" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -797,7 +721,7 @@
       <workItem from="1538221011366" duration="7489000" />
       <workItem from="1538394577871" duration="9707000" />
       <workItem from="1538416422136" duration="821000" />
-      <workItem from="1538653793606" duration="3373000" />
+      <workItem from="1538653793606" duration="6409000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigido NullPointException, quando salva novo usuário">
       <created>1535823420348</created>
@@ -855,15 +779,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538407338023</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Valores nulos ao tentar salvar nova publicação">
+      <created>1538657918370</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1538657918370</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118767000" />
+    <option name="totallyTimeSpent" value="121803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" type="SLIDING" weight="0.32792208" />
@@ -886,11 +816,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="2" type="SLIDING" weight="0.46478873" />
+      <window_info anchor="bottom" id="Run" order="2" type="SLIDING" weight="0.4642857" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32954547" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976526" visible="true" weight="0.21156661" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.21860817" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32980332" />
-      <window_info id="Web" order="5" sideWeight="0.5023474" side_tool="true" weight="0.215959" />
+      <window_info id="Web" order="5" sideWeight="0.5032467" side_tool="true" visible="true" weight="0.21860817" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32707354" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -917,7 +847,8 @@
     <MESSAGE value="Adicionando alumas informações do usuário nas telas home e profile" />
     <MESSAGE value="Implementando a funcionalidade para salvar publicações" />
     <MESSAGE value="Utilizando sessionScope para imprimir as informações do usuário" />
-    <option name="LAST_COMMIT_MESSAGE" value="Utilizando sessionScope para imprimir as informações do usuário" />
+    <MESSAGE value="Valores nulos ao tentar salvar nova publicação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Valores nulos ao tentar salvar nova publicação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -925,20 +856,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/LoginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/factory/FactoryBD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6d844785-ff6d-4ec0-bd91-be282314a1df/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -987,13 +904,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/managers/GerenciadorLogin.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/servlets/FrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/tomcat64/apache-tomcat-9.0.10/lib/servlet-api.jar!/javax/servlet/http/Part.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1170,13 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1191,13 +1094,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1226,16 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,6 +1155,51 @@
             <element signature="e#1541#1542#0" expanded="true" />
             <element signature="e#1573#1574#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/PublicacaoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/servlets/FrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/logintest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style-login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
         </state>
       </provider>
     </entry>
