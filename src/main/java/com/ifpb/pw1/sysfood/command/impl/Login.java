@@ -35,7 +35,7 @@ public class Login extends HttpServlet implements Command {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?success=1");
                 dispatcher.forward(request, response);
             } else {
-                response.sendRedirect("login.jsp?erro=2");
+                response.sendRedirect("login.jsp?value=1");
             }
         } catch (SQLException | IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

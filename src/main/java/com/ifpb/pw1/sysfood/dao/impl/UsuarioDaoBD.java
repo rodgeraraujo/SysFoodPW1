@@ -123,6 +123,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             st.setObject(4,novo.getDataPublicacao());
             st.setBytes(5,novo.getFoto());
 
+            System.out.println(novo);
 
             boolean inserted = st.executeUpdate() > 0;
             conexao.close();

@@ -1,6 +1,7 @@
 package com.ifpb.pw1.sysfood.entities;
 
 import java.security.Timestamp;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Publicacao {
@@ -8,13 +9,11 @@ public class Publicacao {
     private String nomeUsuario;
     private String conteudo;
     private int idUsuario;
-    private Timestamp dataPublicacao;
+    private LocalDate dataPublicacao;
     private byte[] foto;
 
-    public Publicacao() {
-    }
 
-    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, Timestamp dataPublicacao, byte[] foto) {
+    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, LocalDate dataPublicacao, byte[] foto) {
         this.id = id;
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
@@ -23,7 +22,7 @@ public class Publicacao {
         this.foto = foto;
     }
 
-    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, String fotoPublicacao) {
+    public Publicacao(String nomeUsuario, String conteudo, int id, LocalDate dataPublicacao, byte[] fotoPublicacao) {
     }
 
     public int getId() {
@@ -58,11 +57,11 @@ public class Publicacao {
         this.idUsuario = idUsuario;
     }
 
-    public Timestamp getDataPublicacao() {
+    public LocalDate getDataPublicacao() {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(Timestamp dataPublicacao) {
+    public void setDataPublicacao(LocalDate dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 
@@ -76,7 +75,7 @@ public class Publicacao {
 
     @Override
     public String toString() {
-        return "Publicacao{" +
+        return "PublicacaoController{" +
                 "id=" + id +
                 ", nomeUsuario='" + nomeUsuario + '\'' +
                 ", conteudo='" + conteudo + '\'' +

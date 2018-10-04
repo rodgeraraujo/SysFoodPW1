@@ -157,15 +157,17 @@
         <div class="content-posts active" id="posts">
             <div id="posts-container" class="container-fluid container-posts">
                 <div class="card-post">
-                    <form method="post" action="/front?action=Publicacao">
-                        <div>
-                            <input type="text">
-                            <input type="date">
-                            <input type="file">
-                            <input type="submit" value="Post">
-                        </div>
-                    </form>
+                    <div class="row">
+                        <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
+                            <div>
+                                <textarea name="conteudo" id="" cols="30" rows="10"></textarea>
+                                <input name="fotoPublicacao" type="file" required>
+                                <input type="submit" value="Post">
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
                 <div class="card-post">
                     <div class="row">
                         <div class="col-xs-3 col-sm-2">
