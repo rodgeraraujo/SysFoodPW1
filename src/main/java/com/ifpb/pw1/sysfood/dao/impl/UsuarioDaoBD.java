@@ -7,6 +7,7 @@ import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
 import com.ifpb.pw1.sysfood.entities.Publicacao;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 
+import javax.faces.convert.IntegerConverter;
 import java.io.IOException;
 import java.sql.*;
 
@@ -114,9 +115,9 @@ public class UsuarioDaoBD implements UsuarioDao {
 
     @Override
     public boolean salvarPublicacao(Publicacao novo) throws PersistenciaException {
-        String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto) " +
-                "VALUES (?,?,?,?,?)";
         try {
+            String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto) " +
+                "VALUES (?,?,?,?,?)";
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNomeUsuario());
             st.setString(2,novo.getConteudo());
@@ -134,6 +135,49 @@ public class UsuarioDaoBD implements UsuarioDao {
         }
     }
 
+    @Override
+    public Usuario buscarId(int id) throws  IOException{
+        try {
+            String sql = "SELECT * FROM Usuario WHERE id = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet resultado = stmt.executeQuery();
+
+            if(resultado.next()){
+                Usuario u = new Usuario(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("email"),
+                        resultado.getString("profissao"),
+                        resultado.getString("sexo"),
+                        resultado.getBytes("fotoPerfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("telefone"),
+                        resultado.getString("senha")
+                );
+
+                resultado.close();
+                stmt.close();
+                conexao.close();
+                System.out.println(u.toString());
+                return u;
+            }
+            resultado.close();
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /*
     @Override
     public Usuario buscarId(String id) throws IOException {
         try {
@@ -175,5 +219,6 @@ public class UsuarioDaoBD implements UsuarioDao {
         }
         return null;
     }
+    */
 
 }

@@ -22,8 +22,15 @@ public class Publicacao {
         this.foto = foto;
     }
 
-    public Publicacao(String nomeUsuario, String conteudo, int id, LocalDate dataPublicacao, byte[] fotoPublicacao) {
+    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, LocalDate dataPublicacao, byte[] foto) {
+        this.nomeUsuario = nomeUsuario;
+        this.conteudo = conteudo;
+        this.idUsuario = idUsuario;
+        this.dataPublicacao = dataPublicacao;
+        this.foto = foto;
     }
+
+    public Publicacao(){}
 
     public int getId() {
         return id;

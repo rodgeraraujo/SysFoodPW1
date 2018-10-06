@@ -30,6 +30,8 @@ public class PublicacaoController implements Command {
             HttpSession session = req.getSession();
             Usuario u = (Usuario) session.getAttribute("usuario");
 
+            System.out.println(u.toString());
+
             if (u != null) {
 
                 String usuarioNome = u.getNome();
@@ -41,11 +43,11 @@ public class PublicacaoController implements Command {
                 byte[] fotoPublicacao = new byte[(int) part.getSize()];
                 InputStream stream = part.getInputStream();
                 stream.read(fotoPublicacao);
-                stream.close();
 
                 gerencia.salvaPublicacao(
                         new Publicacao(usuarioNome, conteudo, idUsuario, dataPublicacao, fotoPublicacao)
                 );
+                stream.close();
 
                 RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp?value=3");
                 dispatcher.forward(req, res);

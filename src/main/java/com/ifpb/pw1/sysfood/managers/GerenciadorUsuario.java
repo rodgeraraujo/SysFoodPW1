@@ -38,7 +38,7 @@ public class GerenciadorUsuario {
         return dao.buscar(value);
     }
 
-    public Usuario buscarId(String value) throws SQLException, PersistenciaException, IOException {
+    public Usuario buscarId(int value) throws SQLException, PersistenciaException, IOException {
         return dao.buscarId(value);
     }
 
