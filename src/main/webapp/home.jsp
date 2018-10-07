@@ -168,37 +168,39 @@
                     </div>
                 </div>
 
-                <div class="card-post">
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="profile.jsp" title="Profile">
-                                <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
-                            </a>
-                        </div>
-                        <div class="col-xs-9 col-sm-10 info-user">
-                            <h3><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h3>
-                            <p><i>2h</i></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 data-post">
-                            <p>Lorem Ipsum Dolor si amet</p>
-                            <div class="reaction">
-                                <img draggable="false" class="emoji" alt="❤" src="./profile/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="./Wall Template_files/1f603.png"> 54
+                <c:forEach var="post" items="${posts}">
+                    <div class="card-post">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-2">
+                                <a href="profile.jsp" title="Profile">
+                                    <img src="<c:out value="${post.fotoPerfil}"/>" alt="User name" class="img-circle img-user">
+                                </a>
                             </div>
-                            <div class="comments">
-                                <div class="more-comments">View more comments</div>
-                                <ul>
-                                    <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                                    <li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="./profile/1f602.png"></li>
-                                </ul>
-                                <form>
-                                    <input type="text" class="form-control" placeholder="Add a comment">
-                                </form>
+                            <div class="col-xs-9 col-sm-10 info-user">
+                                <h3><a href="profile.jsp" title="Profile"><c:out value="${post.nomeUsuario}"/></a></h3>
+                                <p><i><c:out value="${post.dataPublicacao}"/></i></p>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2 data-post">
+                                <p>L<c:out value="${post.conteudo}"/></p>
+                                <%--<div class="reaction">--%>
+                                    <%--<img draggable="false" class="emoji" alt="❤" src="./profile/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="./Wall Template_files/1f603.png"> 54--%>
+                                <%--</div>--%>
+                                <div class="comments">
+                                    <%--<div class="more-comments">View more comments</div>--%>
+                                    <%--<ul>--%>
+                                        <%--<li><b>User1</b> Lorem Ipsum Dolor si amet</li>--%>
+                                        <%--<li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="./profile/1f602.png"></li>--%>
+                                    <%--</ul>--%>
+                                    <form>
+                                        <input type="text" class="form-control" placeholder="Add a comment">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </c:forEach>
 
                 <%--<div class="card-post">--%>
                     <%--<div class="row">--%>

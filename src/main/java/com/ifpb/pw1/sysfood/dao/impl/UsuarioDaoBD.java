@@ -10,6 +10,7 @@ import com.ifpb.pw1.sysfood.entities.Usuario;
 import javax.faces.convert.IntegerConverter;
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 
 import static java.lang.Integer.parseInt;
 
@@ -166,6 +167,39 @@ public class UsuarioDaoBD implements UsuarioDao {
                 conexao.close();
                 System.out.println(u.toString());
                 return u;
+            }
+            resultado.close();
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Publicacao buscaPublicacao() {
+        try {
+            String sql = "SELECT * FROM publicacao";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+
+            if(resultado.next()){
+                Publicacao p = new Publicacao(
+                        resultado.getInt("id"),
+                        resultado.getString("nomeUsusario"),
+                        resultado.getString("conteudo"),
+                        resultado.getInt("idusuario"),
+                        LocalDate.parse(resultado.getString("datapublicacao")),
+                        resultado.getBytes("foto")
+                );
+
+                resultado.close();
+                stmt.close();
+                conexao.close();
+                System.out.println(p.toString());
+                return p;
             }
             resultado.close();
             stmt.close();
