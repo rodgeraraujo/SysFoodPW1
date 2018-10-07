@@ -1,5 +1,12 @@
 <%@ page import="com.ifpb.pw1.sysfood.entities.Usuario" %>
-<%@ page import="com.ifpb.pw1.sysfood.managers.GerenciadorUsuario" %><%--
+<%@ page import="com.ifpb.pw1.sysfood.managers.GerenciadorUsuario" %>
+<%@ page import="java.awt.image.BufferedImage" %>
+<%@ page import="javax.imageio.ImageIO" %>
+<%@ page import="java.io.InputStream" %>
+<%@ page import="java.io.ByteArrayInputStream" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.io.FileOutputStream" %>
+<%@ page import="java.sql.Blob" %><%--
   Created by IntelliJ IDEA.
   User: Roger
   Date: 25/09/2018
@@ -14,14 +21,19 @@
     Usuario u = (Usuario) session.getAttribute("usuario");
     String id = request.getParameter("id");
 
-    if  (id != null){
-        Usuario usuarioAtual = gerencia.buscarId(id);
-        session.setAttribute("usuario", usuarioAtual);
+//    if  (id !=null){
+//        Usuario usuarioAtual = gerencia.buscarId(Integer.valueOf(id));
+//        session.setAttribute("usuario", usuarioAtual);
+//
+//    } else{
+//        response.sendRedirect("login.jsp");
+//    }
 
-        System.out.println(usuarioAtual);
-    } else{
-        response.sendRedirect("login.jsp");
-    }
+
+//    byte bytearray[] = u.getFotoPerfil();
+//    Part part = new Part(u.getFotoPerfil());
+
+
 %>
 <!DOCTYPE html>
 <html>
@@ -132,7 +144,7 @@
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
         <a href="profile.jsp" title="Profile">
-            <img src="profile/user.jpg" alt="User name" class="img-circle img-user">
+            <img src="./profile/user.jpg" alt="User name" class="img-circle img-user">
         </a>
         <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
         <p class="text-center user-description hidden-xs">

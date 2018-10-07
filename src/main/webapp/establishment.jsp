@@ -11,7 +11,7 @@
 </div>
 <div class="modal-body">
     <form method="post" enctype="multipart/form-data"
-          action="/front?action=CadastrarUsuario" class="col l5 offset-l1">
+          action="/front?action=CadastrarEstabelecimento" class="col l5 offset-l1">
         <div class="row modal-row">
             <div class="col-sm-3">
                 <label>Nome: </label>
@@ -161,7 +161,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="input-group bootstrap-timepicker timepicker">
-                    <input id="timepicker1" type="text" class="form-control input-small">
+                    <input name="funcionamento" id="timepicker1" type="text" class="form-control input-small">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
                 </div>
 
@@ -173,10 +173,10 @@
             <%--<a href="#" title="Edit Language"><i class="fas fa-pencil-alt" aria-hidden="true"></i> <i>Edit</i></a>--%>
             <%--</div>--%>
         </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-social">Salvar</button>
+        </div>
     </form>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-    <button type="button" class="btn btn-social">Salvar</button>
 </div>
 

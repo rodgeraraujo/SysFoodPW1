@@ -9,11 +9,14 @@ import com.ifpb.pw1.sysfood.managers.GerenciadorUsuario;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static com.sun.xml.internal.ws.streaming.XMLStreamWriterUtil.getOutputStream;
 
 
 public class Login extends HttpServlet implements Command {
@@ -43,4 +46,5 @@ public class Login extends HttpServlet implements Command {
         }
 
     }
+
 }

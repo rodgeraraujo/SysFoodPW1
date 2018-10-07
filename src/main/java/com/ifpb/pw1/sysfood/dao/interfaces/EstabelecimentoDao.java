@@ -1,0 +1,12 @@
+package com.ifpb.pw1.sysfood.dao.interfaces;
+
+import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
+import com.ifpb.pw1.sysfood.entities.Estabelecimento;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+public interface EstabelecimentoDao {
+    Boolean criar(Estabelecimento novo) throws PersistenciaException;
+    Estabelecimento buscar(String email) throws PersistenciaException, SQLException, IOException;
+}

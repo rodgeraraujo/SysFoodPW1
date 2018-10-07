@@ -1,12 +1,14 @@
 package com.ifpb.pw1.sysfood.entities;
 
 import java.security.Timestamp;
+import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
 
 public class Estabelecimento {
+    private int id;
     private String nome;
-    private Timestamp dataHoraFuncionamento;
+    private Time dataHoraFuncionamento;
     private String rua;
     private int numero;
     private String cidade;
@@ -23,8 +25,13 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String nome, Timestamp dataHoraFuncionamento, String rua, int numero, String cidade,
+    public Estabelecimento(String nome, Time dataHoraFuncionamento, String rua, int numero, String cidade,
                            String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+    }
+
+    public Estabelecimento(int id, String nome, Time dataHoraFuncionamento, String rua, int numero, String cidade,
+                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+        this.id = id;
         this.nome = nome;
         this.dataHoraFuncionamento = dataHoraFuncionamento;
         this.rua = rua;
@@ -35,7 +42,15 @@ public class Estabelecimento {
         this.tipo = tipo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
-        this.status = ATIVO;
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -46,11 +61,11 @@ public class Estabelecimento {
         this.nome = nome;
     }
 
-    public Timestamp getDataHoraFuncionamento() {
+    public Time getDataHoraFuncionamento() {
         return dataHoraFuncionamento;
     }
 
-    public void setDataHoraFuncionamento(Timestamp dataHoraFuncionamento) {
+    public void setDataHoraFuncionamento(Time dataHoraFuncionamento) {
         this.dataHoraFuncionamento = dataHoraFuncionamento;
     }
 
@@ -126,10 +141,19 @@ public class Estabelecimento {
         this.status = status;
     }
 
+    public static int getATIVO() {
+        return ATIVO;
+    }
+
+    public static int getINATIVO() {
+        return INATIVO;
+    }
+
     @Override
     public String toString() {
         return "Estabelecimento{" +
-                "nome='" + nome + '\'' +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
                 ", dataHoraFuncionamento=" + dataHoraFuncionamento +
                 ", rua='" + rua + '\'' +
                 ", numero=" + numero +
