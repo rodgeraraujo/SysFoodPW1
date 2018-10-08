@@ -9,14 +9,11 @@ import com.ifpb.pw1.sysfood.managers.GerenciadorUsuario;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-import java.io.DataOutput;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.sql.SQLException;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static com.sun.xml.internal.ws.streaming.XMLStreamWriterUtil.getOutputStream;
 
 
 public class Login extends HttpServlet implements Command {
@@ -33,7 +30,11 @@ public class Login extends HttpServlet implements Command {
                 response.sendRedirect("home.jsp?success=1");
             } else if (gerencia.autenticar(request.getParameter("email"), request.getParameter("senha"))) {
                 Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
+
+                String url = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(usuarioAtual.getFotoPerfil());
+
                 session.setAttribute("usuario", usuarioAtual);
+                session.setAttribute("foto", url);
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?success=1");
                 dispatcher.forward(request, response);

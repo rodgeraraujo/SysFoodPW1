@@ -145,7 +145,7 @@
         <!--Wall with Post -->
         <div class="sidebar-nav">
             <a href="profile.jsp" title="Profile">
-                <img src="profile/user.jpg" alt="User name" class="img-circle img-user">
+                <img width="200" height="200" src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
             </a>
             <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
             <p class="text-center user-description hidden-xs">
@@ -159,10 +159,10 @@
                 <div class="card-post">
                     <div class="row">
                         <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
-                            <div>
-                                <textarea name="conteudo" id="" cols="30" rows="10"></textarea>
-                                <input name="fotoPublicacao" type="file" required>
-                                <input type="submit" value="Post">
+                            <div class="col-sm-6">
+                                <textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>
+                                <input class="form-control" name="fotoPublicacao" type="file" required>
+                                <input class="form-control" type="submit" value="Post">
                             </div>
                         </form>
                     </div>
@@ -173,7 +173,7 @@
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
                                 <a href="profile.jsp" title="Profile">
-                                    <img src="<c:out value="${post.fotoPerfil}"/>" alt="User name" class="img-circle img-user">
+                                    <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">

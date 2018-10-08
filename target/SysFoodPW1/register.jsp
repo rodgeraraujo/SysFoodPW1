@@ -52,35 +52,43 @@
                     <div class="row">
                         <div class="input-field col l6">
                             <label for="nome">Nome</label>
-                            <input placeholder="Nome" id="nome" name="nome" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Nome" id="nome" name="nome" type="text" class="validate" required>
                         </div>
 
                         <div class="input-field col l6">
                             <label for="email">E-mail</label>
-                            <input placeholder="E-mail" id="email" name="email" type="email" class="validate" required>
+                            <input class="form-control" placeholder="E-mail" id="email" name="email" type="email" class="validate" required>
                         </div>
 
                         <div class="input-field col l6">
                             <label for="profissao">Pofissão</label>
-                            <input placeholder="Profissao" id="profissao" name="profissao" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Profissao" id="profissao" name="profissao" type="text" class="validate" required>
                         </div>
 
+                    </div>
+                    <div class="row">
                         <div class="input-field col l6">
+                            <br>
                             <label for="rua">Rua</label>
-                            <input placeholder="Rua" id="rua" name="rua" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Rua" id="rua" name="rua" type="text" class="validate" required>
                         </div>
 
                         <div class="input-field col l6">
+                            <br>
                             <label for="numero">Número</label>
-                            <input placeholder="Numero" id="numero" name="numero" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Numero" id="numero" name="numero" type="text" class="validate" required>
                         </div>
 
                         <div class="input-field col l6">
+                            <br>
                             <label for="cidade">Cidade</label>
-                            <input placeholder="Cidade" id="cidade" name="cidade" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Cidade" id="cidade" name="cidade" type="text" class="validate" required>
                         </div>
 
+                    </div>
+                    <div class="row">
                         <div class="input-field col l6">
+                            <br>
                             <label for="estado">Estado</label>
                             <div class="col-sm-5">
                                 <select id="estado" class="form-control" name="estado" class="validate" required>
@@ -116,27 +124,31 @@
                         </div>
                         </div>
 
-                        <div class="input-field col l6">
+                        <div class="col-sm-2">
+                            <br>
                             <label for="cep">CEP</label>
-                            <input maxlength="9" OnKeyPress="formatar('#####-###', this)"
+                            <input class="form-control" maxlength="9" OnKeyPress="formatar('#####-###', this)"
                                    placeholder="CEP" id="cep" name="cep" type="text" class="validate" required>
                         </div>
 
+                    </div>
+
+                    <div class="row">
                         <div class="input-field col l6">
+                            <br>
                             <label for="radio-1">Masculino</label>
-                            <input class="mdc-radio__native-control" id="radio-1" name="sexo" value="M" type="radio" class="validate" required>
+                            <input class="col-sm-2" class="form-control" class="mdc-radio__native-control" id="radio-1" name="sexo" value="M" type="radio" class="validate" required>
                             <br>
                             <label for="radio-2">Feminino</label>
-                            <input class="mdc-radio__native-control" id="radio-2" name="sexo" value="F" type="radio" class="validate" required>
+                            <input class="col-sm-2" class="form-control" class="mdc-radio__native-control" id="radio-2" name="sexo" value="F" type="radio" class="validate" required>
                         </div>
 
-                    </div>
-                    <div class="row">
                         <div class="file-field input-field col l12">
                             <div class="btn">
+                                <br>
                                 <span>Foto</span>
-                                <input name="fotoPerfil" id="fotoPerfil" type="file" accept="image/*" required>
-                                <input class="file-path validate" type="text" disabled>
+                                <input class="form-control" name="fotoPerfil" id="fotoPerfil" type="file" accept="image/*" required>
+                                <input class="form-control" class="file-path validate" type="text" disabled hidden>
                             </div>
                             <div class="file-path-wrapper">
 
@@ -146,21 +158,23 @@
                     <div class="row">
                         <div class="input-field col l6">
                             <label for="descricao">Descrição</label>
-                            <input placeholder="Descrição" id="descricao" name="descricao" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Descrição" id="descricao" name="descricao" type="text" class="validate" required>
                         </div>
                         <div class="input-field col l6">
                             <label for="telefone">Telefone</label>
-                            <input placeholder="Telefone" id="telefone" name="telefone" type="text" class="validate" required>
+                            <input class="form-control" placeholder="Telefone" id="telefone" name="telefone" type="text" class="validate" required>
                         </div>
                         <div class="input-field col l6">
                             <label for="Senha">Senha</label>
-                            <input placeholder="Senha" id="senha" name="senha" type="password" class="validate" required>
+                            <input class="form-control" placeholder="Senha" id="senha" name="senha" type="password" class="validate" required>
                         </div>
                     </div>
 
-                    <button class="btn-large waves-effect waves-light" type="submit" name="action">CADASTRAR
+                    <br><br>
+                    <button  class="btn-large waves-effect waves-light" type="submit" name="action">CADASTRAR
                         <i class="material-icons right">send</i>
                     </button>
+                    <br><br><br>
                 </form>
             </div>
         </div>

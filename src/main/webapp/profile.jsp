@@ -144,7 +144,7 @@
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
         <a href="profile.jsp" title="Profile">
-            <img src="${pageContext.servletContext.contextPath }/ExibirFoto?id=${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
+            <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
         </a>
         <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
@@ -172,8 +172,8 @@
                     <div class="card-post">
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
-                                <a href="https://socialyte.codeplus.it/personal-profile.html" title="Profile">
-                                    <img src="Personal%20Profile%20Template_arquivos/user.jpg" alt="User name" class="img-circle img-user">
+                                <a href="profile.jsp" title="Profile">
+                                    <img src="${sessionScope.foto}" alt="User name" class="img-circle    img-user-post">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">
