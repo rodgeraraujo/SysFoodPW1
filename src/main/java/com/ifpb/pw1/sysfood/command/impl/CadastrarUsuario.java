@@ -17,6 +17,9 @@ public class CadastrarUsuario implements Command {
     public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException, PersistenciaException {
         String nome = req.getParameter("nome");
         String email = req.getParameter("email");
+        String senha = req.getParameter("senha");
+        //ANIVERSÁARIO NÃO IMPLEMENTADO
+        String aniversario = req.getParameter("dia")+"-"+req.getParameter("mes")+"-"+req.getParameter("ano");
         String profissao = req.getParameter("profissao");
         String sexo = req.getParameter("sexo");
         Part part = req.getPart("fotoPerfil");
@@ -27,7 +30,6 @@ public class CadastrarUsuario implements Command {
         String estado = req.getParameter("estado");
         String cep = req.getParameter("cep");
         String telefone = req.getParameter("telefone");
-        String senha = req.getParameter("senha");
 
         //int num = Integer.valueOf(numero)
 
