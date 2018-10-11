@@ -156,12 +156,37 @@
         <div class="row modal-row">
             <div class="col-sm-3">
                 <p>
+                    <label>Numero: </label>
+                </p>
+            </div>
+            <div class="col-sm-5">
+                <p>
+                    <input class="form-control" placeholder="Numero" id="numero" name="numero" type="number" class="validate" required>
+                </p>
+            </div>
+        </div>
+        <div class="row modal-row">
+            <div class="col-sm-3">
+                <p>
+                    <label>Status: </label>
+                </p>
+            </div>
+            <div class="col-sm-5">
+                <input class="form-control" id="status" name="status" type="checkbox" class="validate" required>
+            </div>
+            <%--<div class="col-sm-3">--%>
+            <%--<a href="#" title="Edit Language"><i class="fas fa-pencil-alt" aria-hidden="true"></i> <i>Edit</i></a>--%>
+            <%--</div>--%>
+        </div>
+        <div class="row modal-row">
+            <div class="col-sm-3">
+                <p>
                     <label>Funcionamento: </label>
                 </p>
             </div>
             <div class="col-sm-3">
                 <div class="input-group bootstrap-timepicker timepicker">
-                    <input name="funcionamento" id="timepicker1" type="text" class="form-control input-small">
+                    <input name="funcionamento" id="timepicker1" type="time" class="form-control input-small">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
                 </div>
 

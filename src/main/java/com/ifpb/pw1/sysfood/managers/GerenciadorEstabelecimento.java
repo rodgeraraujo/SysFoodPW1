@@ -18,7 +18,7 @@ public class GerenciadorEstabelecimento {
         dao = factory.getDaoEstabelecimento();
     }
 
-    public Boolean cadastrar(String nome, Time dataHoraFuncionamento, String rua, int numero, String cidade,
+    public Boolean cadastrar(String nome, String dataHoraFuncionamento, String rua, int numero, String cidade,
                              String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status)
             throws PersistenciaException {
 

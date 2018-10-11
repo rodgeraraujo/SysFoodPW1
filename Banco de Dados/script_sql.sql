@@ -28,10 +28,11 @@ CREATE TABLE estabelecimento(
     estado CHARACTER(2), 
     cep VARCHAR(15),
     tipo VARCHAR(50),
-    funcionamento TIMESTAMP NOT NULL,
+    funcionamento VARCHAR(10) NOT NULL,
     fotoperfil bytea NOT NULL,
     descricao VARCHAR(200),
     email_usuario VARCHAR(50) NOT NULL,
+    status int NOT NULL,
     CONSTRAINT estabelecimento_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_email_key FOREIGN KEY (email_usuario) REFERENCES  usuario(email)
 );

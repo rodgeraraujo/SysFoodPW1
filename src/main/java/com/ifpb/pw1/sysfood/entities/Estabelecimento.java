@@ -1,14 +1,12 @@
 package com.ifpb.pw1.sysfood.entities;
 
-import java.security.Timestamp;
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
 
 public class Estabelecimento {
     private int id;
     private String nome;
-    private Time dataHoraFuncionamento;
+    private String dataHoraFuncionamento;
     private String rua;
     private int numero;
     private String cidade;
@@ -25,11 +23,21 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String nome, Time dataHoraFuncionamento, String rua, int numero, String cidade,
-                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+    public Estabelecimento(String nome, String dataHoraFuncionamento, String rua, int numero, String cidade, String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+        this.nome = nome;
+        this.dataHoraFuncionamento = dataHoraFuncionamento;
+        this.rua = rua;
+        this.numero = numero;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
+        this.tipo = tipo;
+        this.fotoPerfil = fotoPerfil;
+        this.descricao = descricao;
+        this.status = status;
     }
 
-    public Estabelecimento(int id, String nome, Time dataHoraFuncionamento, String rua, int numero, String cidade,
+    public Estabelecimento(int id, String nome, String dataHoraFuncionamento, String rua, int numero, String cidade,
                            String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
         this.id = id;
         this.nome = nome;
@@ -61,11 +69,11 @@ public class Estabelecimento {
         this.nome = nome;
     }
 
-    public Time getDataHoraFuncionamento() {
+    public String getDataHoraFuncionamento() {
         return dataHoraFuncionamento;
     }
 
-    public void setDataHoraFuncionamento(Time dataHoraFuncionamento) {
+    public void setDataHoraFuncionamento(String dataHoraFuncionamento) {
         this.dataHoraFuncionamento = dataHoraFuncionamento;
     }
 

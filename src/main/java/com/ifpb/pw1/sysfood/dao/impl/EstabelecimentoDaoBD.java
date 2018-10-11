@@ -23,21 +23,22 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
 
     @Override
     public Boolean criar(Estabelecimento novo) throws PersistenciaException {
-        String sql = "INSERT INTO estabelecimento(nome, dataHoraFuncionamento, rua, numero, cidade, " +
+        String sql = "INSERT INTO estabelecimento(nome, funcionamento, rua, numero, cidade, " +
                     "estado, cep, tipo, fotoPerfil, descricao, status) " +
                     "VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNome());
-            st.setString(2, novo.getRua());
-            st.setInt(3, novo.getNumero());
-            st.setString(4, novo.getCidade());
-            st.setString(5, novo.getEstado());
-            st.setString(6, novo.getCep());
-            st.setString(7, novo.getTipo());
-            st.setString(8, novo.getDescricao());
+            st.setString(2,novo.getDataHoraFuncionamento());
+            st.setString(3, novo.getRua());
+            st.setInt(4, novo.getNumero());
+            st.setString(5, novo.getCidade());
+            st.setString(6, novo.getEstado());
+            st.setString(7, novo.getCep());
+            st.setString(8, novo.getTipo());
+            st.setString(10, novo.getDescricao());
             st.setBytes(9, novo.getFotoPerfil());
-            st.setInt(10, novo.getStatus());
+            st.setInt(11, novo.getStatus());
 
 
             boolean inserted = st.executeUpdate() > 0;

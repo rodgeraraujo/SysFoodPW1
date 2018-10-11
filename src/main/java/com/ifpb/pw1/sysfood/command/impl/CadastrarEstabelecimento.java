@@ -18,18 +18,21 @@ public class CadastrarEstabelecimento implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException,
             PersistenciaException, SQLException {
+        int status = 0;
 
         String nome = req.getParameter("nome");
-        Time dataHoraFuncionamento = Time.valueOf(req.getParameter("funcionamento"));
+        String dataHoraFuncionamento = req.getParameter("funcionamento");
         String rua = req.getParameter("rua");
-        int numero= Integer.valueOf(req.getParameter("numero"));
+        int numero= req.getIntHeader("numero");
         String cidade = req.getParameter("cidade");
         String estado = req.getParameter("estado");
         String cep = req.getParameter("cep");
         String tipo = req.getParameter("tipo");
         Part part = req.getPart("fotoPerfil");
         String descricao = req.getParameter("descricao");
-        int status = Integer.valueOf(req.getParameter("status"));
+        if (req.getParameter("status") == "off"){
+            status = 0;
+        }
 
         //int num = Integer.valueOf(numero)
 
