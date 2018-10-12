@@ -162,7 +162,7 @@
                         <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
                             <div class="col-sm-6">
                                 <textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>
-                                <input class="form-control" name="fotoPublicacao" type="file" required>
+                                <input class="form-control" name="fotoPublicacao" type="file">
                                 <input class="form-control" type="submit" value="Post">
                             </div>
                         </form>
@@ -175,7 +175,7 @@
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
                                 <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
-                                    <img src="<c:out value="${publicacao.usuarioFoto}"/>"  alt="User name" class="img-circle img-user">
+                                    <img src="<c:out value="${publicacao.usuarioFoto}"/>"  alt="User name" class="img-circle img-user-post">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">
@@ -187,8 +187,9 @@
                                 <p><i><c:out value="${publicacao.dataPublicacao}"/></i></p>
                             </div>
                         </div>
+                        <br>
                         <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2 data-post">
+                            <div class="col-sm-8 col-sm-offset data-post">
                                 <p>${publicacao.conteudo}</p>
                                 <img src="<c:out value="${publicacao.foto}"/>" alt="image post" class="img-post">
                                 <div class="comments">

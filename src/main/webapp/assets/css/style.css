@@ -84,8 +84,9 @@ video, img {
 }
 
 .img-user-post {
-    width: 90%;
-    margin-left: 5%;
+    width: 35%;
+    height: 35px;
+    margin-left: 3%;
 }
 
 .card-post .img-user  { max-width: 110px;
@@ -210,6 +211,11 @@ header .badge {
     display: block;
     overflow: hidden;
     margin-bottom: 15px;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0.7px 0.7px 0.7px #888;
 }
 
 .container-posts {
@@ -255,7 +261,10 @@ header .badge {
     line-height: 22px;
 }
 
-.info-user { margin-top:15px; }
+.info-user {
+    margin-left: -90px;
+    margin-top: -2px;
+}
 
 .info-user p {margin:0px; }
 
