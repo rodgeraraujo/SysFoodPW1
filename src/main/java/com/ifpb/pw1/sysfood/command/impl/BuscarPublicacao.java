@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,9 +25,9 @@ public class BuscarPublicacao implements Command {
         Usuario u = (Usuario) session.getAttribute("usuario");
 
         if (u != null) {
-            Publicacao posts = gerencia.buscarPublicacao();
+            List<Publicacao> publicacaoList = gerencia.buscarPublicacao();
 
-            session.setAttribute("posts", posts);
+            session.setAttribute("publicacaoList", publicacaoList);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp");
             dispatcher.forward(req, res);

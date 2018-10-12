@@ -9,11 +9,11 @@ public class Publicacao {
     private String nomeUsuario;
     private String conteudo;
     private int idUsuario;
-    private LocalDate dataPublicacao;
+    private String dataPublicacao;
     private byte[] foto;
 
 
-    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, LocalDate dataPublicacao, byte[] foto) {
+    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, byte[] foto) {
         this.id = id;
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
@@ -22,7 +22,7 @@ public class Publicacao {
         this.foto = foto;
     }
 
-    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, LocalDate dataPublicacao, byte[] foto) {
+    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, byte[] foto) {
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
         this.idUsuario = idUsuario;
@@ -31,6 +31,7 @@ public class Publicacao {
     }
 
     public Publicacao(){}
+
 
     public int getId() {
         return id;
@@ -64,11 +65,11 @@ public class Publicacao {
         this.idUsuario = idUsuario;
     }
 
-    public LocalDate getDataPublicacao() {
+    public String getDataPublicacao() {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(LocalDate dataPublicacao) {
+    public void setDataPublicacao(String dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 

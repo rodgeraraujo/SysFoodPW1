@@ -30,14 +30,12 @@ public class PublicacaoController implements Command {
             HttpSession session = req.getSession();
             Usuario u = (Usuario) session.getAttribute("usuario");
 
-            System.out.println(u.toString());
-
             if (u != null) {
 
                 String usuarioNome = u.getNome();
                 String conteudo = req.getParameter("conteudo");
                 int idUsuario = u.getId();
-                LocalDate dataPublicacao = LocalDate.now();
+                String dataPublicacao = "" + LocalDate.now();
                 Part part = req.getPart("fotoPublicacao");
 
                 byte[] fotoPublicacao = new byte[(int) part.getSize()];

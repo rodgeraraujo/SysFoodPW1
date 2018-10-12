@@ -67,7 +67,7 @@ CREATE TABLE publicacao(
     conteudo VARCHAR(300) NOT NULL,
     idUsuario int, 
     foto bytea,
-    dataPublicacao TIMESTAMP,
+    dataPublicacao VARCHAR(20),
     CONSTRAINT publicacao_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES  usuario(id)
 );

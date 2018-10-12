@@ -10,6 +10,7 @@ import com.ifpb.pw1.sysfood.entities.Usuario;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class GerenciadorUsuario {
 
@@ -42,13 +43,17 @@ public class GerenciadorUsuario {
         return dao.buscarId(value);
     }
 
-
     public void salvaPublicacao(Publicacao novo) throws PersistenciaException {
         dao.salvarPublicacao(novo);
     }
 
-
-    public Publicacao buscarPublicacao() {
+    public List<Publicacao> buscarPublicacao() {
         return dao.buscaPublicacao();
     }
+
+    public List<Publicacao> buscaPublicacaoID(int usuarioID) {
+        return dao.buscaPublicacao();
+    }
+
+
 }

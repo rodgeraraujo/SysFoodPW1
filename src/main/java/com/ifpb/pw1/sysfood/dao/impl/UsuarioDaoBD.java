@@ -11,6 +11,8 @@ import javax.faces.convert.IntegerConverter;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
@@ -48,7 +50,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             st.setString(14, novo.getSenha());
 
             boolean inserted = st.executeUpdate() > 0;
-            conexao.close();
+            //conexao.close();
             return inserted;
         } catch (SQLException e) {
             throw new PersistenciaException(e);
@@ -84,12 +86,12 @@ public class UsuarioDaoBD implements UsuarioDao {
 
                 resultado.close();
                 stmt.close();
-                conexao.close();
+                //conexao.close();
                 return u;
             }
             resultado.close();
             stmt.close();
-            conexao.close();
+            //conexao.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -111,7 +113,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                 return true;
             }
             stmt.close();
-            conexao.close();
+            //conexao.close();
         }
         return false;
     }
@@ -131,7 +133,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             System.out.println(novo);
 
             boolean inserted = st.executeUpdate() > 0;
-            conexao.close();
+            //conexao.close();
             return inserted;
         } catch (SQLException e) {
             throw new PersistenciaException(e);
@@ -167,13 +169,13 @@ public class UsuarioDaoBD implements UsuarioDao {
 
                 resultado.close();
                 stmt.close();
-                conexao.close();
+                //conexao.close();
                 System.out.println(u.toString());
                 return u;
             }
             resultado.close();
             stmt.close();
-            conexao.close();
+//            conexao.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -182,31 +184,68 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
-    public Publicacao buscaPublicacao() {
+    public List<Publicacao> buscaPublicacao() {
         try {
             String sql = "SELECT * FROM publicacao";
             PreparedStatement stmt = conexao.prepareStatement(sql);
             ResultSet resultado = stmt.executeQuery();
 
-            if(resultado.next()){
+            List<Publicacao> publicacaoList = new ArrayList<>();
+            while (resultado.next()){
+
                 Publicacao p = new Publicacao(
                         resultado.getInt("id"),
-                        resultado.getString("nomeUsusario"),
+                        resultado.getString("nomeUsuario"),
                         resultado.getString("conteudo"),
                         resultado.getInt("idusuario"),
-                        LocalDate.parse(resultado.getString("datapublicacao")),
+                        resultado.getString("datapublicacao"),
                         resultado.getBytes("foto")
                 );
 
-                resultado.close();
-                stmt.close();
-                conexao.close();
-                System.out.println(p.toString());
-                return p;
+                publicacaoList.add(p);
             }
+
+            System.out.println(publicacaoList);
+
             resultado.close();
             stmt.close();
-            conexao.close();
+            return publicacaoList;
+           // conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Publicacao> buscaPublicacaoID(int usuarioID) {
+        try {
+            String sql = "SELECT * FROM publicacao WHERE idusuario = '"+ usuarioID +"'";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+
+            List<Publicacao> publicacaoList = new ArrayList<>();
+            while (resultado.next()){
+
+                Publicacao p = new Publicacao(
+                        resultado.getInt("id"),
+                        resultado.getString("nomeUsuario"),
+                        resultado.getString("conteudo"),
+                        resultado.getInt("idusuario"),
+                        resultado.getString("datapublicacao"),
+                        resultado.getBytes("foto")
+                );
+
+                publicacaoList.add(p);
+            }
+
+            System.out.println(publicacaoList);
+
+            resultado.close();
+            stmt.close();
+            return publicacaoList;
+            // conexao.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

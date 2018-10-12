@@ -3,6 +3,7 @@ package com.ifpb.pw1.sysfood.command.impl;
 
 import com.ifpb.pw1.sysfood.command.Command;
 import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
+import com.ifpb.pw1.sysfood.entities.Publicacao;
 import com.ifpb.pw1.sysfood.entities.Usuario;
 import com.ifpb.pw1.sysfood.managers.GerenciadorUsuario;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Base64;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,8 +35,11 @@ public class Login extends HttpServlet implements Command {
 
                 String url = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(usuarioAtual.getFotoPerfil());
 
+//                List<Publicacao> publicacaoList = gerencia.buscarPublicacao();
+
                 session.setAttribute("usuario", usuarioAtual);
                 session.setAttribute("foto", url);
+//                session.setAttribute("publicacaoList", publicacaoList);
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?value=1");
                 dispatcher.forward(request, response);

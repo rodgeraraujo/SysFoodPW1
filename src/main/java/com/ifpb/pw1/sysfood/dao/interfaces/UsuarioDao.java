@@ -6,6 +6,7 @@ import com.ifpb.pw1.sysfood.entities.Usuario;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public interface UsuarioDao {
     Boolean criar(Usuario novo) throws PersistenciaException;
@@ -14,6 +15,8 @@ public interface UsuarioDao {
     boolean salvarPublicacao(Publicacao novo) throws PersistenciaException;
     Usuario buscarId(int value) throws IOException;
 
-    Publicacao buscaPublicacao();
+    List<Publicacao> buscaPublicacao();
+
+    List<Publicacao> buscaPublicacaoID(int usuarioID);
 }
 

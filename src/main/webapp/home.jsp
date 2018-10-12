@@ -156,6 +156,7 @@
         <!-- Modal container for settings--->
         <div class="content-posts active" id="posts">
             <div id="posts-container" class="container-fluid container-posts">
+
                 <div class="card-post">
                     <div class="row">
                         <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
@@ -168,32 +169,30 @@
                     </div>
                 </div>
 
-                <c:forEach var="post" items="${posts}">
+                <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.UsuarioDaoBD"/>
+                <c:forEach var="publicacao" items="${dao.buscaPublicacao()}">
                     <div class="card-post">
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
-                                <a href="profile.jsp" title="Profile">
+                                <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
                                     <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">
-                                <h3><a href="profile.jsp" title="Profile"><c:out value="${post.nomeUsuario}"/></a></h3>
-                                <p><i><c:out value="${post.dataPublicacao}"/></i></p>
+                                <h3>
+                                    <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
+                                        <c:out value="${publicacao.nomeUsuario}"/>
+                                    </a>
+                                </h3>
+                                <p><i><c:out value="${publicacao.dataPublicacao}"/></i></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2 data-post">
-                                <p>L<c:out value="${post.conteudo}"/></p>
-                                <%--<div class="reaction">--%>
-                                    <%--<img draggable="false" class="emoji" alt="❤" src="./profile/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="./Wall Template_files/1f603.png"> 54--%>
-                                <%--</div>--%>
+                                <p>${publicacao.conteudo}</p>
+                                <img src="<c:out value="${publicacao.foto}"/>" alt="image post" class="img-post">
                                 <div class="comments">
-                                    <%--<div class="more-comments">View more comments</div>--%>
-                                    <%--<ul>--%>
-                                        <%--<li><b>User1</b> Lorem Ipsum Dolor si amet</li>--%>
-                                        <%--<li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="./profile/1f602.png"></li>--%>
-                                    <%--</ul>--%>
-                                    <form>
+                                    <form method="post" action="#">
                                         <input type="text" class="form-control" placeholder="Add a comment">
                                     </form>
                                 </div>
