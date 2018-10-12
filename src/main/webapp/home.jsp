@@ -175,7 +175,7 @@
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
                                 <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
-                                    <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
+                                    <img src="<c:out value="${publicacao.usuarioFoto}"/>"  alt="User name" class="img-circle img-user">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">

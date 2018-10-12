@@ -121,14 +121,15 @@ public class UsuarioDaoBD implements UsuarioDao {
     @Override
     public boolean salvarPublicacao(Publicacao novo) throws PersistenciaException {
         try {
-            String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto) " +
-                "VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto, usuariofoto) " +
+                "VALUES (?,?,?,?,?,?)";
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNomeUsuario());
             st.setString(2,novo.getConteudo());
             st.setInt(3,novo.getIdUsuario());
             st.setObject(4,novo.getDataPublicacao());
-            st.setBytes(5,novo.getFoto());
+            st.setString(5,novo.getFoto());
+            st.setString(6,novo.getUsuarioFoto());
 
             System.out.println(novo);
 
@@ -186,7 +187,7 @@ public class UsuarioDaoBD implements UsuarioDao {
     @Override
     public List<Publicacao> buscaPublicacao() {
         try {
-            String sql = "SELECT * FROM publicacao";
+            String sql = "SELECT * FROM publicacao ORDER BY id DESC";
             PreparedStatement stmt = conexao.prepareStatement(sql);
             ResultSet resultado = stmt.executeQuery();
 
@@ -199,7 +200,8 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("conteudo"),
                         resultado.getInt("idusuario"),
                         resultado.getString("datapublicacao"),
-                        resultado.getBytes("foto")
+                        resultado.getString("foto"),
+                        resultado.getString("usuarioFoto")
                 );
 
                 publicacaoList.add(p);
@@ -234,7 +236,8 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("conteudo"),
                         resultado.getInt("idusuario"),
                         resultado.getString("datapublicacao"),
-                        resultado.getBytes("foto")
+                        resultado.getString("foto"),
+                        resultado.getString("usuarioFoto")
                 );
 
                 publicacaoList.add(p);

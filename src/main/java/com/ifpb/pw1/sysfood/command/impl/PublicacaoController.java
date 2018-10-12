@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,13 +38,17 @@ public class PublicacaoController implements Command {
                 int idUsuario = u.getId();
                 String dataPublicacao = "" + LocalDate.now();
                 Part part = req.getPart("fotoPublicacao");
+                String usuarioFoto = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(u.getFotoPerfil());
 
-                byte[] fotoPublicacao = new byte[(int) part.getSize()];
+
+                byte[] foto = new byte[(int) part.getSize()];
                 InputStream stream = part.getInputStream();
-                stream.read(fotoPublicacao);
+                stream.read(foto);
+
+                String fotoPublicacao = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
                 gerencia.salvaPublicacao(
-                        new Publicacao(usuarioNome, conteudo, idUsuario, dataPublicacao, fotoPublicacao)
+                        new Publicacao(usuarioNome, conteudo, idUsuario, dataPublicacao, fotoPublicacao, usuarioFoto)
                 );
                 stream.close();
 

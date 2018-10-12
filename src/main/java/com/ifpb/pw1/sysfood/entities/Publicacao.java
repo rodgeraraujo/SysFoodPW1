@@ -10,28 +10,33 @@ public class Publicacao {
     private String conteudo;
     private int idUsuario;
     private String dataPublicacao;
-    private byte[] foto;
+    private String foto;
+    private String usuarioFoto;
 
 
-    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, byte[] foto) {
+    public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao,
+                      String foto, String usuarioFoto) {
         this.id = id;
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
         this.idUsuario = idUsuario;
         this.dataPublicacao = dataPublicacao;
         this.foto = foto;
+        this.usuarioFoto = usuarioFoto;
     }
 
-    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao, byte[] foto) {
+    public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao,
+                      String foto, String usuarioFoto) {
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
         this.idUsuario = idUsuario;
         this.dataPublicacao = dataPublicacao;
         this.foto = foto;
+        this.usuarioFoto = usuarioFoto;
     }
 
-    public Publicacao(){}
-
+    public Publicacao() {
+    }
 
     public int getId() {
         return id;
@@ -73,23 +78,32 @@ public class Publicacao {
         this.dataPublicacao = dataPublicacao;
     }
 
-    public byte[] getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(byte[] foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public String getUsuarioFoto() {
+        return usuarioFoto;
+    }
+
+    public void setUsuarioFoto(String usuarioFoto) {
+        this.usuarioFoto = usuarioFoto;
     }
 
     @Override
     public String toString() {
-        return "PublicacaoController{" +
+        return "Publicacao{" +
                 "id=" + id +
                 ", nomeUsuario='" + nomeUsuario + '\'' +
                 ", conteudo='" + conteudo + '\'' +
                 ", idUsuario=" + idUsuario +
-                ", dataPublicacao=" + dataPublicacao +
-                ", foto=" + Arrays.toString(foto) +
+                ", dataPublicacao='" + dataPublicacao + '\'' +
+                ", foto='" + foto + '\'' +
+                ", usuarioFoto='" + usuarioFoto + '\'' +
                 '}';
     }
 }
