@@ -55,7 +55,7 @@ public class CadastrarEstabelecimento implements Command {
             res.setHeader("errorMessage", "Não foi possível cadastrar o estabelecimento");
         }
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("home.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("home.jsp?value=2");
         requestDispatcher.forward(req,res);
 
     }

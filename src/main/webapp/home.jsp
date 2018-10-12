@@ -281,8 +281,8 @@
         </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
     <script>
-        var success = "${param.success}";
-        if (success == 1) {
+        var value = "${param.value}";
+        if (value == 1) {
             const toast = swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -293,6 +293,19 @@
             toast({
                 type: 'success',
                 title: 'Logado com sucesso'
+            })
+        }
+        if (value == 2) {
+            const toast = swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000
+            });
+
+            toast({
+                type: 'success',
+                title: 'Estabelecimento cadastrado com sucesso'
             })
         }
     </script>

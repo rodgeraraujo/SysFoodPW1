@@ -36,7 +36,7 @@ public class Login extends HttpServlet implements Command {
                 session.setAttribute("usuario", usuarioAtual);
                 session.setAttribute("foto", url);
 
-                RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?success=1");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?value=1");
                 dispatcher.forward(request, response);
             } else {
                 response.sendRedirect("login.jsp?value=1");

@@ -45,8 +45,13 @@
         <div class="banner">
             <h1 class="">SysFood</h1>
         </div>
-        <br><br><br><br>
-        <div class="bottom text-bottom"><h2><a href="register.jsp">Inscreva-se já!   </a></h2></div>
+        <br><br><br><br><br><br><br><br>
+        <div class="bottom text-bottom">
+            <h2>
+                <a href="register.jsp">Inscreva-se já</a>, ou <br><br>
+                <a href="login.jsp">Faça login!</a>
+            </h2>
+        </div>
     </div>
     <!-- <div class="bottom text-center">
         <a id="scrollDownArrow" href="login.hmtl"><i>Increva-se!</i></a>

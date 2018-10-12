@@ -159,8 +159,7 @@
         <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#posts" role="tab" id="postsTab" data-toggle="tab" aria-controls="posts" aria-expanded="true">Publicações</a></li>
             <li><a href="#profile" role="tab" id="profileTab" data-toggle="tab" aria-controls="profile" aria-expanded="true">Informações</a></li>
-            <li><a href="#amigo" role="tab" id="amigoTab" data-toggle="tab" aria-controls="amigos" aria-expanded="true">Amigos</a></li>
-            <li><a href="#estabelecimento" role="tab" id="estabelecimetoTab" data-toggle="tab" aria-controls="estabelecimentos" aria-expanded="true">Estabelecimentos</a></li>
+            <li><a href="#comida" role="tab" id="comidaTab" data-toggle="tab" aria-controls="chat" aria-expanded="true">Comida</a></li>
         </ul>
 
         <!--Start Tab Content-->
@@ -295,90 +294,28 @@
                 </div>
             </div><!-- end tab Profile -->
 
-            <!-- Start Tab amigo-->
-            <div class="tab-pane fade" role="tabpanel" id="amigo" aria-labelledby="amigoTab">
+            <!-- Start Tab comida-->
+            <div class="tab-pane fade" role="tabpanel" id="comida" aria-labelledby="comidaTab">
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <div class="scrollbar-container">
                             <div class="row row-user-list">
                                 <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user2.jpg" alt="User name" class="img-circle img-user">
+                                    <img src="./profile/user2.jpg" alt="Comida nome" class="img-circle img-user">
                                 </div>
                                 <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b> <span class="badge">1</span></p>
-                                    <p class="chat-time">An hour ago</p>
-                                    <p>Lorem ipsum</p>
+                                    <p><b>Comida nome</b> <span class="badge">1</span></p>
+                                    <p class="chat-time">${sessionScope.estabelecimento.datapublicacao}</p>
+                                    <p>${sessionScope.estabelecimento.descricao}</p>
                                 </div>
                                 <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Replay"><span class="badge badge-replay">Replay &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user3.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">Yesterday</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user4.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">2 days ago</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user5.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">2 days ago</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
+                                    <p><a href="#openModal" title="Avaliar"><span class="badge badge-replay">Avaliar &gt;</span></a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!-- End Tab amigo-->
-
-            <!-- Start Tab estabelecimentos-->
-            <div class="tab-pane fade" role="tabpanel" id="estabelecimento" aria-labelledby="chatTab">
-                <div class="container-fluid container-posts">
-                    <div class="card-post">
-                        <div class="scrollbar-container">
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user2.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><br><br><b>Estabelecimento nome</b></p>
-                                    <%--<p><b>Estabelecimento nome</b> <span class="badge">1</span></p>--%>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="./page/profile.jsp?id=1" title="Visualizar"><span class="badge badge-replay">Ver &gt;</span></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Tab estabelecimentos-->
-
+            </div><!-- End Tab comida-->
         </div><!-- Close Tab Content-->
 
     </div><!--Close content posts-->
