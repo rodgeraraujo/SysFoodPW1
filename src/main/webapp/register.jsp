@@ -67,13 +67,13 @@
 		        <h4>Data de Aniversário</h4>
 		        <div class="input-group">
 		          <div class="col-third">
-		            <input type="text" name="dia" placeholder="DD" OnKeyPress="formatar('##', this)" required/>
+		            <input type="text" name="dia" placeholder="DD" maxlength="2" OnKeyPress="formatar('##', this)" required/>
 		          </div>
 		          <div class="col-third">
-		            <input type="text" name="mes" placeholder="MM" OnKeyPress="formatar('##', this)" required/>
+		            <input type="text" name="mes" placeholder="MM" maxlength="2" OnKeyPress="formatar('##', this)" required/>
 		          </div>
 		          <div class="col-third">
-		            <input type="text" name="ano" placeholder="AAAA" OnKeyPress="formatar('####', this)" required/>
+		            <input type="text" name="ano" placeholder="AAAA" maxlength="4" OnKeyPress="formatar('####', this)" required/>
 		          </div>
 		        </div>
 		      </div>
@@ -108,7 +108,7 @@
 		      </div>
 
 		      <div class="input-group input-group-icon">
-		      	<input type="text" name="telefone" placeholder="Telefone" required/>
+		      	<input type="text" name="telefone" placeholder="Telefone" maxlength="14" OnKeyPress="formatar('### # ####-####', this)" required/>
 		        <div class="input-icon"><i class="fa fa-phone-square "></i></div>
 		      </div>
 		 

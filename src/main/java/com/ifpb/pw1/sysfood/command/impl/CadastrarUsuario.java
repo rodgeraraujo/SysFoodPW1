@@ -19,7 +19,7 @@ public class CadastrarUsuario implements Command {
         String email = req.getParameter("email");
         String senha = req.getParameter("senha");
         //ANIVERSÁARIO NÃO IMPLEMENTADO
-        String aniversario = req.getParameter("dia")+"-"+req.getParameter("mes")+"-"+req.getParameter("ano");
+        String aniversario = req.getParameter("dia")+"/"+req.getParameter("mes")+"/"+req.getParameter("ano");
         String profissao = req.getParameter("profissao");
         String sexo = req.getParameter("sexo");
         Part part = req.getPart("fotoPerfil");
@@ -39,7 +39,7 @@ public class CadastrarUsuario implements Command {
         stream.close();
 
         GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario();
-            Boolean cadastrar = gerenciadorUsuario.cadastrar(nome, email,profissao, sexo,
+            Boolean cadastrar = gerenciadorUsuario.cadastrar(nome, email,profissao, aniversario, sexo,
                     fotoPerfil, descricao, rua, numero, cidade, estado, cep, telefone, senha);
 
         if(cadastrar){

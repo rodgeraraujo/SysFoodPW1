@@ -161,23 +161,25 @@
             </div>
             <div class="col-sm-5">
                 <p>
-                    <input class="form-control" placeholder="Numero" id="numero" name="numero" type="number" class="validate" required>
+                    <input class="form-control" placeholder="Numero" id="numero" name="numero" type="text" class="validate" required>
                 </p>
             </div>
         </div>
-        <div class="row modal-row">
-            <div class="col-sm-3">
-                <p>
-                    <label>Status: </label>
-                </p>
-            </div>
-            <div class="col-sm-5">
-                <input class="form-control" id="status" name="status" type="checkbox" class="validate" required>
-            </div>
+        <%--<div class="row modal-row">--%>
             <%--<div class="col-sm-3">--%>
-            <%--<a href="#" title="Edit Language"><i class="fas fa-pencil-alt" aria-hidden="true"></i> <i>Edit</i></a>--%>
+                <%--<p>--%>
+                    <%--<label>Status: </label>--%>
+                <%--</p>--%>
             <%--</div>--%>
-        </div>
+            <%--<div class="col-sm-5">--%>
+                <%--<p>--%>
+                    <%--<input class="form-control" id="status" name="status" type="checkbox" value="1" class="validate" required>--%>
+                <%--</p>--%>
+            <%--</div>--%>
+            <%--&lt;%&ndash;<div class="col-sm-3">&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<a href="#" title="Edit Language"><i class="fas fa-pencil-alt" aria-hidden="true"></i> <i>Edit</i></a>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--</div>--%>
         <div class="row modal-row">
             <div class="col-sm-3">
                 <p>

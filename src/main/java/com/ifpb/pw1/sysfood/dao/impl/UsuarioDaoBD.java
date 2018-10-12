@@ -27,24 +27,25 @@ public class UsuarioDaoBD implements UsuarioDao {
 
     @Override
     public Boolean criar(Usuario novo) throws PersistenciaException {
-        String sql = "INSERT INTO usuario (nome, email, profissao, sexo, fotoPerfil, descricao, rua, numero, " +
+        String sql = "INSERT INTO usuario (nome, email, profissao, aniversario, sexo, fotoPerfil, descricao, rua, numero, " +
                 "cidade, estado, cep, telefone, senha) " +
-                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNome());
             st.setString(2, novo.getEmail());
             st.setString(3, novo.getProfissao());
-            st.setString(4, novo.getSexo());
-            st.setBytes(5, novo.getFotoPerfil());
-            st.setString(6, novo.getDescricao());
-            st.setString(7, novo.getRua());
-            st.setString(8, novo.getNumero());
-            st.setString(9, novo.getCidade());
-            st.setString(10, novo.getEstado());
-            st.setString(11, novo.getCep());
-            st.setString(12, novo.getTelefone());
-            st.setString(13, novo.getSenha());
+            st.setString(4, novo.getAniversario());
+            st.setString(5, novo.getSexo());
+            st.setBytes(6, novo.getFotoPerfil());
+            st.setString(7, novo.getDescricao());
+            st.setString(8, novo.getRua());
+            st.setString(9, novo.getNumero());
+            st.setString(10, novo.getCidade());
+            st.setString(11, novo.getEstado());
+            st.setString(12, novo.getCep());
+            st.setString(13, novo.getTelefone());
+            st.setString(14, novo.getSenha());
 
             boolean inserted = st.executeUpdate() > 0;
             conexao.close();
@@ -68,6 +69,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("nome"),
                         resultado.getString("email"),
                         resultado.getString("profissao"),
+                        resultado.getString("aniversario"),
                         resultado.getString("sexo"),
                         resultado.getBytes("fotoPerfil"),
                         resultado.getString("descricao"),
@@ -150,6 +152,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("nome"),
                         resultado.getString("email"),
                         resultado.getString("profissao"),
+                        resultado.getString("aniversario"),
                         resultado.getString("sexo"),
                         resultado.getBytes("fotoPerfil"),
                         resultado.getString("descricao"),

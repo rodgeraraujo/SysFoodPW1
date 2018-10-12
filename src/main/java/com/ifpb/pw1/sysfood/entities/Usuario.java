@@ -9,6 +9,7 @@ public class Usuario {
     private String nome;
     private String email;
     private String profissao;
+    private String aniversario;
     private String sexo;
     private byte[] fotoPerfil;
     private String descricao;
@@ -24,13 +25,14 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
+    public Usuario(int id, String nome, String email, String profissao, String aniversario, String sexo, byte[] fotoPerfil,
                    String descricao,String rua, String numero, String cidade, String estado, String cep,
                    String telefone, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.profissao = profissao;
+        this.aniversario = aniversario;
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
@@ -43,11 +45,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Usuario(String nome, String email, String profissao, String sexo, byte[] fotoPerfil,
+    public Usuario(String nome, String email, String profissao, String aniversario, String sexo, byte[] fotoPerfil,
                    String descricao,String rua, String numero, String cidade, String estado, String cep, String telefone, String senha) {
         this.nome = nome;
         this.email = email;
         this.profissao = profissao;
+        this.aniversario = aniversario;
         this.sexo = sexo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
@@ -90,6 +93,14 @@ public class Usuario {
 
     public void setProfissao(String profisao) {
         this.profissao = profisao;
+    }
+
+    public String getAniversario() {
+        return aniversario;
+    }
+
+    public void setAniversario(String aniversario) {
+        this.aniversario = aniversario;
     }
 
     public String getSexo() {
@@ -179,6 +190,7 @@ public class Usuario {
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", profissao='" + profissao + '\'' +
+                ", aniversario='" + aniversario + '\'' +
                 ", sexo='" + sexo + '\'' +
                 ", fotoPerfil=" + Arrays.toString(fotoPerfil) +
                 ", descricao='" + descricao + '\'' +

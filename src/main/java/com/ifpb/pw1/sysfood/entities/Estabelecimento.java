@@ -8,13 +8,14 @@ public class Estabelecimento {
     private String nome;
     private String dataHoraFuncionamento;
     private String rua;
-    private int numero;
+    private String numero;
     private String cidade;
     private String estado;
     private String cep;
     private String tipo;
     private byte[] fotoPerfil;
     private String descricao;
+    private String usuarioEmail;
     private int status;
 
     public static final int ATIVO = 1;
@@ -23,7 +24,9 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String nome, String dataHoraFuncionamento, String rua, int numero, String cidade, String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+    public Estabelecimento(String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
+                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao,
+                           String usuarioEmail, int status) {
         this.nome = nome;
         this.dataHoraFuncionamento = dataHoraFuncionamento;
         this.rua = rua;
@@ -34,11 +37,13 @@ public class Estabelecimento {
         this.tipo = tipo;
         this.fotoPerfil = fotoPerfil;
         this.descricao = descricao;
+        this.usuarioEmail = usuarioEmail;
         this.status = status;
     }
 
-    public Estabelecimento(int id, String nome, String dataHoraFuncionamento, String rua, int numero, String cidade,
-                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, int status) {
+    public Estabelecimento(int id, String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
+                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao,
+                           String usuarioEmail, int status) {
         this.id = id;
         this.nome = nome;
         this.dataHoraFuncionamento = dataHoraFuncionamento;
@@ -85,11 +90,11 @@ public class Estabelecimento {
         this.rua = rua;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -139,6 +144,14 @@ public class Estabelecimento {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getUsuarioEmail() {
+        return usuarioEmail;
+    }
+
+    public void setUsuarioEmail(String usuarioEmail) {
+        this.usuarioEmail = usuarioEmail;
     }
 
     public int getStatus() {
