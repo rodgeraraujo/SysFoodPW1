@@ -160,11 +160,25 @@
                 <div class="card-post">
                     <div class="row">
                         <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
-                            <div class="col-sm-6">
-                                <textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>
-                                <input class="form-control" name="fotoPublicacao" type="file">
-                                <input class="form-control" type="submit" value="Post">
-                            </div>
+                            <%--<div class="col-sm-8">--%>
+                                <%--<textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>--%>
+                                <%--<br>--%>
+                                <%--<input class="form-control" name="fotoPublicacao" type="file">--%>
+                                <%--<br>--%>
+                                <%--<input class="form-control" type="submit" value="Post">--%>
+                            <%--</div>--%>
+                            <li class="add-post">
+                                <textarea class="add-post-textarea" name="conteudo" placeholder="Write a post..."></textarea>
+                            </li>
+
+                                <div class="image-upload">
+                                <label for="file-input">
+                                    <%--<img src="https://placehold.it/100/000000/ffffff?text=UPLOAD" style="pointer-events: none"/>--%>
+                                        <i class="fa fa-upload post-file" aria-hidden="true" name="conteudo" style="cursor: pointer"></i>
+                                </label>
+                                    <input id="file-input" type="file" name="fotoPublicacao"/>
+                                </div>
+                                <input type="submit" class="post-button" value="Post">
                         </form>
                     </div>
                 </div>

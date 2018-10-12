@@ -85,7 +85,7 @@ video, img {
 
 .img-user-post {
     width: 35%;
-    height: 35px;
+    height: 40px;
     margin-left: 3%;
 }
 
@@ -174,6 +174,66 @@ header .badge {
     top: -8px;
     right: -12px;
 }
+/*post form*/
+.add-post {
+    border: 1px solid #DFE2E2;
+    border-radius: 3px;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    margin-left: -5px;
+    width: 68%;
+    padding: 10px; }
+
+.add-post .add-post-textarea {
+    border: none;
+    font-size: 1.3rem;
+    height: 50px;
+    width: 100%; }
+
+.add-post .add-post-textarea:focus {
+    outline: none; }
+
+input[type="submit"].post-button, input[type="file"].post-file {
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -moz-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -o-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -ms-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: linear-gradient(top, #fcfcfc, #eeeeee);
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #333333;
+    display: inline-block;
+    opacity: 0.9;
+    outline: none;
+    position: absolute;
+    padding: 0 10px 0 10px;
+    margin: -28px 0 0 41.98em;
+}
+
+.image-upload > input {
+    visibility:hidden;
+    width:0;
+    height:0
+}
+
+.post-file {
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -moz-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -o-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: -ms-linear-gradient(top, #fcfcfc, #eeeeee);
+    background-image: linear-gradient(top, #fcfcfc, #eeeeee);
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #333333;
+    display: inline-block;
+    opacity: 0.9;
+    outline: none;
+    padding: 3px 10px 5px 10px;
+    margin: 0px 0px 0px 10px;
+}
+
 
 .new-not {
     background: #ffeab6;
@@ -219,7 +279,9 @@ header .badge {
 }
 
 .container-posts {
-    padding: 0 130px;
+    /*padding: 0 130px;*/
+    padding-left: 130px;
+    padding-right: 30%;
 }
 
 .img-post {
@@ -227,6 +289,11 @@ header .badge {
 }
 
 .info-user i { color:#929292; }
+
+.row{
+    margin-right: -335px;
+    margin-left: -15px;
+}
 
 .reaction {
     padding: 10px 0;
