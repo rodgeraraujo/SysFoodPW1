@@ -89,6 +89,11 @@ video, img {
     margin-left: 3%;
 }
 
+.img-establishment{
+    width: 80%;
+    height: 30%;
+    margin-left:30%;
+}
 .card-post .img-user  { max-width: 110px;
                         min-width: 60px;}
 

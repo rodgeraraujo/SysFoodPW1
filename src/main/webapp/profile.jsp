@@ -362,20 +362,31 @@
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <div class="scrollbar-container">
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user2.jpg" alt="User name" class="img-circle img-user">
+                            <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.EstabelecimentoDaoBD"/>
+                            <c:forEach var="estabelecimento" items="${dao.buscarEstabelecimento(sessionScope.usuario.email)}">
+                                <div class="row row-user-list">
+                                    <div class="col-sm-2 col-xs-3">
+                                        <img src="<c:out value="${estabelecimento.fotoPerfil}"/>" alt="image establishment" class="img-circle img-establishment">
+                                    </div>
+                                    <div class="col-sm-4 col-xs-9">
+                                        <p>
+                                            <br><br>
+                                            <b><c:out value="${estabelecimento.nome}"/></b>
+                                        </p>
+                                        <%--<p><b>Estabelecimento nome</b> <span class="badge">1</span></p>--%>
+                                    </div>
+                                    <div class="col-sm-3 hidden-xs">
+                                        <p>
+                                            <a href="./page/profile.jsp?id=<c:out value="${estabelecimento.id}"/>" title="Visualizar">
+                                                <span class="badge badge-replay">Ver &gt;</span>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><br><br><b>Estabelecimento nome</b></p>
-                                    <%--<p><b>Estabelecimento nome</b> <span class="badge">1</span></p>--%>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="./page/profile.jsp?id=1" title="Visualizar"><span class="badge badge-replay">Ver &gt;</span></a></p>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </div>
                     </div>
+
                 </div>
             </div><!-- End Tab estabelecimentos-->
 

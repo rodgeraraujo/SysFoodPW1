@@ -73,8 +73,8 @@
     <schema id="16" parent="4" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-10-12.10:52:09.103</IntrospectionTimestamp>
-      <IntrospectionStateNumber>704</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-13.00:52:41.783</IntrospectionTimestamp>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -120,119 +120,119 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="23" parent="16" name="publicacao_id_seq">
-      <ObjectId>49680</ObjectId>
-      <StateNumber>704</StateNumber>
+    <sequence id="23" parent="16" name="amizade_id_seq">
+      <ObjectId>49981</ObjectId>
+      <StateNumber>758</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="24" parent="16" name="amizade_id_seq">
-      <ObjectId>49636</ObjectId>
-      <StateNumber>685</StateNumber>
+    <sequence id="24" parent="16" name="avaliarcomida_id_seq">
+      <ObjectId>49958</ObjectId>
+      <StateNumber>757</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="25" parent="16" name="avaliarcomida_id_seq">
-      <ObjectId>49613</ObjectId>
-      <StateNumber>684</StateNumber>
+    <sequence id="25" parent="16" name="avaliarestabelecimento_id_seq">
+      <ObjectId>49940</ObjectId>
+      <StateNumber>756</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="26" parent="16" name="avaliarestabelecimento_id_seq">
-      <ObjectId>49595</ObjectId>
-      <StateNumber>683</StateNumber>
+    <sequence id="26" parent="16" name="comida_id_seq">
+      <ObjectId>49890</ObjectId>
+      <StateNumber>753</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="27" parent="16" name="comida_id_seq">
-      <ObjectId>49545</ObjectId>
-      <StateNumber>680</StateNumber>
+    <sequence id="27" parent="16" name="estabelecimento_id_seq">
+      <ObjectId>49856</ObjectId>
+      <StateNumber>751</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="28" parent="16" name="estabelecimento_id_seq">
-      <ObjectId>49511</ObjectId>
-      <StateNumber>678</StateNumber>
+    <sequence id="28" parent="16" name="publicacao_id_seq">
+      <ObjectId>49906</ObjectId>
+      <StateNumber>754</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="29" parent="16" name="recomendacao_id_seq">
-      <ObjectId>49577</ObjectId>
-      <StateNumber>682</StateNumber>
+      <ObjectId>49922</ObjectId>
+      <StateNumber>755</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="30" parent="16" name="solicitacao_id_seq">
-      <ObjectId>49527</ObjectId>
-      <StateNumber>679</StateNumber>
+      <ObjectId>49872</ObjectId>
+      <StateNumber>752</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="31" parent="16" name="usuario_id_seq">
-      <ObjectId>49498</ObjectId>
-      <StateNumber>677</StateNumber>
+      <ObjectId>49843</ObjectId>
+      <StateNumber>750</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <table id="32" parent="16" name="amizade">
-      <ObjectId>49638</ObjectId>
-      <StateNumber>685</StateNumber>
+      <ObjectId>49983</ObjectId>
+      <StateNumber>758</StateNumber>
     </table>
     <table id="33" parent="16" name="avaliarcomida">
-      <ObjectId>49615</ObjectId>
-      <StateNumber>684</StateNumber>
+      <ObjectId>49960</ObjectId>
+      <StateNumber>757</StateNumber>
     </table>
     <table id="34" parent="16" name="avaliarestabelecimento">
-      <ObjectId>49597</ObjectId>
-      <StateNumber>683</StateNumber>
+      <ObjectId>49942</ObjectId>
+      <StateNumber>756</StateNumber>
     </table>
     <table id="35" parent="16" name="comida">
-      <ObjectId>49547</ObjectId>
-      <StateNumber>684</StateNumber>
+      <ObjectId>49892</ObjectId>
+      <StateNumber>757</StateNumber>
     </table>
     <table id="36" parent="16" name="estabelecimento">
-      <ObjectId>49513</ObjectId>
-      <StateNumber>684</StateNumber>
+      <ObjectId>49858</ObjectId>
+      <StateNumber>757</StateNumber>
     </table>
     <table id="37" parent="16" name="publicacao">
-      <ObjectId>49682</ObjectId>
-      <StateNumber>704</StateNumber>
+      <ObjectId>49908</ObjectId>
+      <StateNumber>754</StateNumber>
     </table>
     <table id="38" parent="16" name="recomendacao">
-      <ObjectId>49579</ObjectId>
-      <StateNumber>682</StateNumber>
+      <ObjectId>49924</ObjectId>
+      <StateNumber>755</StateNumber>
     </table>
     <table id="39" parent="16" name="solicitacao">
-      <ObjectId>49529</ObjectId>
-      <StateNumber>679</StateNumber>
+      <ObjectId>49874</ObjectId>
+      <StateNumber>752</StateNumber>
     </table>
     <table id="40" parent="16" name="usuario">
-      <ObjectId>49500</ObjectId>
-      <StateNumber>704</StateNumber>
+      <ObjectId>49845</ObjectId>
+      <StateNumber>758</StateNumber>
     </table>
     <column id="41" parent="32" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>685</StateNumber>
+      <StateNumber>758</StateNumber>
       <DefaultExpression>nextval(&apos;amizade_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>amizade_id_seq</SequenceName>
@@ -240,51 +240,51 @@
     <column id="42" parent="32" name="idusuario">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>685</StateNumber>
+      <StateNumber>758</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="43" parent="32" name="idamigo">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>685</StateNumber>
+      <StateNumber>758</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="44" parent="32" name="amizadestatus">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>685</StateNumber>
+      <StateNumber>758</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="45" parent="32" name="dataamizade">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>685</StateNumber>
+      <StateNumber>758</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="46" parent="32" name="amizade_pkey">
-      <ObjectId>49642</ObjectId>
+      <ObjectId>49987</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="47" parent="32" name="amizade_pkey">
-      <ObjectId>49643</ObjectId>
+      <ObjectId>49988</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>amizade_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="48" parent="32" name="usuario_id_key">
-      <ObjectId>49644</ObjectId>
+      <ObjectId>49989</ObjectId>
       <ColNames>idusuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="49" parent="32" name="amigo_id_key">
-      <ObjectId>49649</ObjectId>
+      <ObjectId>49994</ObjectId>
       <ColNames>idamigo</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
@@ -294,7 +294,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <DefaultExpression>nextval(&apos;avaliarcomida_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>avaliarcomida_id_seq</SequenceName>
@@ -302,66 +302,66 @@
     <column id="51" parent="33" name="idusuario">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="52" parent="33" name="idestabelecimento">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="53" parent="33" name="idcomida">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="54" parent="33" name="avaliacao">
       <Position>5</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <TypeId>700</TypeId>
     </column>
     <column id="55" parent="33" name="dataavaliacao">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>684</StateNumber>
+      <StateNumber>757</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="56" parent="33" name="avaliarcomida_pkey">
-      <ObjectId>49619</ObjectId>
+      <ObjectId>49964</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="57" parent="33" name="avaliarcomida_pkey">
-      <ObjectId>49620</ObjectId>
+      <ObjectId>49965</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>avaliarcomida_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="58" parent="33" name="usuario_id_key">
-      <ObjectId>49621</ObjectId>
+      <ObjectId>49966</ObjectId>
       <ColNames>idusuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="59" parent="33" name="estabelecimento_id_key">
-      <ObjectId>49626</ObjectId>
+      <ObjectId>49971</ObjectId>
       <ColNames>idestabelecimento</ColNames>
-      <RefTableId>49513</RefTableId>
+      <RefTableId>49858</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>estabelecimento</RefTableName>
       <RefKeyName>estabelecimento_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="60" parent="33" name="comida_id_key">
-      <ObjectId>49631</ObjectId>
+      <ObjectId>49976</ObjectId>
       <ColNames>idcomida</ColNames>
-      <RefTableId>49547</RefTableId>
+      <RefTableId>49892</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>comida</RefTableName>
       <RefKeyName>comida_pkey</RefKeyName>
@@ -371,7 +371,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>683</StateNumber>
+      <StateNumber>756</StateNumber>
       <DefaultExpression>nextval(&apos;avaliarestabelecimento_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>avaliarestabelecimento_id_seq</SequenceName>
@@ -379,51 +379,51 @@
     <column id="62" parent="34" name="idusuario">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>683</StateNumber>
+      <StateNumber>756</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="63" parent="34" name="idestabelecimento">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>683</StateNumber>
+      <StateNumber>756</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="64" parent="34" name="avaliacao">
       <Position>4</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>683</StateNumber>
+      <StateNumber>756</StateNumber>
       <TypeId>700</TypeId>
     </column>
     <column id="65" parent="34" name="dataavaliacao">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>683</StateNumber>
+      <StateNumber>756</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="66" parent="34" name="avaliarestabelecimento_pkey">
-      <ObjectId>49601</ObjectId>
+      <ObjectId>49946</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="67" parent="34" name="avaliarestabelecimento_pkey">
-      <ObjectId>49602</ObjectId>
+      <ObjectId>49947</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>avaliarestabelecimento_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="68" parent="34" name="usuario_id_key">
-      <ObjectId>49603</ObjectId>
+      <ObjectId>49948</ObjectId>
       <ColNames>idusuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="69" parent="34" name="estabelecimento_id_key">
-      <ObjectId>49608</ObjectId>
+      <ObjectId>49953</ObjectId>
       <ColNames>idestabelecimento</ColNames>
-      <RefTableId>49513</RefTableId>
+      <RefTableId>49858</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>estabelecimento</RefTableName>
       <RefKeyName>estabelecimento_pkey</RefKeyName>
@@ -433,7 +433,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <DefaultExpression>nextval(&apos;comida_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>comida_id_seq</SequenceName>
@@ -442,49 +442,49 @@
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="72" parent="35" name="desscricao">
       <Position>3</Position>
       <DataType>varchar(150)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="73" parent="35" name="idestabelecimento">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="74" parent="35" name="foto">
       <Position>5</Position>
       <DataType>bytea|0s</DataType>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <TypeId>17</TypeId>
     </column>
     <column id="75" parent="35" name="datapublicacao">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>680</StateNumber>
+      <StateNumber>753</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="76" parent="35" name="comida_pkey">
-      <ObjectId>49554</ObjectId>
+      <ObjectId>49899</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="77" parent="35" name="comida_pkey">
-      <ObjectId>49555</ObjectId>
+      <ObjectId>49900</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>comida_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="78" parent="35" name="estabelecimento_id_key">
-      <ObjectId>49556</ObjectId>
+      <ObjectId>49901</ObjectId>
       <ColNames>idestabelecimento</ColNames>
-      <RefTableId>49513</RefTableId>
+      <RefTableId>49858</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>estabelecimento</RefTableName>
       <RefKeyName>estabelecimento_pkey</RefKeyName>
@@ -494,7 +494,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <DefaultExpression>nextval(&apos;estabelecimento_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>estabelecimento_id_seq</SequenceName>
@@ -503,94 +503,94 @@
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="81" parent="36" name="rua">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="82" parent="36" name="numero">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="83" parent="36" name="cidade">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="84" parent="36" name="estado">
       <Position>6</Position>
       <DataType>char(2)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="85" parent="36" name="cep">
       <Position>7</Position>
       <DataType>varchar(15)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="86" parent="36" name="tipo">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="87" parent="36" name="funcionamento">
       <Position>9</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="88" parent="36" name="fotoperfil">
       <Position>10</Position>
-      <DataType>bytea|0s</DataType>
+      <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
-      <TypeId>17</TypeId>
+      <StateNumber>751</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="89" parent="36" name="descricao">
       <Position>11</Position>
       <DataType>varchar(200)|0s</DataType>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="90" parent="36" name="email_usuario">
       <Position>12</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="91" parent="36" name="status">
       <Position>13</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>678</StateNumber>
+      <StateNumber>751</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="92" parent="36" name="estabelecimento_pkey">
-      <ObjectId>49520</ObjectId>
+      <ObjectId>49865</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="93" parent="36" name="estabelecimento_pkey">
-      <ObjectId>49521</ObjectId>
+      <ObjectId>49866</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>estabelecimento_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="94" parent="36" name="usuario_email_key">
-      <ObjectId>49522</ObjectId>
+      <ObjectId>49867</ObjectId>
       <ColNames>email_usuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>3</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_email_key</RefKeyName>
@@ -600,7 +600,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <DefaultExpression>nextval(&apos;publicacao_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>publicacao_id_seq</SequenceName>
@@ -608,55 +608,55 @@
     <column id="96" parent="37" name="nomeusuario">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="97" parent="37" name="conteudo">
       <Position>3</Position>
       <DataType>varchar(300)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="98" parent="37" name="idusuario">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="99" parent="37" name="foto">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="100" parent="37" name="datapublicacao">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="101" parent="37" name="usuariofoto">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>704</StateNumber>
+      <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="102" parent="37" name="publicacao_pkey">
-      <ObjectId>49689</ObjectId>
+      <ObjectId>49915</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="103" parent="37" name="publicacao_pkey">
-      <ObjectId>49690</ObjectId>
+      <ObjectId>49916</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>publicacao_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="104" parent="37" name="usuario_id_key">
-      <ObjectId>49691</ObjectId>
+      <ObjectId>49917</ObjectId>
       <ColNames>idusuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
@@ -666,7 +666,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>682</StateNumber>
+      <StateNumber>755</StateNumber>
       <DefaultExpression>nextval(&apos;recomendacao_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>recomendacao_id_seq</SequenceName>
@@ -674,39 +674,39 @@
     <column id="106" parent="38" name="idusuario">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>682</StateNumber>
+      <StateNumber>755</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="107" parent="38" name="idestabelecimento">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>682</StateNumber>
+      <StateNumber>755</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="108" parent="38" name="recomendacao_pkey">
-      <ObjectId>49583</ObjectId>
+      <ObjectId>49928</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="109" parent="38" name="recomendacao_pkey">
-      <ObjectId>49584</ObjectId>
+      <ObjectId>49929</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>recomendacao_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="110" parent="38" name="usuario_id_key">
-      <ObjectId>49585</ObjectId>
+      <ObjectId>49930</ObjectId>
       <ColNames>idusuario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="111" parent="38" name="estabelecimento_id_key">
-      <ObjectId>49590</ObjectId>
+      <ObjectId>49935</ObjectId>
       <ColNames>idestabelecimento</ColNames>
-      <RefTableId>49513</RefTableId>
+      <RefTableId>49858</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>estabelecimento</RefTableName>
       <RefKeyName>estabelecimento_pkey</RefKeyName>
@@ -716,7 +716,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>679</StateNumber>
+      <StateNumber>752</StateNumber>
       <DefaultExpression>nextval(&apos;solicitacao_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>solicitacao_id_seq</SequenceName>
@@ -724,51 +724,51 @@
     <column id="113" parent="39" name="idremetente">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>679</StateNumber>
+      <StateNumber>752</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="114" parent="39" name="iddestinatario">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>679</StateNumber>
+      <StateNumber>752</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="115" parent="39" name="status">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>679</StateNumber>
+      <StateNumber>752</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="116" parent="39" name="datahora">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>679</StateNumber>
+      <StateNumber>752</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="117" parent="39" name="solicitacao_pkey">
-      <ObjectId>49533</ObjectId>
+      <ObjectId>49878</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="118" parent="39" name="solicitacao_pkey">
-      <ObjectId>49534</ObjectId>
+      <ObjectId>49879</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>solicitacao_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="119" parent="39" name="remetente_id_key">
-      <ObjectId>49535</ObjectId>
+      <ObjectId>49880</ObjectId>
       <ColNames>idremetente</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="120" parent="39" name="destintario_id_key">
-      <ObjectId>49540</ObjectId>
+      <ObjectId>49885</ObjectId>
       <ColNames>iddestinatario</ColNames>
-      <RefTableId>49500</RefTableId>
+      <RefTableId>49845</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
@@ -778,7 +778,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <DefaultExpression>nextval(&apos;usuario_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>usuario_id_seq</SequenceName>
@@ -787,108 +787,108 @@
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="123" parent="40" name="email">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="124" parent="40" name="profissao">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="125" parent="40" name="aniversario">
       <Position>5</Position>
       <DataType>varchar(11)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="126" parent="40" name="sexo">
       <Position>6</Position>
       <DataType>char|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="127" parent="40" name="fotoperfil">
       <Position>7</Position>
       <DataType>bytea|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>17</TypeId>
     </column>
     <column id="128" parent="40" name="descricao">
       <Position>8</Position>
       <DataType>varchar(200)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="129" parent="40" name="rua">
       <Position>9</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="130" parent="40" name="numero">
       <Position>10</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="131" parent="40" name="cidade">
       <Position>11</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="132" parent="40" name="estado">
       <Position>12</Position>
       <DataType>char(2)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="133" parent="40" name="cep">
       <Position>13</Position>
       <DataType>varchar(15)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="134" parent="40" name="telefone">
       <Position>14</Position>
       <DataType>varchar(20)|0s</DataType>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="135" parent="40" name="senha">
       <Position>15</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>677</StateNumber>
+      <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="136" parent="40" name="usuario_pkey">
-      <ObjectId>49507</ObjectId>
+      <ObjectId>49852</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="137" parent="40" name="usuario_email_key">
-      <ObjectId>49509</ObjectId>
+      <ObjectId>49854</ObjectId>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="138" parent="40" name="usuario_pkey">
-      <ObjectId>49508</ObjectId>
+      <ObjectId>49853</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>usuario_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <key id="139" parent="40" name="usuario_email_key">
-      <ObjectId>49510</ObjectId>
+      <ObjectId>49855</ObjectId>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>usuario_email_key</UnderlyingIndexName>
     </key>

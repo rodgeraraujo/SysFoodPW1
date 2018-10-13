@@ -131,8 +131,6 @@ public class UsuarioDaoBD implements UsuarioDao {
             st.setString(5,novo.getFoto());
             st.setString(6,novo.getUsuarioFoto());
 
-            System.out.println(novo);
-
             boolean inserted = st.executeUpdate() > 0;
             //conexao.close();
             return inserted;
@@ -171,7 +169,6 @@ public class UsuarioDaoBD implements UsuarioDao {
                 resultado.close();
                 stmt.close();
                 //conexao.close();
-                System.out.println(u.toString());
                 return u;
             }
             resultado.close();
@@ -207,8 +204,6 @@ public class UsuarioDaoBD implements UsuarioDao {
                 publicacaoList.add(p);
             }
 
-            System.out.println(publicacaoList);
-
             resultado.close();
             stmt.close();
             return publicacaoList;
@@ -242,8 +237,6 @@ public class UsuarioDaoBD implements UsuarioDao {
 
                 publicacaoList.add(p);
             }
-
-            System.out.println(publicacaoList);
 
             resultado.close();
             stmt.close();

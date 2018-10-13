@@ -13,7 +13,7 @@ public class Estabelecimento {
     private String estado;
     private String cep;
     private String tipo;
-    private byte[] fotoPerfil;
+    private String fotoPerfil;
     private String descricao;
     private String usuarioEmail;
     private int status;
@@ -25,7 +25,7 @@ public class Estabelecimento {
     }
 
     public Estabelecimento(String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
-                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao,
+                           String estado, String cep, String tipo, String fotoPerfil, String descricao,
                            String usuarioEmail, int status) {
         this.nome = nome;
         this.dataHoraFuncionamento = dataHoraFuncionamento;
@@ -42,7 +42,7 @@ public class Estabelecimento {
     }
 
     public Estabelecimento(int id, String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
-                           String estado, String cep, String tipo, byte[] fotoPerfil, String descricao,
+                           String estado, String cep, String tipo, String fotoPerfil, String descricao,
                            String usuarioEmail, int status) {
         this.id = id;
         this.nome = nome;
@@ -130,11 +130,11 @@ public class Estabelecimento {
         this.tipo = tipo;
     }
 
-    public byte[] getFotoPerfil() {
+    public String getFotoPerfil() {
         return fotoPerfil;
     }
 
-    public void setFotoPerfil(byte[] fotoPerfil) {
+    public void setFotoPerfil(String fotoPerfil) {
         this.fotoPerfil = fotoPerfil;
     }
 
@@ -182,7 +182,7 @@ public class Estabelecimento {
                 ", estado='" + estado + '\'' +
                 ", cep='" + cep + '\'' +
                 ", tipo='" + tipo + '\'' +
-                ", fotoPerfil=" + Arrays.toString(fotoPerfil) +
+                ", fotoPerfil=" + fotoPerfil + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", status=" + status +
                 '}';

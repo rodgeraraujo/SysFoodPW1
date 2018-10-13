@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.Base64;
 
 public class CadastrarEstabelecimento implements Command {
     @Override
@@ -39,10 +40,12 @@ public class CadastrarEstabelecimento implements Command {
         String usuarioEmail = u.getEmail();
         int status = e.getATIVO();
 
-        byte[] fotoPerfil = new byte[(int) part.getSize()];
+        byte[] foto = new byte[(int) part.getSize()];
         InputStream stream = part.getInputStream();
-        stream.read(fotoPerfil);
+        stream.read(foto);
         stream.close();
+
+        String fotoPerfil = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
         GerenciadorEstabelecimento gerenciadorEstabelecimento = new GerenciadorEstabelecimento();
         Boolean cadastrar = gerenciadorEstabelecimento.cadastrar(nome, dataHoraFuncionamento, rua, numero, cidade,

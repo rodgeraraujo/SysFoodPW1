@@ -159,7 +159,7 @@
 
                 <div class="card-post">
                     <div class="row">
-                        <form method="post" action="/front?action=PublicacaoController" enctype="multipart/form-data">
+                        <form method="post" action="/front?action=SalvarPublicacao" enctype="multipart/form-data">
                             <%--<div class="col-sm-8">--%>
                                 <%--<textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>--%>
                                 <%--<br>--%>

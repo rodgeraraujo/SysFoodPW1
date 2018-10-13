@@ -21,7 +21,7 @@ import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PublicacaoController implements Command {
+public class SalvarPublicacao implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException,
             PersistenciaException, SQLException {

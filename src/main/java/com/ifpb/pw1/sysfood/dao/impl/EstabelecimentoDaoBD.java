@@ -10,7 +10,10 @@ import com.sun.javafx.embed.EmbeddedStageInterface;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EstabelecimentoDaoBD implements EstabelecimentoDao {
     private DataBase props;
@@ -23,7 +26,6 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
 
     @Override
     public Boolean criar(Estabelecimento novo) throws PersistenciaException {
-        System.out.println(novo);
         String sql = "INSERT INTO estabelecimento(nome, funcionamento, rua, numero, cidade, " +
                     "estado, cep, tipo, fotoPerfil, descricao, email_usuario, status) " +
                     "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -37,7 +39,7 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
             st.setString(6, novo.getEstado());
             st.setString(7, novo.getCep());
             st.setString(8, novo.getTipo());
-            st.setBytes(9, novo.getFotoPerfil());
+            st.setString(9, novo.getFotoPerfil());
             st.setString(10, novo.getDescricao());
             st.setString(11, novo.getUsuarioEmail());
             st.setInt(12, novo.getStatus());
@@ -49,6 +51,48 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
         } catch (SQLException e) {
             throw new PersistenciaException(e);
         }
+    }
+
+    @Override
+    public List<Estabelecimento> buscarEstabelecimento(String emailUsuario) {
+        System.out.println(emailUsuario);
+        try {
+            String sql = "SELECT * FROM estabelecimento WHERE email_usuario = '"+ emailUsuario +"'";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+
+            List<Estabelecimento> estabelecientoList = new ArrayList<>();
+            while (resultado.next()){
+
+                Estabelecimento e = new Estabelecimento(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("funcionamento"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("tipo"),
+                        resultado.getString("fotoperfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("email_usuario"),
+                        resultado.getInt("status")
+
+                );
+
+                estabelecientoList.add(e);
+            }
+
+            resultado.close();
+            stmt.close();
+            return estabelecientoList;
+            // conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override

@@ -132,6 +132,7 @@
                     <option value="tipo">Selecione o Tipo</option>
                     <option value="restaurante">Restaurante</option>
                     <option value="cafeteria">Cafeteria</option>
+                    <option value="pizzaria">Pizzaria</option>
                     <option value="outro">Outro</option>
                 </select>
             </div>

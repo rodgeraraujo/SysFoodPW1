@@ -30,7 +30,7 @@ CREATE TABLE estabelecimento(
     cep VARCHAR(15),
     tipo VARCHAR(50),
     funcionamento VARCHAR(10) NOT NULL,
-    fotoperfil bytea NOT NULL,
+    fotoperfil VARCHAR NOT NULL,
     descricao VARCHAR(200),
     email_usuario VARCHAR(50) NOT NULL,
     status int NOT NULL,

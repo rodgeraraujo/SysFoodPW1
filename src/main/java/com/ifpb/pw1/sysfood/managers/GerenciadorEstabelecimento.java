@@ -19,7 +19,7 @@ public class GerenciadorEstabelecimento {
     }
 
     public Boolean cadastrar(String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
-                             String estado, String cep, String tipo, byte[] fotoPerfil, String descricao, String usuarioEmail, int status)
+                             String estado, String cep, String tipo, String fotoPerfil, String descricao, String usuarioEmail, int status)
             throws PersistenciaException {
 
         Estabelecimento estabelecimento = new Estabelecimento(nome, dataHoraFuncionamento, rua, numero, cidade,
