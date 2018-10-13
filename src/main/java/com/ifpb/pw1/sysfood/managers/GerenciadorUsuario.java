@@ -55,5 +55,9 @@ public class GerenciadorUsuario {
         return dao.buscaPublicacao();
     }
 
+    public List<Usuario> buscaNome(String nome){
+        return dao.buscarNome(nome);
+    }
+
 
 }

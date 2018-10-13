@@ -11,6 +11,7 @@ public interface EstabelecimentoDao {
     Boolean criar(Estabelecimento novo) throws PersistenciaException;
 
     List<Estabelecimento> buscarEstabelecimento(String emailUsuario);
+    List<Estabelecimento> buscarNome(String nome);
 
     Estabelecimento buscar_id(int id) throws PersistenciaException, SQLException, IOException;
 }

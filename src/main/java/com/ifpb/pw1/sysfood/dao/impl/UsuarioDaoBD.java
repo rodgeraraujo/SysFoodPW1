@@ -182,6 +182,49 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
+    public List<Usuario> buscarNome(String nome) {
+        try {
+            String sql = "SELECT * FROM Usuario WHERE nome = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, nome);
+            ResultSet resultado = stmt.executeQuery();
+            List<Usuario> user = new ArrayList<Usuario>();
+            while (!resultado.isLast()){
+
+                if(resultado.next()){
+                    Usuario u = new Usuario(
+                            resultado.getInt("id"),
+                            resultado.getString("nome"),
+                            resultado.getString("email"),
+                            resultado.getString("profissao"),
+                            resultado.getString("aniversario"),
+                            resultado.getString("sexo"),
+                            resultado.getBytes("fotoPerfil"),
+                            resultado.getString("descricao"),
+                            resultado.getString("rua"),
+                            resultado.getString("numero"),
+                            resultado.getString("cidade"),
+                            resultado.getString("estado"),
+                            resultado.getString("cep"),
+                            resultado.getString("telefone"),
+                            resultado.getString("senha")
+                    );
+                    user.add(u);
+            }
+                //conexao.close();
+            }
+            resultado.close();
+            stmt.close();
+            return user;
+//            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
     public List<Publicacao> buscaPublicacao() {
         try {
             String sql = "SELECT * FROM publicacao ORDER BY id DESC";

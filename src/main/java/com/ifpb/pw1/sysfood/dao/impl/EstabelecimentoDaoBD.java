@@ -96,6 +96,48 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
     }
 
     @Override
+    public List<Estabelecimento> buscarNome(String nome) {
+
+        try{
+            String sql = "SELECT * FROM Estabelecimento WHERE nome = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, nome);
+            ResultSet resultado = stmt.executeQuery();
+            List<Estabelecimento> estabelecimentos = new ArrayList<Estabelecimento>();
+
+            while(!resultado.isLast()){
+                if(resultado.next()){
+                    Estabelecimento e = new Estabelecimento(
+                            resultado.getInt("id"),
+                            resultado.getString("nome"),
+                            resultado.getString("funcionamento"),
+                            resultado.getString("rua"),
+                            resultado.getString("numero"),
+                            resultado.getString("cidade"),
+                            resultado.getString("estado"),
+                            resultado.getString("cep"),
+                            resultado.getString("tipo"),
+                            resultado.getString("fotoperfil"),
+                            resultado.getString("descricao"),
+                            resultado.getString("email_usuario"),
+                            resultado.getInt("status")
+
+                    );
+                    estabelecimentos.add(e);
+                }
+                resultado.close();
+                stmt.close();
+                return estabelecimentos;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    @Override
     public Estabelecimento buscar_id(int id) throws PersistenciaException, SQLException, IOException {
         try {
             String sql = "SELECT * FROM estabelecimento WHERE id = ?";

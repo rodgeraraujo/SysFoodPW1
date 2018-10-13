@@ -9,6 +9,7 @@ import com.ifpb.pw1.sysfood.entities.Estabelecimento;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.List;
 
 public class GerenciadorEstabelecimento {
 
@@ -32,5 +33,9 @@ public class GerenciadorEstabelecimento {
 
     public Estabelecimento buscar_id(int id) throws PersistenciaException, IOException, SQLException {
         return dao.buscar_id(id);
+    }
+
+    public List<Estabelecimento> buscarNome(String nome){
+        return dao.buscarNome(nome);
     }
 }

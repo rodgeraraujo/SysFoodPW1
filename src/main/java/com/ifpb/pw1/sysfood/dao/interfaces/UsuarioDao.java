@@ -15,8 +15,11 @@ public interface UsuarioDao {
     boolean salvarPublicacao(Publicacao novo) throws PersistenciaException;
     Usuario buscarId(int value) throws IOException;
 
+    List<Usuario> buscarNome(String nome);
+
     List<Publicacao> buscaPublicacao();
 
     List<Publicacao> buscaPublicacaoID(int usuarioID);
+
 }
 
