@@ -377,7 +377,7 @@
                                     </div>
                                     <div class="col-sm-3 hidden-xs">
                                         <p>
-                                            <a href="./page/profile.jsp?id=<c:out value="${estabelecimento.id}"/>" title="Visualizar">
+                                            <a href="/front?action=BuscarEstabelecimento?id=<c:out value="${estabelecimento.id}"/>" title="Visualizar">
                                                 <span class="badge badge-replay">Ver &gt;</span>
                                             </a>
                                         </p>

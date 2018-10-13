@@ -7,6 +7,7 @@ import com.ifpb.pw1.sysfood.dao.interfaces.EstabelecimentoDao;
 import com.ifpb.pw1.sysfood.entities.Estabelecimento;
 import com.sun.javafx.embed.EmbeddedStageInterface;
 
+import javax.enterprise.inject.New;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -55,7 +56,6 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
 
     @Override
     public List<Estabelecimento> buscarEstabelecimento(String emailUsuario) {
-        System.out.println(emailUsuario);
         try {
             String sql = "SELECT * FROM estabelecimento WHERE email_usuario = '"+ emailUsuario +"'";
             PreparedStatement stmt = conexao.prepareStatement(sql);
@@ -96,7 +96,42 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
     }
 
     @Override
-    public Estabelecimento buscar(String email) throws PersistenciaException, SQLException, IOException {
+    public Estabelecimento buscar_id(int id) throws PersistenciaException, SQLException, IOException {
+        System.out.println(id);
+        try {
+            String sql = "SELECT * FROM Usuario WHERE id = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet resultado = stmt.executeQuery();
+
+            if(resultado.next()){
+                Estabelecimento novo = new Estabelecimento(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("funcionamento"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("tipo"),
+                        resultado.getString("fotoperfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("email_usuario"),
+                        resultado.getInt("status")
+                );
+                resultado.close();
+                stmt.close();
+                return novo;
+            }
+
+            resultado.close();
+            stmt.close();
+            // conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }

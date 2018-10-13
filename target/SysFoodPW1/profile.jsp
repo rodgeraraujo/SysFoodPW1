@@ -370,14 +370,14 @@
                                     </div>
                                     <div class="col-sm-4 col-xs-9">
                                         <p>
-                                            <br>
+                                            <br><br>
                                             <b><c:out value="${estabelecimento.nome}"/></b>
                                         </p>
                                         <%--<p><b>Estabelecimento nome</b> <span class="badge">1</span></p>--%>
                                     </div>
                                     <div class="col-sm-3 hidden-xs">
                                         <p>
-                                            <a href="./page/profile.jsp?id=<c:out value="${estabelecimento.id}"/>" title="Visualizar">
+                                            <a href="/front?action=BuscarEstabelecimento?id=<c:out value="${estabelecimento.id}"/>" title="Visualizar">
                                                 <span class="badge badge-replay">Ver &gt;</span>
                                             </a>
                                         </p>

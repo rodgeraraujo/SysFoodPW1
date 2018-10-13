@@ -6,6 +6,8 @@ import com.ifpb.pw1.sysfood.dao.interfaces.EstabelecimentoDao;
 import com.ifpb.pw1.sysfood.dao.interfaces.FactoryDao;
 import com.ifpb.pw1.sysfood.entities.Estabelecimento;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.sql.Time;
 
 public class GerenciadorEstabelecimento {
@@ -26,5 +28,9 @@ public class GerenciadorEstabelecimento {
                 estado, cep, tipo, fotoPerfil, descricao, usuarioEmail, status);
 
         return dao.criar(estabelecimento);
+    }
+
+    public Estabelecimento buscar_id(int id) throws PersistenciaException, IOException, SQLException {
+        return dao.buscar_id(id);
     }
 }

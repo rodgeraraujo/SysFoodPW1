@@ -1,12 +1,6 @@
 <%@ page import="com.ifpb.pw1.sysfood.entities.Usuario" %>
-<%@ page import="com.ifpb.pw1.sysfood.managers.GerenciadorUsuario" %>
-<%@ page import="java.awt.image.BufferedImage" %>
-<%@ page import="javax.imageio.ImageIO" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.io.ByteArrayInputStream" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="java.io.FileOutputStream" %>
-<%@ page import="java.sql.Blob" %><%--
+<%@ page import="com.ifpb.pw1.sysfood.entities.Estabelecimento" %>
+<%@ page import="com.ifpb.pw1.sysfood.managers.GerenciadorEstabelecimento" %><%--
   Created by IntelliJ IDEA.
   User: Roger
   Date: 25/09/2018
@@ -17,9 +11,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="m" uri="/WEB-INF/myTags" %>
 <%
-    GerenciadorUsuario gerencia = new GerenciadorUsuario();
+    GerenciadorEstabelecimento gerencia = new GerenciadorEstabelecimento();
     Usuario u = (Usuario) session.getAttribute("usuario");
-    String id = request.getParameter("id");
 
 //    if  (id !=null){
 //        Usuario usuarioAtual = gerencia.buscarId(Integer.valueOf(id));
@@ -39,21 +32,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>${sessionScope.usuario.nome} | Profile!</title>
+    <title>${sessionScope.estabelecimento.nome} | Profile!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
-    <script src="./assets/js/jquery-3.2.0.min.js.download"></script>
-    <script src="./assets/js/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+    <script src="../assets/js/jquery-3.2.0.min.js.download"></script>
+    <script src="../assets/js/bootstrap.min.js.download"></script>
     <link href="https://socialyte.codeplus.it/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/bootstrap-switch.min.css">
-    <script src="./assets/profile/js/bootstrap-switch.min.js"></script>
-    <script src="./assets/profile/js/twemoji.min.js"></script>
-    <script src="./assets/profile/js/lazy-load.min.js"></script>
-    <script src="./assets/profile/js/socialyte.min.js"></script>
-    <link href="./assets/css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-switch.min.css">
+    <script src="../assets/profile/js/bootstrap-switch.min.js"></script>
+    <script src="../assets/profile/js/twemoji.min.js"></script>
+    <script src="../assets/profile/js/lazy-load.min.js"></script>
+    <script src="../assets/profile/js/socialyte.min.js"></script>
+    <link href="../assets/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
@@ -144,11 +137,11 @@
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
         <a href="profile.jsp" title="Profile">
-            <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
+            <img src="${sessionScope.estabelecimento.fotoPerfil}" alt="User name" class="img-circle img-user">
         </a>
-        <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
+        <h2 class="text-center hidden-xs"><a href="./page/profile.jsp?id=${sessionScope.estabelecimento.id}" title="Profile">${sessionScope.estabelecimento.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
-            <i>${sessionScope.usuario.descricao}</i>
+            <i>${sessionScope.estabelecimento.descricao}</i>
         </p>
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
@@ -280,14 +273,14 @@
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <ul class="profile-data">
-                            <li><b>Nome:</b> ${sessionScope.usuario.nome}</li>
-                            <li><b>Email:</b>  ${sessionScope.usuario.email}</li>
-                            <li><b>Data de aniversário:</b>  ${sessionScope.usuario.aniversario}</li>
-                            <li><b>Profissão:</b> ${sessionScope.usuario.profissao}</li>
-                            <li><b>Telefone:</b> ${sessionScope.usuario.telefone}</li>
-                            <li><b>Sexo:</b> ${sessionScope.usuario.sexo}</li>
-                            <li><b>Endereco:</b> ${sessionScope.usuario.rua}, ${sessionScope.usuario.numero},
-                                ${sessionScope.usuario.cep}, ${sessionScope.usuario.cidade} - ${sessionScope.usuario.estado}</li>
+                            <li><b>Nome:</b> ${sessionScope.estabelecimento.nome}</li>
+                            <li><b>Funcionamento:</b>  ${sessionScope.estabelecimento.funcionamento}</li>
+                            <li><b>Data de aniversário:</b>  ${sessionScope.estabelecimento.aniversario}</li>
+                            <li><b>Tipo:</b> ${sessionScope.estabelecimento.tipo}</li>
+                            <li><b>Endereco:</b> ${sessionScope.estabelecimento.rua}, ${sessionScope.estabelecimento.numero},
+                                ${sessionScope.estabelecimento.cep}, ${sessionScope.estabelecimento.cidade} - ${sessionScope.estabelecimento.estado}</li>
+                            <li><b>Email dono::</b> ${sessionScope.estabelecimento.usuarioEmail}</li>
+                            <li><b>ID da página:</b> ${sessionScope.estabelecimento.id}</li>
                         </ul>
                         <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
                     </div>
