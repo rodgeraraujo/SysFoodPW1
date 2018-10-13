@@ -29,8 +29,6 @@ public class BuscarEstabelecimento implements Command {
 
             Estabelecimento e = gerencia.buscar_id(id);
 
-            System.out.println(e);
-
             session.setAttribute("estabelecimento", e);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/page/profile.jsp?id="+ id);

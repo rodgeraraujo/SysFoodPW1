@@ -97,9 +97,8 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
 
     @Override
     public Estabelecimento buscar_id(int id) throws PersistenciaException, SQLException, IOException {
-        System.out.println(id);
         try {
-            String sql = "SELECT * FROM Usuario WHERE id = ?";
+            String sql = "SELECT * FROM estabelecimento WHERE id = ?";
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setInt(1, id);
             ResultSet resultado = stmt.executeQuery();
