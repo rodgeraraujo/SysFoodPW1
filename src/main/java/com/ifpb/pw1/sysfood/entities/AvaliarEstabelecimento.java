@@ -2,17 +2,24 @@ package com.ifpb.pw1.sysfood.entities;
 
 import java.security.Timestamp;
 
-public class avaliarEstabelecimento {
+public class AvaliarEstabelecimento {
     private int id;
     private int idUsuario;
     private int idEstabelecimento;
     private float avaliacao;
     private Timestamp dataAvaliacao;
 
-    public avaliarEstabelecimento() {
+    public AvaliarEstabelecimento() {
     }
 
-    public avaliarEstabelecimento(int id, int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
+    public AvaliarEstabelecimento(int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
+        this.idUsuario = idUsuario;
+        this.idEstabelecimento = idEstabelecimento;
+        this.avaliacao = avaliacao;
+        this.dataAvaliacao = dataAvaliacao;
+    }
+
+    public AvaliarEstabelecimento(int id, int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.idEstabelecimento = idEstabelecimento;
@@ -62,7 +69,7 @@ public class avaliarEstabelecimento {
 
     @Override
     public String toString() {
-        return "avaliarEstabelecimento{" +
+        return "AvaliarEstabelecimento{" +
                 "id=" + id +
                 ", idUsuario=" + idUsuario +
                 ", idEstabelecimento=" + idEstabelecimento +
