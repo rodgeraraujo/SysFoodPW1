@@ -15,6 +15,7 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.Base64;
 
 public class CadastrarComida implements Command {
@@ -28,7 +29,9 @@ public class CadastrarComida implements Command {
         String nome = req.getParameter("nome");
         String descricao = req.getParameter("descricao");
         Part part = req.getPart("fotoComida");
-        String data = req.getParameter("dataComida");
+
+        Timestamp dataPublicacao = new Timestamp(System.currentTimeMillis());
+
         int idEstabelecimento = e.getId();
 
         byte[] foto = new byte[(int) part.getSize()];
@@ -36,9 +39,12 @@ public class CadastrarComida implements Command {
         stream.read(foto);
         stream.close();
 
-        gerenciador.cadastrar(new Comida(nome, descricao, idEstabelecimento, foto, data));
+        String fotoComida = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
+
+
+        gerenciador.cadastrar(new Comida(nome, descricao, idEstabelecimento, fotoComida, dataPublicacao));
         stream.close();
-        RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp?value=3");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("front?action=BuscarEstabelecimento&id=" + idEstabelecimento);
         dispatcher.forward(req, res);
     }
 

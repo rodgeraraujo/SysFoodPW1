@@ -55,8 +55,8 @@ CREATE TABLE comida(
     nome VARCHAR(50) NOT NULL, 
     desscricao VARCHAR(150) NOT NULL,
     idEstabelecimento int, 
-    foto bytea,
-    dataPublicacao VARCHAR(12),
+    foto VARCHAR,
+    dataPublicacao TIMESTAMP,
     CONSTRAINT comida_pkey PRIMARY KEY (id),
     CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES estabelecimento(id)
 );

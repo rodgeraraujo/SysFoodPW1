@@ -5,10 +5,14 @@ import com.ifpb.pw1.sysfood.dao.connect.DataBase;
 import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 import com.ifpb.pw1.sysfood.dao.interfaces.ComidaDao;
 import com.ifpb.pw1.sysfood.entities.Comida;
+import com.ifpb.pw1.sysfood.entities.Estabelecimento;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComidaDaoBD implements ComidaDao {
 
@@ -30,7 +34,7 @@ public class ComidaDaoBD implements ComidaDao {
             st.setString(1, comida.getNome());
             st.setString(2, comida.getDescricao());
             st.setInt(3, comida.getIdEstabelecimento());
-            st.setBytes(4, comida.getFoto());
+            st.setString(4, comida.getFoto());
             st.setObject(5, comida.getDataPublicacao());
 
             boolean inserted = st.executeUpdate() > 0;
@@ -40,5 +44,37 @@ public class ComidaDaoBD implements ComidaDao {
         } catch (SQLException e) {
             throw new PersistenciaException(e);
         }
+    }
+
+    public List<Comida> buscar_comida(int id) {
+        try {
+            String sql = "SELECT * FROM comida WHERE id = '"+ id +"'";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+
+            List<Comida> comidaList = new ArrayList<>();
+            while (resultado.next()){
+
+                Comida c = new Comida(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("desscricao"),
+                        resultado.getInt("idEstabelecimento"),
+                        resultado.getString("foto"),
+                        resultado.getTimestamp("dataPublicacao")
+                );
+
+                comidaList.add(c);
+            }
+
+            resultado.close();
+            stmt.close();
+            return comidaList;
+            // conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

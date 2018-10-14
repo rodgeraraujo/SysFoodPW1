@@ -53,86 +53,7 @@
 <body id="wall">
 
 <!--Header with Nav -->
-<header class="text-right">
-    <form class="text-left search" method="GET">
-        <input name="q" type="text" placeholder="Search..">
-    </form>
-    <div class="menu-icon">
-        <div class="dropdown">
-                    <span class="dropdown-toggle" role="button" id="dropdownSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <span class="hidden-xs hidden-sm"> </span> <i class="fa fa-cogs" aria-hidden="true"></i>
-                    </span>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSettings">
-                <li>
-                    <a href="settings.jsp" title="Settings" data-toggle="modal" data-target="#settingsmodal">
-                        <div class="col-xs-4">
-                            <i class="fa fa-wrench" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-xs-8 text-left">
-                            <span>Configurações</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="establishment.jsp" title="Establishment" data-toggle="modal" data-target="#establishmentmodel">
-                        <div class="col-xs-4">
-                            <i class="fas fa-store" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-xs-8 text-left">
-                            <span>Estabelecimento</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#faq" title="Settings">
-                        <div class="col-xs-4">
-                            <i class="fa fa-question" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-xs-8 text-left">
-                            <span>FAQ</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/front?action=Logout" title="Settings">
-                        <div class="col-xs-4">
-                            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-xs-8 text-left">
-                            <span>Sair</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="second-icon dropdown menu-icon">
-                <span class="dropdown-toggle" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <span class="hidden-xs hidden-sm">Notifications</span> <i class="fas fa-bell" aria-hidden="true"></i> <span class="badge">2</span>
-                </span>
-        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownNotification">
-            <li class="new-not">
-                <a href="#link1" title="User name comment"><img src="./profile/user2.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
-            <li class="new-not">
-                <a href="#link2" title="User name comment"><img src="./profile/user3.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
-            <li>
-                <a href="#link3" title="User name comment"><img src="./profile/user4.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#allnotifications" title="All notifications">Todas as notificações</a></li>
-        </ul>
-    </div>
-    <div class="second-icon menu-icon">
-                <span><a href="profile.jsp" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
-                </span>
-    </div>
-    <div class="second-icon menu-icon">
-                <span><a href="home.jsp" title="Wall"><span class="hidden-xs hidden-sm">Home</span> <i class="fa fa-database" aria-hidden="true"></i></a>
-                </span>
-    </div>
-</header>
+    <jsp:include page="/navbar.jsp"/>
 
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
@@ -266,21 +187,22 @@
                                     </a>
                                 </div>
                             </div>
-                            <%--FOR EACH COMIDAS - INICIO--%>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user2.jpg" alt="Comida nome" class="img-circle img-user">
+                            <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.ComidaDaoBD"/>
+                            <c:forEach var="comida" items="${dao.buscar_comida(sessionScope.estabelecimento.id)}">
+                                <div class="row row-user-list">
+                                    <div class="col-sm-2 col-xs-3">
+                                        <img src="<c:out value="${comida.foto}"/>" alt="Comida nome" class="img-circle img-user">
+                                    </div>
+                                    <div class="col-sm-4 col-xs-9">
+                                        <p><b>${comida.nome}</b> <span class="badge">1</span></p>
+                                        <p class="chat-time">${comida.dataPublicacao}</p>
+                                        <p><c:out value="${comida.descricao}"/></p>
+                                    </div>
+                                    <div class="col-sm-3 hidden-xs">
+                                        <p><a href="#cadastrarItem" title="Avaliar"><span class="badge badge-replay">Avaliar &gt;</span></a></p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-4 col-xs-9">
-                                    <p><b>Comida nome</b> <span class="badge">1</span></p>
-                                    <p class="chat-time">data</p>
-                                    <p>descrição</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="#cadastrarItem" title="Avaliar"><span class="badge badge-replay">Avaliar &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <%--FOR EACH COMIDAS - FINAL--%>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>

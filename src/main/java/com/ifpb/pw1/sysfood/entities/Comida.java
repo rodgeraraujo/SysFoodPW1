@@ -1,5 +1,6 @@
 package com.ifpb.pw1.sysfood.entities;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 
 public class Comida {
@@ -7,28 +8,31 @@ public class Comida {
     private String nome;
     private String descricao;
     private int idEstabelecimento;
-    private byte[] foto;
-    private String dataPublicacao;
+    private String fotoComida;
+    private Timestamp dataPublicacao;
 
 
     public Comida() {
     }
 
-    public Comida(String nome, String descricao, int idEstabelecimento, byte[] foto, String dataPublicacao) {
+    public Comida(String nome, String descricao, int idEstabelecimento, String fotoComida, Timestamp dataPublicacao) {
         this.nome = nome;
         this.descricao = descricao;
         this.idEstabelecimento = idEstabelecimento;
-        this.foto = foto;
+        this.fotoComida = fotoComida;
         this.dataPublicacao = dataPublicacao;
     }
 
-    public Comida(int id, String nome, String descricao, int idEstabelecimento, byte[] foto, String dataPublicacao) {
+    public Comida(int id, String nome, String descricao, int idEstabelecimento, String fotoComida, Timestamp dataPublicacao) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.idEstabelecimento = idEstabelecimento;
-        this.foto = foto;
+        this.fotoComida = fotoComida;
         this.dataPublicacao = dataPublicacao;
+    }
+
+    public Comida(int id, String nome, String descricao, String idEstabelecimento, byte fotoperfil, String dataPublicacao) {
     }
 
     public int getId() {
@@ -63,19 +67,19 @@ public class Comida {
         this.idEstabelecimento = idEstabelecimento;
     }
 
-    public byte[] getFoto() {
-        return foto;
+    public String getFoto() {
+        return fotoComida;
     }
 
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
+    public void setFoto(String foto) {
+        this.fotoComida = foto;
     }
 
-    public String getDataPublicacao() {
+    public Timestamp getDataPublicacao() {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(String dataPublicacao) {
+    public void setDataPublicacao(Timestamp dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 
@@ -86,7 +90,7 @@ public class Comida {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", idEstabelecimento=" + idEstabelecimento +
-                ", foto=" + foto +
+                ", foto=" + fotoComida +
                 ", dataPublicacao=" + dataPublicacao +
                 '}';
     }
