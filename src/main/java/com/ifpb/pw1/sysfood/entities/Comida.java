@@ -1,6 +1,5 @@
 package com.ifpb.pw1.sysfood.entities;
 
-import java.security.Timestamp;
 import java.util.Arrays;
 
 public class Comida {
@@ -9,13 +8,21 @@ public class Comida {
     private String descricao;
     private int idEstabelecimento;
     private byte[] foto;
-    private Timestamp dataPublicacao;
+    private String dataPublicacao;
 
 
     public Comida() {
     }
 
-    public Comida(int id, String nome, String descricao, int idEstabelecimento, byte[] foto, Timestamp dataPublicacao) {
+    public Comida(String nome, String descricao, int idEstabelecimento, byte[] foto, String dataPublicacao) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.idEstabelecimento = idEstabelecimento;
+        this.foto = foto;
+        this.dataPublicacao = dataPublicacao;
+    }
+
+    public Comida(int id, String nome, String descricao, int idEstabelecimento, byte[] foto, String dataPublicacao) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -64,11 +71,11 @@ public class Comida {
         this.foto = foto;
     }
 
-    public Timestamp getDataPublicacao() {
+    public String getDataPublicacao() {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(Timestamp dataPublicacao) {
+    public void setDataPublicacao(String dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 
@@ -79,7 +86,7 @@ public class Comida {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", idEstabelecimento=" + idEstabelecimento +
-                ", foto=" + Arrays.toString(foto) +
+                ", foto=" + foto +
                 ", dataPublicacao=" + dataPublicacao +
                 '}';
     }

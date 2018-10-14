@@ -40,6 +40,16 @@
                 <textarea class="form-control" placeholder="Descrição" name="descricao" id="descricao" cols="20" rows="10"></textarea>
             </div>
         </div>
+        <div class="row modal-row">
+            <div class="col-sm-3">
+                <p>
+                    <label>Descrição: </label>
+                </p>
+            </div>
+            <div class="col-sm-5">
+                <input type="date" class="form-control" name="dataComida" id="dataComida">
+            </div>
+        </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             <button type="submit" class="btn btn-social">Salvar</button>
