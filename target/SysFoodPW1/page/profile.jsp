@@ -48,6 +48,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style-rating.css" type="text/css">
+
 </head>
 
 <body id="wall">
@@ -64,6 +66,9 @@
         <p class="text-center user-description hidden-xs">
             <i>${sessionScope.estabelecimento.descricao}</i>
         </p>
+
+        <jsp:include page="/page/establishment_rating.jsp"/>
+
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
     <div class="content-posts profile-content">
