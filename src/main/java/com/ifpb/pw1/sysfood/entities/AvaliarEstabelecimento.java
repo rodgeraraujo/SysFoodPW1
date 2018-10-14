@@ -1,6 +1,5 @@
 package com.ifpb.pw1.sysfood.entities;
-
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class AvaliarEstabelecimento {
     private int id;
@@ -8,9 +7,6 @@ public class AvaliarEstabelecimento {
     private int idEstabelecimento;
     private float avaliacao;
     private Timestamp dataAvaliacao;
-
-    public AvaliarEstabelecimento() {
-    }
 
     public AvaliarEstabelecimento(int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
         this.idUsuario = idUsuario;

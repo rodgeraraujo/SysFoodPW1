@@ -1,12 +1,10 @@
 package com.ifpb.pw1.sysfood.dao.factory;
 
+import com.ifpb.pw1.sysfood.dao.impl.AvaliarEstabelecimentoDaoBD;
 import com.ifpb.pw1.sysfood.dao.impl.ComidaDaoBD;
 import com.ifpb.pw1.sysfood.dao.impl.EstabelecimentoDaoBD;
 import com.ifpb.pw1.sysfood.dao.impl.UsuarioDaoBD;
-import com.ifpb.pw1.sysfood.dao.interfaces.ComidaDao;
-import com.ifpb.pw1.sysfood.dao.interfaces.EstabelecimentoDao;
-import com.ifpb.pw1.sysfood.dao.interfaces.FactoryDao;
-import com.ifpb.pw1.sysfood.dao.interfaces.UsuarioDao;
+import com.ifpb.pw1.sysfood.dao.interfaces.*;
 
 import java.sql.SQLException;
 
@@ -37,6 +35,18 @@ public class FactoryBD implements FactoryDao {
         try{
             return new ComidaDaoBD();
         }catch (SQLException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public AvaliaEstabelecimentoDao getAvaliaEstabelecimentoDao() {
+        try{
+            return new AvaliarEstabelecimentoDaoBD();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;

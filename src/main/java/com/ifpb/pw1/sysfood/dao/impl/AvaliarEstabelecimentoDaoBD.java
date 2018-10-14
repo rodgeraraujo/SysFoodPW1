@@ -14,7 +14,7 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
     private DataBase props;
     private Connection conexao;
 
-    private AvaliarEstabelecimentoDaoBD() throws SQLException, ClassNotFoundException {
+    public AvaliarEstabelecimentoDaoBD() throws SQLException, ClassNotFoundException {
         this.props = new DataBase();
         this.conexao = ConFactory.getConnection(props.getUrl(),props.getUser(),props.getPassword());
     }
