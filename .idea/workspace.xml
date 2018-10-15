@@ -7,57 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a450eb6-a08b-4201-8c36-2d7b8de43db3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/AvaliarEstabelecimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/AvaliarEstabelecimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/AvaliarEstabeleciment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/BuscarEstabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/BuscarPublicacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/CadastrarComida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/CadastrarEstabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/CadastrarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/DadosController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/Logout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/Pesquisa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/connect/ConFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/connect/DataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/exceptions/PersistenciaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/factory/Factory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/factory/FactoryBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/AvaliarComidaDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/ComidaDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/EstabelecimentoDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/PesquisaDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/AvaliaEstabelecimentoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/AvaliarComidaDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/ComidaDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/EstabelecimentoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/FactoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/LoginDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/PesquisaDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/dao/interfaces/UsuarioDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Amizade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/AmizadeStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Comida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Estabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/LoginBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Publicacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Recomendacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Solicitacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/avaliarComida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/entities/avaliarEstabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/filter/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciaPesquisa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciadorAvaliaComida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciadorAvaliaEstabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciadorComida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciadorEstabelecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/managers/GerenciadorUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/servlets/FrontController.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avaliacaoEstabelecimento.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -216,17 +169,26 @@
       <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/page/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3043">
-              <caret line="179" column="57" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="57" />
+            <state relative-caret-position="-731">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="avaliacoesEstabelecimento.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/avaliacoesEstabelecimento.jsp">
+      <file leaf-file-name="establishment_rating.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="20" column="116" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="avaliacaoEstabelecimento.tag" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avaliacaoEstabelecimento.tag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -234,8 +196,8 @@
       <file leaf-file-name="AvaliarEstabelecimentoDaoBD.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+            <state relative-caret-position="143">
+              <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,11 +205,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvaliarEstabelecimento.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/AvaliarEstabelecimento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+      <file leaf-file-name="avaliarestabelecimento" pinned="false" current-in-tab="false">
+        <entry file="das://df06144d-4f82-4eb7-ace1-aa66ee9bcff9/database/sysfood/schema/public/table/avaliarestabelecimento">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -309,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/search.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/PesquisaDao.java" />
@@ -352,14 +313,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/AvaliarEstabeleciment.java" />
         <option value="$PROJECT_DIR$/Banco de Dados/script_sql.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/avaliaEstabelecimento.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/css/style-rating.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/AvaliaEstabelecimentoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/df06144d-4f82-4eb7-ace1-aa66ee9bcff9/console.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/avaliacoesEstabelecimento.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/AvaliarEstabelecimento.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avaliacaoEstabelecimento.tag" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java" />
       </list>
     </option>
   </component>
@@ -497,8 +459,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SysFoodPW1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SysFoodPW1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -528,22 +498,22 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.ifpb.pw1.sysfood.command.impl" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\WEB-INF\tags" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\page" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\old-pages" />
+      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ifpb.pw1.sysfood.dao.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\page" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets\pages" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\page\img" />
       <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ifpb.pw1.sysfood.dao.impl" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\page" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\old-pages" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets" />
-      <recent name="C:\Users\Roger\IdeaProjects\PROGRAMAÇÃO_WEB_I\SysFoodPW1\src\main\webapp\assets\profile\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -867,7 +837,7 @@
       <workItem from="1539525131570" duration="7001000" />
       <workItem from="1539535067731" duration="12531000" />
       <workItem from="1539572218483" duration="8135000" />
-      <workItem from="1539614672665" duration="248000" />
+      <workItem from="1539614672665" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigido NullPointException, quando salva novo usuário">
       <created>1535823420348</created>
@@ -1037,11 +1007,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539574273396</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Corrigido Avaliar Estabelecimento Fix #11">
+      <created>1539615170602</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1539615170602</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243772000" />
+    <option name="totallyTimeSpent" value="245302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,6 +1031,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" type="SLIDING" weight="0.32792208" />
@@ -1075,17 +1053,17 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32954547" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" type="SLIDING" visible="true" weight="0.46266234" />
+      <window_info anchor="bottom" id="Run" order="2" type="SLIDING" weight="0.46266234" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32792208" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32954547" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.2118003" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32792208" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49512988" visible="true" weight="0.2118003" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32980332" />
-      <window_info id="Web" order="5" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
+      <window_info id="Web" order="5" sideWeight="0.5048701" side_tool="true" weight="0.2118003" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="6" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32792208" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32419354" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1130,20 +1108,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/ComidaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1320,6 +1284,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="20" column="43" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1389,13 +1356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/ComidaDaoBD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1427,13 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="179" column="57" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style-rating.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1448,13 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://df06144d-4f82-4eb7-ace1-aa66ee9bcff9/database/sysfood/schema/public/table/avaliarestabelecimento">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/AvaliarEstabelecimento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1464,15 +1410,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/page/avaliacoesEstabelecimento.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        <state relative-caret-position="347">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="117" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://df06144d-4f82-4eb7-ace1-aa66ee9bcff9/database/sysfood/schema/public/table/avaliarestabelecimento">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="116" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avaliacaoEstabelecimento.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/AvaliarEstabelecimentoDaoBD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+        <state relative-caret-position="143">
+          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

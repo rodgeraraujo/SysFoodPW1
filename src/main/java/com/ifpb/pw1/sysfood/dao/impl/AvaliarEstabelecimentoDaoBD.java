@@ -99,5 +99,21 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
         return null;
     }
 
-
+    public boolean buscarAvaliacaoUsuario(int u_id, int e_id) throws SQLException {
+            String sql = "SELECT * FROM avaliarestabelecimento WHERE idusuario = ? AND idestabelecimento = ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, u_id);
+            stmt.setInt(2, e_id);
+            if (stmt.executeQuery().next()) {
+                //stmt.close();
+                //conexao.close();
+                System.out.println("true");
+                stmt.close();
+                return true;
+            }
+            stmt.close();
+            //conexao.close();
+        System.out.println("false");
+        return false;
+    }
 }
