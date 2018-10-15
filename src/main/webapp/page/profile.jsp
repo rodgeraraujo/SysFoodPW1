@@ -180,14 +180,14 @@
                         <div class="scrollbar-container">
                             <div class="row row-user-list">
                                 <div class="col-sm-2 col-xs-3">
-                                    <img src="../assets/img/menu.png" alt="Logo food" class="img-circle img-user">
+                                    <img src="/page/img/menu.png" alt="Logo food" class="img-circle img-user">
                                 </div>
                                 <div class="col-sm-4 col-xs-9">
                                     <p style="text-align: justify"><b>Cadastre um novo item:</b></p>
                                     <p>Abaixo uma lista com todos os itens do cardápio do estabelecimento.</p>
                                 </div>
                                 <div class="col-sm-3 hidden-xs">
-                                    <a href="food.jsp" title="Cadastrar" data-toggle="modal" data-target="#foodmodal">
+                                    <a href="/page/food.jsp" title="Cadastrar" data-toggle="modal" data-target="#foodmodal">
                                         <span class="badge badge-replay">Cadastrar +</span>
                                     </a>
                                 </div>
@@ -224,6 +224,18 @@
         </div>
     </div>
     <div id="foodmodal" class="modal fade text-center">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <div id="avaliarEstblModal" class="modal fade text-center">
+        <div style="width: 500px" class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <div id="avaliacoesEstblModal" class="modal fade text-center">
         <div class="modal-dialog">
             <div class="modal-content">
             </div>

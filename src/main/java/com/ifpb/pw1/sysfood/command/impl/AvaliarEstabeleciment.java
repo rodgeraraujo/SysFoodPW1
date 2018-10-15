@@ -66,17 +66,12 @@ public class AvaliarEstabeleciment implements Command {
             break;
         }
 
-        String comentario = null;
+        String comentario = req.getParameter("comentario");
         Timestamp dataAvaliacao = new Timestamp(System.currentTimeMillis());
 
         AvaliarEstabelecimento avaliar = new AvaliarEstabelecimento(idUsuario, idEstabelecimento, nota, comentario, dataAvaliacao);
 
         gerenciador.Avaliar(avaliar);
-
-        Float avaliacaoNota = gerenciador.MediaNota();
-        System.out.println(avaliacaoNota);
-
-        session.setAttribute("avaliacaoNota", avaliacaoNota);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("front?action=BuscarEstabelecimento&id=" + idEstabelecimento);
         dispatcher.forward(req, res);

@@ -4,11 +4,14 @@ import com.ifpb.pw1.sysfood.dao.connect.ConFactory;
 import com.ifpb.pw1.sysfood.dao.connect.DataBase;
 import com.ifpb.pw1.sysfood.dao.interfaces.AvaliaEstabelecimentoDao;
 import com.ifpb.pw1.sysfood.entities.AvaliarEstabelecimento;
+import com.ifpb.pw1.sysfood.entities.Comida;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
     private DataBase props;
@@ -60,5 +63,39 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public List<AvaliarEstabelecimento> buscar(int id) {
+        try {
+            String sql = "SELECT * FROM avaliarestabelecimento where idestabelecimento = '" + id + "'"
+                    + "ORDER BY dataavaliacao DESC ";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet resultado = stmt.executeQuery();
+
+            List<AvaliarEstabelecimento> avaliacaoList = new ArrayList<>();
+            while (resultado.next()){
+                AvaliarEstabelecimento a = new AvaliarEstabelecimento(
+                        resultado.getInt("id"),
+                        resultado.getInt("idusuario"),
+                        resultado.getInt("idestabelecimento"),
+                        resultado.getFloat("avaliacao"),
+                        resultado.getString("comentario"),
+                        resultado.getTimestamp("dataavaliacao")
+                );
+
+                avaliacaoList.add(a);
+            }
+
+            System.out.println(avaliacaoList);
+            resultado.close();
+            stmt.close();
+            return avaliacaoList;
+            // conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
