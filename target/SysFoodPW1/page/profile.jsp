@@ -92,7 +92,7 @@
                         <div class="row">
                             <div class="col-xs-3 col-sm-2">
                                 <a href="profile.jsp" title="Profile">
-                                    <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user-post">
+                                    <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user-post">
                                 </a>
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">

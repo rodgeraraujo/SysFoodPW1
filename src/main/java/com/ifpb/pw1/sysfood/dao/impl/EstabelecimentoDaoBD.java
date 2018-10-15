@@ -105,30 +105,28 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
             ResultSet resultado = stmt.executeQuery();
             List<Estabelecimento> estabelecimentos = new ArrayList<Estabelecimento>();
 
-            while(!resultado.isLast()){
-                if(resultado.next()){
-                    Estabelecimento e = new Estabelecimento(
-                            resultado.getInt("id"),
-                            resultado.getString("nome"),
-                            resultado.getString("funcionamento"),
-                            resultado.getString("rua"),
-                            resultado.getString("numero"),
-                            resultado.getString("cidade"),
-                            resultado.getString("estado"),
-                            resultado.getString("cep"),
-                            resultado.getString("tipo"),
-                            resultado.getString("fotoperfil"),
-                            resultado.getString("descricao"),
-                            resultado.getString("email_usuario"),
-                            resultado.getInt("status")
+            while (resultado.next()){
+                Estabelecimento e = new Estabelecimento(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("funcionamento"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("tipo"),
+                        resultado.getString("fotoperfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("email_usuario"),
+                        resultado.getInt("status")
 
-                    );
-                    estabelecimentos.add(e);
-                }
-                resultado.close();
-                stmt.close();
-                return estabelecimentos;
+                );
+                estabelecimentos.add(e);
             }
+            resultado.close();
+            stmt.close();
+            return estabelecimentos;
 
         } catch (SQLException e) {
             e.printStackTrace();

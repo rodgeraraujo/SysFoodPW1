@@ -38,7 +38,7 @@ public class SalvarPublicacao implements Command {
                 int idUsuario = u.getId();
                 String dataPublicacao = "" + LocalDate.now();
                 Part part = req.getPart("fotoPublicacao");
-                String usuarioFoto = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(u.getFotoPerfil());
+                String usuarioFoto = u.getFotoPerfil();
 
 
                 byte[] foto = new byte[(int) part.getSize()];

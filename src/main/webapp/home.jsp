@@ -50,7 +50,7 @@
         <!--Wall with Post -->
         <div class="sidebar-nav">
             <a href="profile.jsp" title="Profile">
-                <img width="200" height="200" src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
+                <img width="200" height="200" src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
             </a>
             <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
             <p class="text-center user-description hidden-xs">

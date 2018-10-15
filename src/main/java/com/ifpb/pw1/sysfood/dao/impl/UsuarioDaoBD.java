@@ -39,7 +39,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             st.setString(3, novo.getProfissao());
             st.setString(4, novo.getAniversario());
             st.setString(5, novo.getSexo());
-            st.setBytes(6, novo.getFotoPerfil());
+            st.setString(6, novo.getFotoPerfil());
             st.setString(7, novo.getDescricao());
             st.setString(8, novo.getRua());
             st.setString(9, novo.getNumero());
@@ -73,7 +73,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("profissao"),
                         resultado.getString("aniversario"),
                         resultado.getString("sexo"),
-                        resultado.getBytes("fotoPerfil"),
+                        resultado.getString("fotoPerfil"),
                         resultado.getString("descricao"),
                         resultado.getString("rua"),
                         resultado.getString("numero"),
@@ -155,7 +155,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getString("profissao"),
                         resultado.getString("aniversario"),
                         resultado.getString("sexo"),
-                        resultado.getBytes("fotoPerfil"),
+                        resultado.getString("fotoPerfil"),
                         resultado.getString("descricao"),
                         resultado.getString("rua"),
                         resultado.getString("numero"),
@@ -189,28 +189,25 @@ public class UsuarioDaoBD implements UsuarioDao {
             stmt.setString(1, nome);
             ResultSet resultado = stmt.executeQuery();
             List<Usuario> user = new ArrayList<Usuario>();
-            while (!resultado.isLast()){
-
-                if(resultado.next()){
-                    Usuario u = new Usuario(
-                            resultado.getInt("id"),
-                            resultado.getString("nome"),
-                            resultado.getString("email"),
-                            resultado.getString("profissao"),
-                            resultado.getString("aniversario"),
-                            resultado.getString("sexo"),
-                            resultado.getBytes("fotoPerfil"),
-                            resultado.getString("descricao"),
-                            resultado.getString("rua"),
-                            resultado.getString("numero"),
-                            resultado.getString("cidade"),
-                            resultado.getString("estado"),
-                            resultado.getString("cep"),
-                            resultado.getString("telefone"),
-                            resultado.getString("senha")
-                    );
-                    user.add(u);
-            }
+            while (resultado.next()){
+                Usuario u = new Usuario(
+                        resultado.getInt("id"),
+                        resultado.getString("nome"),
+                        resultado.getString("email"),
+                        resultado.getString("profissao"),
+                        resultado.getString("aniversario"),
+                        resultado.getString("sexo"),
+                        resultado.getString("fotoPerfil"),
+                        resultado.getString("descricao"),
+                        resultado.getString("rua"),
+                        resultado.getString("numero"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("telefone"),
+                        resultado.getString("senha")
+                );
+                user.add(u);
                 //conexao.close();
             }
             resultado.close();

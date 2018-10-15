@@ -33,12 +33,12 @@ public class Login extends HttpServlet implements Command {
             } else if (gerencia.autenticar(request.getParameter("email"), request.getParameter("senha"))) {
                 Usuario usuarioAtual = gerencia.buscaUsuario(request.getParameter("email"));
 
-                String url = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(usuarioAtual.getFotoPerfil());
+//                String url = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(usuarioAtual.getFotoPerfil());
 
 //                List<Publicacao> publicacaoList = gerencia.buscarPublicacao();
 
                 session.setAttribute("usuario", usuarioAtual);
-                session.setAttribute("foto", url);
+//                session.setAttribute("foto", url);
 //                session.setAttribute("publicacaoList", publicacaoList);
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp?value=1");

@@ -7,7 +7,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <header class="text-right">
-    <form class="text-left search" method="GET">
+    <form class="text-left search" method="post" action="/front?action=Pesquisa">
         <input name="q" type="text" placeholder="Pesquise...">
     </form>
     <div class="menu-icon">

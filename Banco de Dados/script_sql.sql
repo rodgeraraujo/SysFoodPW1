@@ -7,7 +7,7 @@ CREATE TABLE usuario(
     profissao VARCHAR(50),
     aniversario VARCHAR(11),
     sexo CHARACTER(1),
-    fotoperfil bytea NOT NULL,
+    fotoperfil VARCHAR NOT NULL,
     descricao VARCHAR(200),
     rua VARCHAR(50),
     numero VARCHAR(10),
@@ -124,4 +124,14 @@ CREATE TABLE Amizade(
     CONSTRAINT Amizade_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES usuario(id),
     CONSTRAINT amigo_id_key FOREIGN KEY (idAmigo) REFERENCES  usuario(id)
-)
+);
+
+CREATE TABLE Comentario(
+    id SERIAL,
+    foto VARCHAR,
+    nomeUsuario VARCHAR(50),
+    comentario VARCHAR(250),
+    idPublicacao int,
+    CONSTRAINT Comentario_pkey PRIMARY KEY (id),
+    CONSTRAINT publicacao_id_key FOREIGN KEY (idPublicacao) REFERENCES  publicacao(id)
+);

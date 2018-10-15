@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Base64;
 
 public class CadastrarUsuario implements Command {
     @Override
@@ -33,10 +34,12 @@ public class CadastrarUsuario implements Command {
 
         //int num = Integer.valueOf(numero)
 
-        byte[] fotoPerfil = new byte[(int) part.getSize()];
+        byte[] foto = new byte[(int) part.getSize()];
         InputStream stream = part.getInputStream();
-        stream.read(fotoPerfil);
+        stream.read(foto);
         stream.close();
+
+        String fotoPerfil = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
         GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario();
             Boolean cadastrar = gerenciadorUsuario.cadastrar(nome, email,profissao, aniversario, sexo,

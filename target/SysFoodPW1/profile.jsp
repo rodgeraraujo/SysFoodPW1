@@ -65,7 +65,7 @@
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
         <a href="profile.jsp" title="Profile">
-            <img src="${sessionScope.foto}" alt="User name" class="img-circle img-user">
+            <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
         </a>
         <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
