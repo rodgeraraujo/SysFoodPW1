@@ -98,4 +98,6 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
         }
         return null;
     }
+
+
 }

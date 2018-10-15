@@ -14,6 +14,7 @@ public class AvaliarEstabelecimento {
         this.idUsuario = idUsuario;
         this.idEstabelecimento = idEstabelecimento;
         this.avaliacao = avaliacao;
+        this.comentario = comentario;
         this.dataAvaliacao = dataAvaliacao;
     }
 
@@ -23,6 +24,7 @@ public class AvaliarEstabelecimento {
         this.idUsuario = idUsuario;
         this.idEstabelecimento = idEstabelecimento;
         this.avaliacao = avaliacao;
+        this.comentario = comentario;
         this.dataAvaliacao = dataAvaliacao;
     }
 
