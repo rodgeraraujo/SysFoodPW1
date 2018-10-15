@@ -32,7 +32,7 @@ public class AvaliarEstabeleciment implements Command {
         float nota;
 
         switch (req.getParameter("rating")){
-            case "half": nota = (float) 0.5;
+            case "0.5": nota = (float) 0.5;
             break;
 
             case "1": nota = 1;
@@ -66,11 +66,18 @@ public class AvaliarEstabeleciment implements Command {
             break;
         }
 
-        Timestamp data = new Timestamp(System.currentTimeMillis());
+        String comentario = null;
+        Timestamp dataAvaliacao = new Timestamp(System.currentTimeMillis());
 
-        AvaliarEstabelecimento avaliar = new AvaliarEstabelecimento(idUsuario, idEstabelecimento, nota, data);
+        AvaliarEstabelecimento avaliar = new AvaliarEstabelecimento(idUsuario, idEstabelecimento, nota, comentario, dataAvaliacao);
 
         gerenciador.Avaliar(avaliar);
+
+        Float avaliacaoNota = gerenciador.MediaNota();
+        System.out.println(avaliacaoNota);
+
+        session.setAttribute("avaliacaoNota", avaliacaoNota);
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("front?action=BuscarEstabelecimento&id=" + idEstabelecimento);
         dispatcher.forward(req, res);
     }

@@ -6,16 +6,19 @@ public class AvaliarEstabelecimento {
     private int idUsuario;
     private int idEstabelecimento;
     private float avaliacao;
+    private String comentario;
     private Timestamp dataAvaliacao;
 
-    public AvaliarEstabelecimento(int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
+    public AvaliarEstabelecimento(int idUsuario, int idEstabelecimento, float avaliacao, String comentario,
+                                  Timestamp dataAvaliacao) {
         this.idUsuario = idUsuario;
         this.idEstabelecimento = idEstabelecimento;
         this.avaliacao = avaliacao;
         this.dataAvaliacao = dataAvaliacao;
     }
 
-    public AvaliarEstabelecimento(int id, int idUsuario, int idEstabelecimento, float avaliacao, Timestamp dataAvaliacao) {
+    public AvaliarEstabelecimento(int id, int idUsuario, int idEstabelecimento, float avaliacao, String comentario,
+                                  Timestamp dataAvaliacao) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.idEstabelecimento = idEstabelecimento;
@@ -55,6 +58,14 @@ public class AvaliarEstabelecimento {
         this.avaliacao = avaliacao;
     }
 
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
     public Timestamp getDataAvaliacao() {
         return dataAvaliacao;
     }
@@ -69,6 +80,7 @@ public class AvaliarEstabelecimento {
                 "id=" + id +
                 ", idUsuario=" + idUsuario +
                 ", idEstabelecimento=" + idEstabelecimento +
+                ", comentario=" + comentario +
                 ", avaliacao=" + avaliacao +
                 ", dataAvaliacao=" + dataAvaliacao +
                 '}';

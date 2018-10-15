@@ -21,6 +21,6 @@ public class GerenciadorAvaliaEstabelecimento {
     }
 
     public Float MediaNota(){
-        return dao.MediaNOta();
+        return dao.MediaNota();
     }
 }

@@ -4,7 +4,7 @@ import com.ifpb.pw1.sysfood.entities.AvaliarEstabelecimento;
 
 public interface AvaliaEstabelecimentoDao {
 
-    Float MediaNOta();
+    Float MediaNota();
 
     boolean Avaliar(AvaliarEstabelecimento avaliar);
 }

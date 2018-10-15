@@ -20,7 +20,7 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
     }
 
     @Override
-    public Float MediaNOta() {
+    public Float MediaNota() {
         try{
             String sql = "SELECT avaliacao FROM avaliarestabelecimento";
             int divisor =0;
@@ -42,18 +42,19 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
 
     @Override
     public boolean Avaliar(AvaliarEstabelecimento avaliar) {
-        String sql = "INSERT INTO avaliarestabelecimento(idusuario, idestabelecimento, avaliacao, dataavaliacao" +
-                "VALUES(?,?,?,?)";
+        String sql = "INSERT INTO avaliarestabelecimento(idusuario, idestabelecimento, avaliacao, comentario, dataavaliacao)" +
+                "VALUES(?,?,?,?,?)";
 
         try{
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setInt(1, avaliar.getIdUsuario());
             st.setInt(2, avaliar.getIdEstabelecimento());
             st.setFloat(3, avaliar.getAvaliacao());
-            st.setObject(4, avaliar.getDataAvaliacao());
+            st.setString(4, avaliar.getComentario());
+            st.setObject(5, avaliar.getDataAvaliacao());
 
             boolean inserted = st.executeUpdate() > 0;
-            conexao.close();
+            //conexao.close();
             return  inserted;
         } catch (SQLException e) {
             e.printStackTrace();
