@@ -22,10 +22,10 @@ public class GerenciadorUsuario {
         dao = factory.getDaoUsuario();
     }
 
-    public Boolean cadastrar(String nome, String email, String profissao, String aniversario, String sexo, String fotoPerfil,
+    public Boolean cadastrar(int id, String nome, String email, String profissao, String aniversario, String sexo, String fotoPerfil,
                              String descricao, String rua, String numero, String cidade, String estado, String cep,
                              String telefone, String senha) throws PersistenciaException {
-        Usuario usuario = new Usuario(nome, email, profissao, aniversario, sexo, fotoPerfil, descricao, rua, numero, cidade, estado,
+        Usuario usuario = new Usuario(id, nome, email, profissao, aniversario, sexo, fotoPerfil, descricao, rua, numero, cidade, estado,
                 cep, telefone, senha);
 
         return dao.criar(usuario);
