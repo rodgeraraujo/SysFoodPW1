@@ -33,10 +33,16 @@ public class PesquisaDaoBD implements PesquisaDao {
         GerenciadorUsuario gerenciaU = new GerenciadorUsuario();
 
         List<Estabelecimento> e = gereciaE.buscarNome(nome);
-        objects.add(e);
+        for (Estabelecimento o: e) {
+            objects.add(o);
+        }
+
         List<Usuario> u = gerenciaU.buscaNome(nome);
-        objects.add(u);
-        System.out.println(objects);
+        for(Usuario i: u){
+            objects.add(u);
+        }
+
+        //System.out.println(objects);
         return objects;
     }
 

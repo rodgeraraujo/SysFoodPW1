@@ -34,8 +34,12 @@
         <br> <b> <br> <br> <br>
         <p>O resultado:</p>
 
-        <c:forEach var="pesquisa" items="${sessionScope.pesquisa}">
-            <p>${pesquisa}</p>
+        <c:forEach var="usuarios" items="${sessionScope.usuarios}">
+            <p>${usuarios.nome}</p>
+        </c:forEach>
+
+        <c:forEach var="estabelecimentos" items="${sessionScope.estabelecimentos}">
+            <p>${estabelecimentos.nome}</p>
         </c:forEach>
     </body>
 </html>
