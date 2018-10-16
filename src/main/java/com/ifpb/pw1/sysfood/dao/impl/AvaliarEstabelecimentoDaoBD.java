@@ -2,9 +2,12 @@ package com.ifpb.pw1.sysfood.dao.impl;
 
 import com.ifpb.pw1.sysfood.dao.connect.ConFactory;
 import com.ifpb.pw1.sysfood.dao.connect.DataBase;
+import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
 import com.ifpb.pw1.sysfood.dao.interfaces.AvaliaEstabelecimentoDao;
 import com.ifpb.pw1.sysfood.entities.AvaliarEstabelecimento;
 import com.ifpb.pw1.sysfood.entities.Comida;
+import com.ifpb.pw1.sysfood.entities.Publicacao;
+import com.ifpb.pw1.sysfood.entities.PublicacaoEstabelecimento;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -99,6 +102,7 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
         return null;
     }
 
+    @Override
     public boolean buscarAvaliacaoUsuario(int u_id, int e_id) throws SQLException {
             String sql = "SELECT * FROM avaliarestabelecimento WHERE idusuario = ? AND idestabelecimento = ?";
             PreparedStatement stmt = conexao.prepareStatement(sql);
@@ -116,4 +120,5 @@ public class AvaliarEstabelecimentoDaoBD implements AvaliaEstabelecimentoDao {
         System.out.println("false");
         return false;
     }
+
 }

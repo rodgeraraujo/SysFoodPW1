@@ -5,6 +5,8 @@ import com.ifpb.pw1.sysfood.dao.factory.Factory;
 import com.ifpb.pw1.sysfood.dao.interfaces.EstabelecimentoDao;
 import com.ifpb.pw1.sysfood.dao.interfaces.FactoryDao;
 import com.ifpb.pw1.sysfood.entities.Estabelecimento;
+import com.ifpb.pw1.sysfood.entities.Publicacao;
+import com.ifpb.pw1.sysfood.entities.PublicacaoEstabelecimento;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -38,4 +40,17 @@ public class GerenciadorEstabelecimento {
     public List<Estabelecimento> buscarNome(String nome){
         return dao.buscarNome(nome);
     }
+
+    public void salvaPublicacao(PublicacaoEstabelecimento novo) throws PersistenciaException {
+        dao.salvarPublicacao(novo);
+    }
+
+    public List<PublicacaoEstabelecimento> buscarPublicacao() {
+        return dao.buscaPublicacao();
+    }
+
+    public List<PublicacaoEstabelecimento> buscaPublicacaoID(int estabelecimentoID) {
+        return dao.buscaPublicacaoEstabelecimento(estabelecimentoID);
+    }
+
 }

@@ -43,6 +43,10 @@ public class GerenciadorUsuario {
         return dao.buscarId(value);
     }
 
+    public List<Usuario> buscaNome(String nome){
+        return dao.buscarNome(nome);
+    }
+
     public void salvaPublicacao(Publicacao novo) throws PersistenciaException {
         dao.salvarPublicacao(novo);
     }
@@ -52,11 +56,7 @@ public class GerenciadorUsuario {
     }
 
     public List<Publicacao> buscaPublicacaoID(int usuarioID) {
-        return dao.buscaPublicacao();
-    }
-
-    public List<Usuario> buscaNome(String nome){
-        return dao.buscarNome(nome);
+        return dao.buscaPublicacaoUsuario(usuarioID);
     }
 
 

@@ -12,10 +12,12 @@ public class Publicacao {
     private String dataPublicacao;
     private String foto;
     private String usuarioFoto;
+    private String tipo;
+
 
 
     public Publicacao(int id, String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao,
-                      String foto, String usuarioFoto) {
+                      String foto, String usuarioFoto, String tipo) {
         this.id = id;
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
@@ -23,16 +25,18 @@ public class Publicacao {
         this.dataPublicacao = dataPublicacao;
         this.foto = foto;
         this.usuarioFoto = usuarioFoto;
+        this.tipo = tipo;
     }
 
     public Publicacao(String nomeUsuario, String conteudo, int idUsuario, String dataPublicacao,
-                      String foto, String usuarioFoto) {
+                      String foto, String usuarioFoto, String tipo) {
         this.nomeUsuario = nomeUsuario;
         this.conteudo = conteudo;
         this.idUsuario = idUsuario;
         this.dataPublicacao = dataPublicacao;
         this.foto = foto;
         this.usuarioFoto = usuarioFoto;
+        this.tipo = tipo;
     }
 
     public Publicacao() {
@@ -94,6 +98,14 @@ public class Publicacao {
         this.usuarioFoto = usuarioFoto;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public String toString() {
         return "Publicacao{" +
@@ -104,6 +116,7 @@ public class Publicacao {
                 ", dataPublicacao='" + dataPublicacao + '\'' +
                 ", foto='" + foto + '\'' +
                 ", usuarioFoto='" + usuarioFoto + '\'' +
+                ", tipo='" + tipo + '\'' +
                 '}';
     }
 }

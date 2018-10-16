@@ -69,8 +69,22 @@ CREATE TABLE publicacao(
     foto VARCHAR,
     dataPublicacao VARCHAR(20),
     usuarioFoto VARCHAR,
+    tipo VARCHAR(5),
     CONSTRAINT publicacao_pkey PRIMARY KEY (id),
     CONSTRAINT usuario_id_key FOREIGN KEY (idUsuario) REFERENCES  usuario(id)
+);
+
+CREATE TABLE publicacaoEstabelecimento(
+    id serial,
+    nomeEstabelecimento VARCHAR(50),
+    conteudo VARCHAR(300) NOT NULL,
+    idEstabelecimento int,
+    foto VARCHAR,
+    dataPublicacao VARCHAR(20),
+    estabelecimentoFoto VARCHAR,
+    tipo VARCHAR(5),
+    CONSTRAINT publicacao_estabelecimento_pkey PRIMARY KEY (id),
+    CONSTRAINT estabelecimento_id_key FOREIGN KEY (idEstabelecimento) REFERENCES  estabelecimento(id)
 );
 
 

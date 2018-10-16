@@ -93,68 +93,67 @@
 
                     <div class="card-post">
                         <div class="row">
-                            <div class="col-xs-3 col-sm-2">
-                                <a href="profile.jsp" title="Profile">
-                                    <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user-post">
-                                </a>
-                            </div>
-                            <div class="col-xs-9 col-sm-10 info-user">
-                                <h3><a href="https://socialyte.codeplus.it/personal-profile.html" title="Profile">My User</a></h3>
-                                <p><i>2h</i></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2 data-post">
-                                <p>Lorem Ipsum Dolor si amet</p>
-                                <div class="reaction">
-                                    <img draggable="false" class="emoji" alt="❤" src="Personal%20Profile%20Template_arquivos/2764.png"> 156 <img draggable="false" class="emoji" alt="😃" src="Personal%20Profile%20Template_arquivos/1f603.png"> 54
+                            <form method="post" action="/front?action=SalvarPublicacao" enctype="multipart/form-data">
+                                <%--<div class="col-sm-8">--%>
+                                <%--<textarea class="form-control" name="conteudo" id="" cols="30" rows="10"></textarea>--%>
+                                <%--<br>--%>
+                                <%--<input class="form-control" name="fotoPublicacao" type="file">--%>
+                                <%--<br>--%>
+                                <%--<input class="form-control" type="submit" value="Post">--%>
+                                <%--</div>--%>
+                                <li class="add-post">
+                                    <textarea class="add-post-textarea" name="conteudo" placeholder="Write a post..."></textarea>
+                                </li>
+
+                                <div class="image-upload">
+                                    <label for="file-input">
+                                        <%--<img src="https://placehold.it/100/000000/ffffff?text=UPLOAD" style="pointer-events: none"/>--%>
+                                        <i class="fa fa-upload post-file" aria-hidden="true" name="conteudo" style="cursor: pointer"></i>
+                                    </label>
+                                    <input id="file-input" type="file" name="fotoPublicacao"/>
+                                    <img style="border-radius:10px;width:0%; margin-left:5%;" id="image_upload_preview" src="http://placehold.it/1x1" alt="your image" />
                                 </div>
-                                <div class="comments">
-                                    <div class="more-comments">View more comments</div>
-                                    <ul>
-                                        <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                                        <li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="Personal%20Profile%20Template_arquivos/1f602.png"></li>
-                                    </ul>
-                                    <form>
-                                        <input class="form-control" placeholder="Add a comment" type="text">
-                                    </form>
-                                </div>
-                            </div>
+                                <input type="submit" class="post-button" value="Post">
+                            </form>
                         </div>
                     </div>
 
-                    <div class="card-post">
-                        <div class="row">
-                            <div class="col-xs-3 col-sm-2">
-                                <a href="https://socialyte.codeplus.it/personal-profile.html" title="Profile">
-                                    <img src="Personal%20Profile%20Template_arquivos/user.jpg" alt="My User" class="img-circle img-user">
-                                </a>
-                            </div>
-                            <div class="col-xs-9 col-sm-10 info-user">
-                                <h3><a href="https://socialyte.codeplus.it/personal-profile.html" title="Profile">My User</a></h3>
-                                <p><i>2h</i></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class=" col-sm-8 col-sm-offset-2 data-post">
-                                <p>Lorem Ipsum Dolor si amet</p>
-                                <img src="Personal%20Profile%20Template_arquivos/post.jpg" alt="image post" class="img-post">
-                                <div class="reaction">
-                                    <img draggable="false" class="emoji" alt="❤" src="Personal%20Profile%20Template_arquivos/2764.png"> 1234 <img draggable="false" class="emoji" alt="😃" src="Personal%20Profile%20Template_arquivos/1f603.png"> 54
+                    <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.EstabelecimentoDaoBD"/>
+                    <c:forEach var="publicacao" items="${dao.buscaPublicacaoEstabelecimento(sessionScope.estabelecimento.id)}">
+                        <div class="card-post">
+                            <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                    <a href="profile.jsp?id=<c:out value="${publicacao.idEstabelecimento}"/>" title="Profile">
+                                        <img src="<c:out value="${publicacao.estabelecimentoFoto}"/>"  alt="User name" class="img-circle img-user-post">
+                                    </a>
                                 </div>
-                                <div class="comments">
-                                    <div class="more-comments">View more comments</div>
-                                    <ul>
-                                        <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                                        <li><b>User2</b> Lorem Ipsum Dolor si amet <img draggable="false" class="emoji" alt="😂" src="Personal%20Profile%20Template_arquivos/1f602.png"></li>
-                                    </ul>
-                                    <form>
-                                        <input class="form-control" placeholder="Add a comment" type="text">
-                                    </form>
+                                <div class="col-xs-9 col-sm-10 info-user">
+                                    <h3>
+                                        <a href="profile.jsp?id=<c:out value="${publicacao.idEstabelecimento}"/>" title="Profile">
+                                            <c:out value="${publicacao.nomeEstabelecimento}"/>
+                                        </a>
+                                    </h3>
+                                    <p><i><c:out value="${publicacao.dataPublicacao}"/></i></p>
                                 </div>
                             </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset data-post">
+                                    <p>${publicacao.conteudo}</p>
+                                    <img style="border-radius:10px; margin-bottom: 5px;" src="<c:out value="${publicacao.foto}"/>" alt="image post" class="img-post">
+                                    <div class="comments">
+                                        <form method="post" action="#">
+                                            <input type="text" class="form-control" placeholder="Add a comment">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </c:forEach>
+
+                </div>
+                <div id="loading" style="display: none;">
+                    <img src="Personal%20Profile%20Template_arquivos/load.gif" alt="loader">
                 </div>
             </div><!-- end Tab Posts -->
 
@@ -195,8 +194,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.ComidaDaoBD"/>
-                            <c:forEach var="comida" items="${dao.buscar_comida(sessionScope.estabelecimento.id)}">
+                            <jsp:useBean id="dao2" class="com.ifpb.pw1.sysfood.dao.impl.ComidaDaoBD"/>
+                            <c:forEach var="comida" items="${dao2.buscar_comida(sessionScope.estabelecimento.id)}">
                                 <div class="row row-user-list">
                                     <div class="col-sm-2 col-xs-3">
                                         <img src="<c:out value="${comida.foto}"/>" alt="Comida nome" class="img-circle img-user">
@@ -245,4 +244,24 @@
         </div>
     </div>
 </body>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image_upload_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $("#file-input").change(function () {
+        readURL(this);
+        document.getElementById("image_upload_preview").style.width="50%";
+    });
+
+</script>
 </html>

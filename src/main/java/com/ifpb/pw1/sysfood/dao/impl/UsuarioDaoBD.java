@@ -25,8 +25,6 @@ public class UsuarioDaoBD implements UsuarioDao {
         this.conexao = ConFactory.getConnection(props.getUrl(),props.getUser(),props.getPassword());
     }
 
-
-
     @Override
     public Boolean criar(Usuario novo) throws PersistenciaException {
         if (novo.getId() == 0) {
@@ -147,26 +145,6 @@ public class UsuarioDaoBD implements UsuarioDao {
         return false;
     }
 
-    @Override
-    public boolean salvarPublicacao(Publicacao novo) throws PersistenciaException {
-        try {
-            String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto, usuariofoto) " +
-                "VALUES (?,?,?,?,?,?)";
-            PreparedStatement st = conexao.prepareStatement(sql);
-            st.setString(1,novo.getNomeUsuario());
-            st.setString(2,novo.getConteudo());
-            st.setInt(3,novo.getIdUsuario());
-            st.setObject(4,novo.getDataPublicacao());
-            st.setString(5,novo.getFoto());
-            st.setString(6,novo.getUsuarioFoto());
-
-            boolean inserted = st.executeUpdate() > 0;
-            //conexao.close();
-            return inserted;
-        } catch (SQLException e) {
-            return false;
-        }
-    }
 
     @Override
     public Usuario buscarId(int id) throws  IOException{
@@ -251,6 +229,28 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
+    public boolean salvarPublicacao(Publicacao novo) throws PersistenciaException {
+        try {
+            String sql = "INSERT INTO publicacao (nomeusuario, conteudo, idusuario, datapublicacao, foto, usuariofoto) " +
+                    "VALUES (?,?,?,?,?,?)";
+            PreparedStatement st = conexao.prepareStatement(sql);
+            st.setString(1,novo.getNomeUsuario());
+            st.setString(2,novo.getConteudo());
+            st.setInt(3,novo.getIdUsuario());
+            st.setObject(4,novo.getDataPublicacao());
+            st.setString(5,novo.getFoto());
+            st.setString(6,novo.getUsuarioFoto());
+
+
+            boolean inserted = st.executeUpdate() > 0;
+            //conexao.close();
+            return inserted;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    @Override
     public List<Publicacao> buscaPublicacao() {
         try {
             String sql = "SELECT * FROM publicacao ORDER BY id DESC";
@@ -267,7 +267,9 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getInt("idusuario"),
                         resultado.getString("datapublicacao"),
                         resultado.getString("foto"),
-                        resultado.getString("usuarioFoto")
+                        resultado.getString("usuarioFoto"),
+                        resultado.getString("tipo")
+
                 );
 
                 publicacaoList.add(p);
@@ -276,7 +278,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             resultado.close();
             stmt.close();
             return publicacaoList;
-           // conexao.close();
+            // conexao.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -301,41 +303,8 @@ public class UsuarioDaoBD implements UsuarioDao {
                         resultado.getInt("idusuario"),
                         resultado.getString("datapublicacao"),
                         resultado.getString("foto"),
-                        resultado.getString("usuarioFoto")
-                );
-
-                publicacaoList.add(p);
-            }
-
-            resultado.close();
-            stmt.close();
-            return publicacaoList;
-            // conexao.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public List<Publicacao> buscaPublicacaoID(int usuarioID) {
-        try {
-            String sql = "SELECT * FROM publicacao WHERE idusuario = '"+ usuarioID +"'";
-            PreparedStatement stmt = conexao.prepareStatement(sql);
-            ResultSet resultado = stmt.executeQuery();
-
-            List<Publicacao> publicacaoList = new ArrayList<>();
-            while (resultado.next()){
-
-                Publicacao p = new Publicacao(
-                        resultado.getInt("id"),
-                        resultado.getString("nomeUsuario"),
-                        resultado.getString("conteudo"),
-                        resultado.getInt("idusuario"),
-                        resultado.getString("datapublicacao"),
-                        resultado.getString("foto"),
-                        resultado.getString("usuarioFoto")
+                        resultado.getString("usuarioFoto"),
+                        resultado.getString("tipo")
                 );
 
                 publicacaoList.add(p);

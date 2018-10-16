@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset data-post">
                                 <p>${publicacao.conteudo}</p>
-                                <img src="<c:out value="${publicacao.foto}"/>" alt="you image" class="img-post">
+                                <img id="img-post-ch" src="<c:out value="${publicacao.foto}"/>" alt="" class="img-post">
                                 <div class="comments">
                                     <form method="post" action="#">
                                         <input type="text" class="form-control" placeholder="Add a comment">
@@ -246,6 +246,13 @@
             readURL(this);
             document.getElementById("image_upload_preview").style.width="50%";
         });
+
+        var srcUrl = document.getElementById("img-post-ch").src;
+
+        if (url = "data:image/jpeg;base64,") {
+            document.getElementById("img-post-ch").src="";
+        }
+
 
     </script>
 </html>

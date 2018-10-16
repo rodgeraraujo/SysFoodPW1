@@ -10,18 +10,23 @@ import java.util.List;
 
 public interface UsuarioDao {
     Boolean criar(Usuario novo) throws PersistenciaException;
+
     Usuario buscar(String email) throws PersistenciaException, SQLException, IOException;
+
     Boolean autenticar(String email, String senha) throws PersistenciaException, SQLException;
-    boolean salvarPublicacao(Publicacao novo) throws PersistenciaException;
+
+
     Usuario buscarId(int value) throws IOException;
 
     List<Usuario> buscarNome(String nome);
 
+
+    boolean salvarPublicacao(Publicacao novo) throws PersistenciaException;
+
     List<Publicacao> buscaPublicacao();
 
-    List<Publicacao> buscaPublicacaoUsuario(int id);
+    public List<Publicacao> buscaPublicacaoUsuario(int id);
 
-    List<Publicacao> buscaPublicacaoID(int usuarioID);
 
 }
 

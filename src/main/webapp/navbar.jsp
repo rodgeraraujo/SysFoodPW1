@@ -61,24 +61,24 @@
     </div>
     <div class="second-icon dropdown menu-icon">
                 <span class="dropdown-toggle" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <span class="hidden-xs hidden-sm">Notifications</span> <i class="fas fa-bell" aria-hidden="true"></i> <span class="badge">2</span>
+            <span class="hidden-xs hidden-sm">Notificações</span> <i class="fas fa-bell" aria-hidden="true"></i> <span class="badge">2</span>
                 </span>
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownNotification">
-            <li class="new-not">
-                <a href="#link1" title="User name comment"><img src="./profile/user2.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
-            <li class="new-not">
-                <a href="#link2" title="User name comment"><img src="./profile/user3.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
-            <li>
-                <a href="#link3" title="User name comment"><img src="./profile/user4.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>
-            </li>
+            <%--<li class="new-not">--%>
+                <%--<a href="#link1" title="User name comment"><img src="./profile/user2.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>--%>
+            <%--</li>--%>
+            <%--<li class="new-not">--%>
+                <%--<a href="#link2" title="User name comment"><img src="./profile/user3.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="#link3" title="User name comment"><img src="./profile/user4.jpg" alt="User name" class="img-circle img-user-mini"> User comments your post</a>--%>
+            <%--</li>--%>
             <li role="separator" class="divider"></li>
-            <li><a href="#allnotifications" title="All notifications">Todas as notificações</a></li>
+            <li><a href="#allnotifications" title="All notifications">Exibit todas as notificações</a></li>
         </ul>
     </div>
     <div class="second-icon menu-icon">
-                <span><a href="/profile.jsp?id${sessionScope.usuario.id}" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
+                <span><a href="/profile.jsp?user=${sessionScope.usuario.id}" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
                 </span>
     </div>
     <div class="second-icon menu-icon">

@@ -2,11 +2,13 @@ package com.ifpb.pw1.sysfood.command.impl;
 
 import com.ifpb.pw1.sysfood.command.Command;
 import com.ifpb.pw1.sysfood.dao.exceptions.PersistenciaException;
+import com.ifpb.pw1.sysfood.entities.Estabelecimento;
 import com.ifpb.pw1.sysfood.entities.Publicacao;
+import com.ifpb.pw1.sysfood.entities.PublicacaoEstabelecimento;
 import com.ifpb.pw1.sysfood.entities.Usuario;
+import com.ifpb.pw1.sysfood.managers.GerenciadorEstabelecimento;
 import com.ifpb.pw1.sysfood.managers.GerenciadorUsuario;
 
-import javax.ejb.Local;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,24 +23,25 @@ import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SalvarPublicacao implements Command {
+public class SalvarPublicacaoEstab implements Command {
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException,
-            PersistenciaException, SQLException {
+    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException,
+            ServletException, PersistenciaException, SQLException {
 
         try {
-            GerenciadorUsuario gerencia = new GerenciadorUsuario();
+            GerenciadorEstabelecimento gerencia = new GerenciadorEstabelecimento();
             HttpSession session = req.getSession();
             Usuario u = (Usuario) session.getAttribute("usuario");
+            Estabelecimento e = (Estabelecimento) session.getAttribute("estabelecimento");
 
             if (u != null) {
 
-                String usuarioNome = u.getNome();
+                String nomeEstabelecimento = e.getNome();
                 String conteudo = req.getParameter("conteudo");
-                int idUsuario = u.getId();
+                int idEstabelecimento = e.getId();
                 String dataPublicacao = "" + LocalDate.now();
                 Part part = req.getPart("fotoPublicacao");
-                String usuarioFoto = u.getFotoPerfil();
+                String estabelecimentoFoto = e.getFotoPerfil();
 
 
                 byte[] foto = new byte[(int) part.getSize()];
@@ -47,14 +50,15 @@ public class SalvarPublicacao implements Command {
 
                 String fotoPublicacao = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
-                String tipo = "u";
+                String tipo = "e";
 
                 gerencia.salvaPublicacao(
-                        new Publicacao(usuarioNome, conteudo, idUsuario, dataPublicacao, fotoPublicacao, usuarioFoto, tipo)
+                        new PublicacaoEstabelecimento(nomeEstabelecimento, conteudo, idEstabelecimento,
+                                dataPublicacao, fotoPublicacao, estabelecimentoFoto, tipo)
                 );
                 stream.close();
 
-                RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp?value=3");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/page/profile.jsp?id=" + e.getId());
                 dispatcher.forward(req, res);
             } else {
                 res.sendRedirect("login.jsp?value=2");
@@ -63,6 +67,7 @@ public class SalvarPublicacao implements Command {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
 
         }
-
     }
+
+
 }
