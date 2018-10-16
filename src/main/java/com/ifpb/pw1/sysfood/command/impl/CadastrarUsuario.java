@@ -23,7 +23,6 @@ public class CadastrarUsuario implements Command {
 
         String nome = req.getParameter("nome");
         String senha = req.getParameter("senha");
-        //ANIVERSÁARIO NÃO IMPLEMENTADO
         String aniversario = req.getParameter("dia")+"/"+req.getParameter("mes")+"/"+req.getParameter("ano");
         String profissao = req.getParameter("profissao");
         String sexo = req.getParameter("sexo");
