@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset data-post">
                                 <p>${publicacao.conteudo}</p>
-                                <img style="border-radius:10px; margin-bottom: 5px;" src="<c:out value="${publicacao.foto}"/>" alt="" class="img-post">
+                                <img src="<c:out value="${publicacao.foto}"/>" alt="you image" class="img-post">
                                 <div class="comments">
                                     <form method="post" action="#">
                                         <input type="text" class="form-control" placeholder="Add a comment">

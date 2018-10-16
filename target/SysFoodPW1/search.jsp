@@ -32,14 +32,59 @@
         <jsp:include page="/navbar.jsp"/>
 
         <br> <b> <br> <br> <br>
-        <p>O resultado:</p>
+        <p style="width:40%; margin-left: 10%;">A pesquisa por "<i id="resultado">${requestScope.pesquisa}</i>"  retornou  o(s)  seguinte(s)  valor(es):</p>
+            <br>
 
         <c:forEach var="usuarios" items="${sessionScope.usuarios}">
-            <p>${usuarios.nome}</p>
+            <div class="card-post" style="width:40%; margin-left: 10%;">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <a href="/visited/profile.jsp?id=<c:out value="${usuarios.id}"/>" title="Profile">
+                            <img src="<c:out value="${usuarios.fotoPerfil}"/>"  alt="User name" class="img-circle img-user-post">
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 info-user">
+                        <h3>
+                            <a href="/visited/profile.jsp?id=<c:out value="${usuarios.id}"/>" title="Profile">
+                                <c:out value="${usuarios.nome}"/>
+                            </a>
+                        </h3>
+                        <p class="text-date">
+                            <i><c:out value="${usuarios.descricao}"/></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </c:forEach>
 
         <c:forEach var="estabelecimentos" items="${sessionScope.estabelecimentos}">
-            <p>${estabelecimentos.nome}</p>
+            <div class="card-post" style="width:40%; margin-left: 10%;">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <a href="/visited/profile.jsp?id=<c:out value="${estabelecimentos.id}"/>" title="Profile">
+                            <img src="<c:out value="${estabelecimentos.fotoPerfil}"/>"  alt="User name" class="img-circle img-user-post">
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 info-user">
+                        <h3>
+                            <a href="/page/profile.jsp?id=<c:out value="${estabelecimentos.id}"/>" title="Profile">
+                                <c:out value="${estabelecimentos.nome}"/>
+                            </a>
+                        </h3>
+                        <p class="text-date">
+                            <i><c:out value="${estabelecimentos.descricao}"/></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </c:forEach>
     </body>
+    <script>
+        <%--var name = "${param.name}";--%>
+        <%--if  (name != ""){--%>
+            <%--document.getElementById("resultado").innerHTML = name;--%>
+        <%--}else {--%>
+            <%--alert("eh!");--%>
+        <%--}--%>
+    </script>
 </html>

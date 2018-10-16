@@ -7,10 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a450eb6-a08b-4201-8c36-2d7b8de43db3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/visited/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/visited/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/WEB-INF/classes/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SysFoodPW1/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SysFoodPW1/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -171,68 +174,12 @@
     <favorites_list name="SysFoodPW1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SalvarPublicacao.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SalvarPublicacao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="125" column="45" lean-forward="true" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publicacao" pinned="false" current-in-tab="false">
-        <entry file="das://df06144d-4f82-4eb7-ace1-aa66ee9bcff9/database/sysfood/schema/public/table/publicacao">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/profile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="263" column="36" lean-forward="true" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/visited/profile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="483">
+              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -240,17 +187,34 @@
       <file leaf-file-name="UsuarioDaoBD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
+            <state relative-caret-position="255">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+              <folding>
+                <element signature="e#8667#8676#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
+      <file leaf-file-name="search.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="80" column="57" lean-forward="true" selection-start-line="80" selection-start-column="57" selection-end-line="81" selection-end-column="23" />
+            <state relative-caret-position="364">
+              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pesquisa.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -258,8 +222,17 @@
       <file leaf-file-name="BuscarEstabelecimento.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/BuscarEstabelecimento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="58">
               <caret line="22" column="57" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -280,7 +253,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img-</find>
       <find>container</find>
       <find>row</find>
       <find>post</find>
@@ -310,6 +282,7 @@
       <find>profile.jsp</find>
       <find>sessionScope</find>
       <find>useBean</find>
+      <find>salva</find>
     </findStrings>
     <replaceStrings>
       <replace>String</replace>
@@ -355,8 +328,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/entities/Comentario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/PesquisaDaoBD.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/managers/GerenciadorUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/avaliacoesEstabelecimento.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/establishment_rating.jsp" />
@@ -366,12 +337,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/BuscarEstabelecimento.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/UsuarioDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/visited/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/search.jsp" />
       </list>
     </option>
   </component>
@@ -422,7 +395,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -546,7 +519,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -913,7 +886,9 @@
       <workItem from="1539645685927" duration="8813000" />
       <workItem from="1539655443991" duration="2244000" />
       <workItem from="1539657743654" duration="125000" />
-      <workItem from="1539661560467" duration="8886000" />
+      <workItem from="1539661560467" duration="9035000" />
+      <workItem from="1539689398645" duration="3179000" />
+      <workItem from="1539693021564" duration="1763000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigido NullPointException, quando salva novo usuário">
       <created>1535823420348</created>
@@ -1125,11 +1100,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539667617665</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add parada para pre visualizar imagem antes de publicar">
+      <created>1539671170131</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1539671170132</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280306000" />
+    <option name="totallyTimeSpent" value="285397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1145,67 +1127,40 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" type="SLIDING" weight="0.32792208" />
-      <window_info anchor="bottom" id="Application Servers" order="6" type="SLIDING" weight="0.3286385" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" type="SLIDING" weight="0.32792208" />
+      <window_info anchor="bottom" id="Application Servers" order="7" type="SLIDING" weight="0.3286385" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
-      <window_info anchor="bottom" id="Database Changes" order="17" weight="0.32954547" />
       <window_info anchor="right" id="CDI" order="6" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="16" weight="0.32954547" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="8" weight="0.32753405" />
-      <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
       <window_info anchor="right" id="JSF" order="4" weight="0.32980332" />
+      <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="20" weight="0.3967742" />
-      <window_info anchor="bottom" id="TODO" order="22" weight="0.32903227" />
+      <window_info anchor="bottom" id="Debug" order="21" weight="0.3967742" />
+      <window_info anchor="bottom" id="TODO" order="23" weight="0.32903227" />
       <window_info anchor="bottom" id="Messages" order="12" type="SLIDING" weight="0.32580644" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32954547" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32954547" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="18" weight="0.32792208" />
-      <window_info anchor="bottom" id="Run" order="2" type="SLIDING" visible="true" weight="0.42207792" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32954547" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32792208" />
+      <window_info anchor="bottom" id="Run" order="3" type="SLIDING" weight="0.42207792" />
+      <window_info anchor="bottom" id="Version Control" order="19" weight="0.32792208" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32954547" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49197862" visible="true" weight="0.22087745" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32980332" />
       <window_info id="Web" order="5" sideWeight="0.5080214" side_tool="true" weight="0.21785174" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="6" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" type="SLIDING" weight="0.32792208" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32954547" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="CDI" order="6" weight="0.32980332" />
-      <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.20121029" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32954547" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
-      <window_info id="Web" order="5" sideWeight="0.5080214" side_tool="true" weight="0.21785174" />
-      <window_info anchor="bottom" id="Database Changes" order="16" weight="0.32954547" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32753405" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="19" weight="0.32792208" />
-      <window_info anchor="bottom" id="Debug" order="21" weight="0.3967742" />
-      <window_info anchor="bottom" id="TODO" order="23" weight="0.32903227" />
-      <window_info anchor="bottom" id="Application Servers" order="7" type="SLIDING" weight="0.3286385" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49197862" visible="true" weight="0.21785174" />
-      <window_info anchor="right" id="JSF" order="4" weight="0.32980332" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32419354" />
-      <window_info anchor="bottom" id="Run" order="3" type="SLIDING" weight="0.42258066" />
-      <window_info anchor="right" id="Bean Validation" order="11" weight="0.32980332" />
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32792208" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32419354" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1215,7 +1170,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix #1 - Corrigido bug ao autenticar novo usuário (login).&#10;Add mais um bug, ao busca pelo usuário da sessão." />
     <MESSAGE value="Fix #2: corrigido, bug ao buscar usuário no banco" />
     <MESSAGE value="Adicionando alumas informações do usuário nas telas home e profile" />
     <MESSAGE value="Implementando a funcionalidade para salvar publicações" />
@@ -1240,29 +1194,12 @@
     <MESSAGE value="Bug no form que att as informações do usuário." />
     <MESSAGE value="Add filtro nos perfil de estabelecimento e usuario" />
     <MESSAGE value="Corrigido perfil de usuário da sessão e perfil de usuario visitado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigido perfil de usuário da sessão e perfil de usuario visitado" />
+    <MESSAGE value="Add parada para pre visualizar imagem antes de publicar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add parada para pre visualizar imagem antes de publicar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/PesquisaDaoBD.java</url>
           <line>45</line>
@@ -1423,9 +1360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1457,13 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/managers/GerenciadorPesquisa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1481,13 +1408,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -1547,24 +1467,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/BuscarEstabelecimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/interfaces/UsuarioDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1575,13 +1481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="80" column="57" lean-forward="true" selection-start-line="80" selection-start-column="57" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/page/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -1589,31 +1488,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="263" column="36" lean-forward="true" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/visited/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="296">
           <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/BuscarEstabelecimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1626,19 +1518,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="125" column="45" lean-forward="true" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
+        <state relative-caret-position="663">
+          <caret line="121" column="26" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="121" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="263" column="36" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/visited/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/dao/impl/UsuarioDaoBD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8667#8676#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/SalvarPublicacao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="153">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/pw1/sysfood/command/impl/Pesquisa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#b#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

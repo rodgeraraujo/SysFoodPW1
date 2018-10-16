@@ -35,9 +35,10 @@ public class Pesquisa implements Command {
             List<Estabelecimento> estabelecimentos = gerenciadorE.buscarNome(nome);
             List<Usuario> usuarios = gerenciadorU.buscaNome(nome);
 
-
             session.setAttribute("usuarios", usuarios);
             session.setAttribute("estabelecimentos", estabelecimentos);
+
+            req.setAttribute("pesquisa", nome);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("search.jsp?nome="+ nome);
             dispatcher.forward(req, res);
