@@ -98,6 +98,13 @@
                                     <img src="<c:out value="${publicacao.usuarioFoto}"/>"  alt="User name" class="img-circle img-user-post">
                                 </a>
                             </div>
+                            <c:if test="${sessionScope.usuario.id == publicacao.idUsuario}">
+                                <div class="col-xs-3 col-sm-2" style="margin-left: 45%;">
+                                    <a href="#" title="Excluir publicação">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </div>
+                            </c:if>
                             <div class="col-xs-9 col-sm-10 info-user">
                                 <h3>
                                     <a href="/visited/profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
