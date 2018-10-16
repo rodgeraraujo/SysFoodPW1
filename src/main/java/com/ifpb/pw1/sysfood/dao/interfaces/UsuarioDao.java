@@ -19,7 +19,7 @@ public interface UsuarioDao {
 
     List<Publicacao> buscaPublicacao();
 
-    List<Publicacao> buscaPublicacao(int id);
+    List<Publicacao> buscaPublicacaoUsuario(int id);
 
     List<Publicacao> buscaPublicacaoID(int usuarioID);
 

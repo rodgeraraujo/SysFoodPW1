@@ -285,7 +285,7 @@ public class UsuarioDaoBD implements UsuarioDao {
     }
 
     @Override
-    public List<Publicacao> buscaPublicacao(int id) {
+    public List<Publicacao> buscaPublicacaoUsuario(int id) {
         try {
             String sql = "SELECT * FROM publicacao WHERE idusuario = '"+id+"' ORDER BY id DESC";
             PreparedStatement stmt = conexao.prepareStatement(sql);

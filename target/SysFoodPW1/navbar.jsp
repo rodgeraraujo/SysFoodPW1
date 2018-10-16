@@ -78,7 +78,7 @@
         </ul>
     </div>
     <div class="second-icon menu-icon">
-                <span><a href="/profile.jsp" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
+                <span><a href="/profile.jsp?id${sessionScope.usuario.id}" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
                 </span>
     </div>
     <div class="second-icon menu-icon">

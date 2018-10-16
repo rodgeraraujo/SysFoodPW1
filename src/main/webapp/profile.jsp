@@ -16,13 +16,8 @@
     String id = request.getParameter("id");
 
     if  (u != null) {
-        if  (id !=null){
-            Usuario usuarioAtual = gerencia.buscarId(Integer.valueOf(id));
-            if (usuarioAtual != null){
-                session.setAttribute("usuario", usuarioAtual);
-            }else{
-                response.sendRedirect("home.jsp");
-            }
+        if  (id != null){
+            response.sendRedirect("profile.jsp");
         }
     } else{
         response.sendRedirect("login.jsp");

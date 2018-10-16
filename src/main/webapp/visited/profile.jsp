@@ -16,8 +16,13 @@
     String id = request.getParameter("id");
 
     if  (u != null) {
-        if  (id != null){
-            response.sendRedirect("profile.jsp");
+        if  (id !=null){
+            Usuario usuarioAtual = gerencia.buscarId(Integer.valueOf(id));
+            if (usuarioAtual != null){
+                request.setAttribute("usuario", usuarioAtual);
+            }else{
+                response.sendRedirect("home.jsp");
+            }
         }
     } else{
         response.sendRedirect("login.jsp");
@@ -28,21 +33,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>${sessionScope.usuario.nome} | Profile!</title>
+    <title>${requestScope.usuario.nome} | Profile!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
-    <script src="./assets/js/jquery-3.2.0.min.js.download"></script>
-    <script src="./assets/js/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+    <script src="../assets/js/jquery-3.2.0.min.js.download"></script>
+    <script src="../assets/js/bootstrap.min.js.download"></script>
     <link href="https://socialyte.codeplus.it/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bootstrap-switch.min.css">
-    <script src="./assets/profile/js/bootstrap-switch.min.js"></script>
-    <script src="./assets/profile/js/twemoji.min.js"></script>
-    <script src="./assets/profile/js/lazy-load.min.js"></script>
-    <script src="./assets/profile/js/socialyte.min.js"></script>
-    <link href="./assets/css" rel="stylesheet">
+    <script src="../assets/profile/js/bootstrap-switch.min.js"></script>
+    <script src="../assets/profile/js/twemoji.min.js"></script>
+    <script src="../assets/profile/js/lazy-load.min.js"></script>
+    <script src="../assets/profile/js/socialyte.min.js"></script>
+    <link href="../assets/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
@@ -54,11 +59,11 @@
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
         <a href="profile.jsp" title="Profile">
-            <img src="${sessionScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
+            <img src="${requestScope.usuario.fotoPerfil}" alt="User name" class="img-circle img-user">
         </a>
-        <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${sessionScope.usuario.nome}</a></h2>
+        <h2 class="text-center hidden-xs"><a href="profile.jsp" title="Profile">${requestScope.usuario.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
-            <i>${sessionScope.usuario.descricao}</i>
+            <i>${requestScope.usuario.descricao}</i>
         </p>
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
@@ -107,7 +112,7 @@
                     </div>
 
                     <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.UsuarioDaoBD"/>
-                    <c:forEach var="publicacao" items="${dao.buscaPublicacaoUsuario(sessionScope.usuario.id)}">
+                    <c:forEach var="publicacao" items="${dao.buscaPublicacaoUsuario(requestScope.usuario.id)}">
                         <div class="card-post">
                             <div class="row">
                                 <div class="col-xs-3 col-sm-2">
@@ -117,7 +122,7 @@
                                 </div>
                                 <div class="col-xs-9 col-sm-10 info-user">
                                     <h3>
-                                        <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
+                                        <a href="/visited/profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
                                             <c:out value="${publicacao.nomeUsuario}"/>
                                         </a>
                                     </h3>
@@ -149,14 +154,14 @@
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <ul class="profile-data">
-                            <li><b>Nome:</b> ${sessionScope.usuario.nome}</li>
-                            <li><b>Email:</b>  ${sessionScope.usuario.email}</li>
-                            <li><b>Data de aniversário:</b>  ${sessionScope.usuario.aniversario}</li>
-                            <li><b>Profissão:</b> ${sessionScope.usuario.profissao}</li>
-                            <li><b>Telefone:</b> ${sessionScope.usuario.telefone}</li>
-                            <li><b>Sexo:</b> ${sessionScope.usuario.sexo}</li>
-                            <li><b>Endereco:</b> ${sessionScope.usuario.rua}, ${sessionScope.usuario.numero},
-                                ${sessionScope.usuario.cep}, ${sessionScope.usuario.cidade} - ${sessionScope.usuario.estado}</li>
+                            <li><b>Nome:</b> ${requestScope.usuario.nome}</li>
+                            <li><b>Email:</b>  ${requestScope.usuario.email}</li>
+                            <li><b>Data de aniversário:</b>  ${requestScope.usuario.aniversario}</li>
+                            <li><b>Profissão:</b> ${requestScope.usuario.profissao}</li>
+                            <li><b>Telefone:</b> ${requestScope.usuario.telefone}</li>
+                            <li><b>Sexo:</b> ${requestScope.usuario.sexo}</li>
+                            <li><b>Endereco:</b> ${requestScope.usuario.rua}, ${requestScope.usuario.numero},
+                                ${requestScope.usuario.cep}, ${requestScope.usuario.cidade} - ${requestScope.usuario.estado}</li>
                         </ul>
                         <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
                     </div>
@@ -231,7 +236,7 @@
                     <div class="card-post">
                         <div class="scrollbar-container">
                             <jsp:useBean id="dao2" class="com.ifpb.pw1.sysfood.dao.impl.EstabelecimentoDaoBD"/>
-                            <c:forEach var="estabelecimento" items="${dao2.buscarEstabelecimento(sessionScope.usuario.email)}">
+                            <c:forEach var="estabelecimento" items="${dao2.buscarEstabelecimento(requestScope.usuario.email)}">
                                 <div class="row row-user-list">
                                     <div class="col-sm-2 col-xs-3">
                                         <img src="<c:out value="${estabelecimento.fotoPerfil}"/>" alt="image establishment" class="img-circle img-establishment">

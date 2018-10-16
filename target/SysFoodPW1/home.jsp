@@ -99,7 +99,7 @@
                             </div>
                             <div class="col-xs-9 col-sm-10 info-user">
                                 <h3>
-                                    <a href="profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
+                                    <a href="/visited/profile.jsp?id=<c:out value="${publicacao.idUsuario}"/>" title="Profile">
                                         <c:out value="${publicacao.nomeUsuario}"/>
                                     </a>
                                 </h3>
