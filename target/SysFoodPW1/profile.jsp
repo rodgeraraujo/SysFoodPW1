@@ -100,6 +100,7 @@
                                         <i class="fa fa-upload post-file" aria-hidden="true" name="conteudo" style="cursor: pointer"></i>
                                     </label>
                                     <input id="file-input" type="file" name="fotoPublicacao"/>
+                                    <img style="border-radius:10px;width:0%; margin-left:5%;" id="image_upload_preview" src="http://placehold.it/1x1" alt="your image" />
                                 </div>
                                 <input type="submit" class="post-button" value="Post">
                             </form>
@@ -128,7 +129,7 @@
                             <div class="row">
                                 <div class="col-sm-8 col-sm-offset data-post">
                                     <p>${publicacao.conteudo}</p>
-                                    <img src="<c:out value="${publicacao.foto}"/>" alt="image post" class="img-post">
+                                    <img style="border-radius:10px; margin-bottom: 5px;" src="<c:out value="${publicacao.foto}"/>" alt="image post" class="img-post">
                                     <div class="comments">
                                         <form method="post" action="#">
                                             <input type="text" class="form-control" placeholder="Add a comment">
@@ -270,4 +271,25 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image_upload_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $("#file-input").change(function () {
+        readURL(this);
+        document.getElementById("image_upload_preview").style.width="50%";
+    });
+
+</script>
 </html>

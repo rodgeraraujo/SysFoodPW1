@@ -45,7 +45,15 @@ public class SalvarPublicacao implements Command {
                 InputStream stream = part.getInputStream();
                 stream.read(foto);
 
-                String fotoPublicacao = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
+                String fotoPublicacao = "";
+
+                System.out.println(part);
+                System.out.println(req.getPart("fotoPublicacao"));
+                System.out.println(req.getParameter("fotoPublicacao"));
+                System.out.println(foto);
+                if  (part != null){
+                    fotoPublicacao = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
+                }
 
                 gerencia.salvaPublicacao(
                         new Publicacao(usuarioNome, conteudo, idUsuario, dataPublicacao, fotoPublicacao, usuarioFoto)
