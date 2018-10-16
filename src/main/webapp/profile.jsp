@@ -63,7 +63,7 @@
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
     <div class="content-posts profile-content">
-        <div class="banner-profile">
+        <div class="banner-profile" style=" height: 160px;width: 100%;background-size: cover;background-position: center;background-image: url('/assets/profile/banner.jpg')">
         </div>
         <!-- Tab Panel -->
         <ul class="nav nav-tabs" role="tablist">
@@ -159,7 +159,7 @@
                             <li><b>Endereco:</b> ${sessionScope.usuario.rua}, ${sessionScope.usuario.numero},
                                 ${sessionScope.usuario.cep}, ${sessionScope.usuario.cidade} - ${sessionScope.usuario.estado}</li>
                         </ul>
-                        <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
+                        <%--<p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>--%>
                     </div>
                 </div>
             </div><!-- end tab Profile -->
@@ -169,58 +169,58 @@
                 <div class="container-fluid container-posts">
                     <div class="card-post">
                         <div class="scrollbar-container">
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user2.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b> <span class="badge">1</span></p>
-                                    <p class="chat-time">An hour ago</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Replay"><span class="badge badge-replay">Replay &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user3.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">Yesterday</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user4.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">2 days ago</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
-                                </div>
-                            </div>
-                            <div class="row row-user-list">
-                                <div class="col-sm-2 col-xs-3">
-                                    <img src="./profile/user5.jpg" alt="User name" class="img-circle img-user">
-                                </div>
-                                <div class="col-sm-7 col-xs-9">
-                                    <p><b>User Name</b></p>
-                                    <p class="chat-time">2 days ago</p>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                                <div class="col-sm-3 hidden-xs">
-                                    <p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>
-                                </div>
-                            </div>
+                            <%--<div class="row row-user-list">--%>
+                                <%--<div class="col-sm-2 col-xs-3">--%>
+                                    <%--<img src="./profile/user2.jpg" alt="User name" class="img-circle img-user">--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-7 col-xs-9">--%>
+                                    <%--<p><b>User Name</b> <span class="badge">1</span></p>--%>
+                                    <%--<p class="chat-time">An hour ago</p>--%>
+                                    <%--<p>Lorem ipsum</p>--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-3 hidden-xs">--%>
+                                    <%--<p><a href="" title="Replay"><span class="badge badge-replay">Replay &gt;</span></a></p>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="row row-user-list">--%>
+                                <%--<div class="col-sm-2 col-xs-3">--%>
+                                    <%--<img src="./profile/user3.jpg" alt="User name" class="img-circle img-user">--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-7 col-xs-9">--%>
+                                    <%--<p><b>User Name</b></p>--%>
+                                    <%--<p class="chat-time">Yesterday</p>--%>
+                                    <%--<p>Lorem ipsum</p>--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-3 hidden-xs">--%>
+                                    <%--<p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="row row-user-list">--%>
+                                <%--<div class="col-sm-2 col-xs-3">--%>
+                                    <%--<img src="./profile/user4.jpg" alt="User name" class="img-circle img-user">--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-7 col-xs-9">--%>
+                                    <%--<p><b>User Name</b></p>--%>
+                                    <%--<p class="chat-time">2 days ago</p>--%>
+                                    <%--<p>Lorem ipsum</p>--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-3 hidden-xs">--%>
+                                    <%--<p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="row row-user-list">--%>
+                                <%--<div class="col-sm-2 col-xs-3">--%>
+                                    <%--<img src="./profile/user5.jpg" alt="User name" class="img-circle img-user">--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-7 col-xs-9">--%>
+                                    <%--<p><b>User Name</b></p>--%>
+                                    <%--<p class="chat-time">2 days ago</p>--%>
+                                    <%--<p>Lorem ipsum</p>--%>
+                                <%--</div>--%>
+                                <%--<div class="col-sm-3 hidden-xs">--%>
+                                    <%--<p><a href="" title="Start chat"><span class="badge badge-message">Start chat &gt;</span></a></p>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
                         </div>
                     </div>
                 </div>

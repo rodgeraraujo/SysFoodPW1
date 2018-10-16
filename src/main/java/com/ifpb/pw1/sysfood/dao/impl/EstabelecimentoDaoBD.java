@@ -29,13 +29,13 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
 
     @Override
     public Boolean criar(Estabelecimento novo) throws PersistenciaException {
-        String sql = "INSERT INTO estabelecimento(nome, funcionamento, rua, numero, cidade, " +
-                    "estado, cep, tipo, fotoPerfil, descricao, email_usuario, status) " +
-                    "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO estabelecimento(nome, checkin, rua, numero, cidade, " +
+                    "estado, cep, tipo, fotoPerfil, descricao, email_usuario, status, checkout) " +
+                    "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement st = conexao.prepareStatement(sql);
             st.setString(1,novo.getNome());
-            st.setString(2,novo.getDataHoraFuncionamento());
+            st.setString(2,novo.getCheckin());
             st.setString(3, novo.getRua());
             st.setString(4, novo.getNumero());
             st.setString(5, novo.getCidade());
@@ -46,6 +46,8 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
             st.setString(10, novo.getDescricao());
             st.setString(11, novo.getUsuarioEmail());
             st.setInt(12, novo.getStatus());
+            st.setString(13, novo.getCheckout());
+
 
 
             boolean inserted = st.executeUpdate() > 0;
@@ -69,7 +71,8 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
                 Estabelecimento e = new Estabelecimento(
                         resultado.getInt("id"),
                         resultado.getString("nome"),
-                        resultado.getString("funcionamento"),
+                        resultado.getString("checkin"),
+                        resultado.getString("checkout"),
                         resultado.getString("rua"),
                         resultado.getString("numero"),
                         resultado.getString("cidade"),
@@ -111,7 +114,8 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
                 Estabelecimento e = new Estabelecimento(
                         resultado.getInt("id"),
                         resultado.getString("nome"),
-                        resultado.getString("funcionamento"),
+                        resultado.getString("checkin"),
+                        resultado.getString("checkout"),
                         resultado.getString("rua"),
                         resultado.getString("numero"),
                         resultado.getString("cidade"),
@@ -149,7 +153,8 @@ public class EstabelecimentoDaoBD implements EstabelecimentoDao {
                 Estabelecimento novo = new Estabelecimento(
                         resultado.getInt("id"),
                         resultado.getString("nome"),
-                        resultado.getString("funcionamento"),
+                        resultado.getString("checkin"),
+                        resultado.getString("checkout"),
                         resultado.getString("rua"),
                         resultado.getString("numero"),
                         resultado.getString("cidade"),

@@ -321,6 +321,35 @@ public class UsuarioDaoBD implements UsuarioDao {
         return null;
     }
 
+    @Override
+    public boolean excluirPublicacao(int id) throws PersistenciaException {
+        String sql = "DELETE FROM publicacao WHERE id = ?";
+
+        try{
+            PreparedStatement st = conexao.prepareStatement(sql);
+            st.setInt(1, id);
+
+            return st.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+
+    }
+
+    @Override
+    public boolean excluirUsuario(int id) throws PersistenciaException {
+        String sql = "DELETE FROM usuario WHERE id = ?";
+
+        try{
+            PreparedStatement st = conexao.prepareStatement(sql);
+            st.setInt(1, id);
+
+            return st.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
     /*
     @Override
     public Usuario buscarId(String id) throws IOException {

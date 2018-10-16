@@ -189,14 +189,13 @@
             </div>
             <div class="col-sm-3">
                 <div class="input-group bootstrap-timepicker timepicker">
-                    <input name="funcionamento" id="timepicker1" type="time" class="form-control input-small">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                    <p>Checkin</p>
+                    <input name="checkin" id="timepicker1" type="time" class="form-control input-small">
+                    <p>Checkout</p>
+                    <input name="checkout" id="timepicker2" type="time" class="form-control input-small">
                 </div>
-
-                <script type="text/javascript">
-                    $('#timepicker1').timepicker();
-                </script>
             </div>
+
             <%--<div class="col-sm-3">--%>
             <%--<a href="#" title="Edit Language"><i class="fas fa-pencil-alt" aria-hidden="true"></i> <i>Edit</i></a>--%>
             <%--</div>--%>

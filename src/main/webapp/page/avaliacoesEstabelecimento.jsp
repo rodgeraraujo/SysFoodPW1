@@ -23,7 +23,7 @@
                         <span><i class="icon-star"></i></span>
                     </div>
                     <div class="rating-users">
-                        <i class="icon-user"></i> 1,014,004 total
+                        <i class="icon-user"></i> 1
                     </div>
                 </div>
             </div>

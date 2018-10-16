@@ -23,11 +23,11 @@ public class GerenciadorEstabelecimento {
         dao = factory.getDaoEstabelecimento();
     }
 
-    public Boolean cadastrar(String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
+    public Boolean cadastrar(String nome, String checkin, String checkout, String rua, String numero, String cidade,
                              String estado, String cep, String tipo, String fotoPerfil, String descricao, String usuarioEmail, int status)
             throws PersistenciaException {
 
-        Estabelecimento estabelecimento = new Estabelecimento(nome, dataHoraFuncionamento, rua, numero, cidade,
+        Estabelecimento estabelecimento = new Estabelecimento(nome, checkin, checkout, rua, numero, cidade,
                 estado, cep, tipo, fotoPerfil, descricao, usuarioEmail, status);
 
         return dao.criar(estabelecimento);

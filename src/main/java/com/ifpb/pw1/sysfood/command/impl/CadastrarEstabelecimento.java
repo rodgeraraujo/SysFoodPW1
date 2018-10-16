@@ -33,7 +33,8 @@ public class CadastrarEstabelecimento implements Command {
         String tipo = req.getParameter("tipo");
         String rua = req.getParameter("rua");
         String cidade = req.getParameter("cidade");
-        String dataHoraFuncionamento = req.getParameter("funcionamento");
+        String checkin = req.getParameter("checkin");
+        String checkout = req.getParameter("checkout");
         String estado = req.getParameter("estado");
         String numero = req.getParameter("numero");
         String cep = req.getParameter("cep");
@@ -48,7 +49,7 @@ public class CadastrarEstabelecimento implements Command {
         String fotoPerfil = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
         GerenciadorEstabelecimento gerenciadorEstabelecimento = new GerenciadorEstabelecimento();
-        Boolean cadastrar = gerenciadorEstabelecimento.cadastrar(nome, dataHoraFuncionamento, rua, numero, cidade,
+        Boolean cadastrar = gerenciadorEstabelecimento.cadastrar(nome, checkin, checkout, rua, numero, cidade,
                 estado, cep, tipo, fotoPerfil, descricao, usuarioEmail, status);
 
         if(cadastrar){

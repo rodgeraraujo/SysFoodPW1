@@ -357,7 +357,7 @@ input[type="submit"].post-button, input[type="file"].post-file {
 .banner-profile {
     height: 160px;
     width: 100%;
-    background-image: url('img/banner.jpg');
+    background-image: url("../profile/delicious-food.jpg");
     background-size: cover;
     background-position: center;
 }

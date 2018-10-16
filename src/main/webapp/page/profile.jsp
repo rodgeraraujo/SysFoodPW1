@@ -75,7 +75,7 @@
         <div id="extwaiimpotscp" style="display:none" v="{b384" f="ZTJJek9EUmlOelZqTFdNNU56Z3ROR00wWkMxaU0yTm1MVFl5WVRneVpEaG1PR1l4TW4wPQ==" q="be61240b" c="2.501" i="6.549" u="1.627" s="8d4e4c40" w="false" vn="0yotr"></div></div>
 
     <div class="content-posts profile-content">
-        <div class="banner-profile">
+        <div class="banner-profile" style=" height: 160px;width: 100%;background-size: cover;background-position: center;background-image: url('/assets/profile/delicious-food.jpg')">
         </div>
         <!-- Tab Panel -->
         <ul class="nav nav-tabs" role="tablist">
@@ -163,14 +163,15 @@
                     <div class="card-post">
                         <ul class="profile-data">
                             <li><b>Nome:</b> ${sessionScope.estabelecimento.nome}</li>
-                            <li><b>Funcionamento:</b>  ${sessionScope.estabelecimento.dataHoraFuncionamento}</li>
+                            <li><b>Funcionamento:</b>  Abre ás: ${sessionScope.estabelecimento.checkin},
+                            Fecha ás: ${sessionScope.estabelecimento.checkout}</li>
                             <li><b>Tipo:</b> ${sessionScope.estabelecimento.tipo}</li>
                             <li><b>Endereco:</b> ${sessionScope.estabelecimento.rua}, ${sessionScope.estabelecimento.numero},
                                 ${sessionScope.estabelecimento.cep}, ${sessionScope.estabelecimento.cidade} - ${sessionScope.estabelecimento.estado}</li>
                             <li><b>Email dono::</b> ${sessionScope.estabelecimento.usuarioEmail}</li>
                             <li><b>ID da página:</b> ${sessionScope.estabelecimento.id}</li>
                         </ul>
-                        <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
+                        <%--<p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>--%>
                     </div>
                 </div>
             </div><!-- end tab Profile -->

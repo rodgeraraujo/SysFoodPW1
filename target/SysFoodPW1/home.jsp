@@ -100,7 +100,7 @@
                             </div>
                             <c:if test="${sessionScope.usuario.id == publicacao.idUsuario}">
                                 <div class="col-xs-3 col-sm-2" style="margin-left: 45%;">
-                                    <a href="#" title="Excluir publicação">
+                                    <a href="home.jsp?return=${dao.excluirPublicacao(publicacao.id)}" title="Excluir publicação">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </div>

@@ -6,7 +6,8 @@ import java.util.List;
 public class Estabelecimento {
     private int id;
     private String nome;
-    private String dataHoraFuncionamento;
+    private String checkin;
+    private String checkout;
     private String rua;
     private String numero;
     private String cidade;
@@ -24,11 +25,12 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
-    public Estabelecimento(String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
+    public Estabelecimento(String nome, String checkin, String checkout, String rua, String numero, String cidade,
                            String estado, String cep, String tipo, String fotoPerfil, String descricao,
                            String usuarioEmail, int status) {
         this.nome = nome;
-        this.dataHoraFuncionamento = dataHoraFuncionamento;
+        this.checkin = checkin;
+        this.checkout = checkout;
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
@@ -41,12 +43,13 @@ public class Estabelecimento {
         this.status = status;
     }
 
-    public Estabelecimento(int id, String nome, String dataHoraFuncionamento, String rua, String numero, String cidade,
+    public Estabelecimento(int id, String nome, String checkin, String checkout, String rua, String numero, String cidade,
                            String estado, String cep, String tipo, String fotoPerfil, String descricao,
                            String usuarioEmail, int status) {
         this.id = id;
         this.nome = nome;
-        this.dataHoraFuncionamento = dataHoraFuncionamento;
+        this.checkin = checkin;
+        this.checkout = checkout;
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
@@ -74,12 +77,20 @@ public class Estabelecimento {
         this.nome = nome;
     }
 
-    public String getDataHoraFuncionamento() {
-        return dataHoraFuncionamento;
+    public String getCheckin() {
+        return checkin;
     }
 
-    public void setDataHoraFuncionamento(String dataHoraFuncionamento) {
-        this.dataHoraFuncionamento = dataHoraFuncionamento;
+    public void setCheckin(String checkin) {
+        this.checkin = checkin;
+    }
+
+    public String getCheckout() {
+        return checkout;
+    }
+
+    public void setCheckout(String checkout) {
+        this.checkout = checkout;
     }
 
     public String getRua() {
@@ -175,7 +186,7 @@ public class Estabelecimento {
         return "Estabelecimento{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", dataHoraFuncionamento=" + dataHoraFuncionamento +
+                ", checkin=" + checkin +
                 ", rua='" + rua + '\'' +
                 ", numero=" + numero +
                 ", cidade='" + cidade + '\'' +

@@ -28,5 +28,7 @@ public interface UsuarioDao {
     public List<Publicacao> buscaPublicacaoUsuario(int id);
 
 
+    boolean excluirPublicacao(int id) throws PersistenciaException;
+    boolean excluirUsuario(int id) throws PersistenciaException;
 }
 
