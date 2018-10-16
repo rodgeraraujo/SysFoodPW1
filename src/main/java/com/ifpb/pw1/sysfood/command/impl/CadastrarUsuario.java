@@ -40,7 +40,13 @@ public class CadastrarUsuario implements Command {
 
         Usuario u = (Usuario) session.getAttribute("usuario");
 
-        int id = u.getId();
+        int id;
+
+        if (u == null){
+            id = 0;
+        }else{
+            id = u.getId();
+        }
         //int num = Integer.valueOf(numero)
 
         byte[] foto = new byte[(int) part.getSize()];

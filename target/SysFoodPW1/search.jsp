@@ -35,11 +35,11 @@
         <p>O resultado:</p>
 
         <c:forEach var="usuarios" items="${sessionScope.usuarios}">
-            <p>${usuarios.nome; usuarios.fotoPerfil}</p>
+            <p>${usuarios.nome}</p>
         </c:forEach>
 
         <c:forEach var="estabelecimentos" items="${sessionScope.estabelecimentos}">
-            <p>${estabelecimentos.nome; estabelecimentos.fotoPerfil}</p>
+            <p>${estabelecimentos.nome}</p>
         </c:forEach>
     </body>
 </html>
