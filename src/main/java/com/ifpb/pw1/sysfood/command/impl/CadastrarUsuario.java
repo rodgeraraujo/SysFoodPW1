@@ -22,7 +22,6 @@ public class CadastrarUsuario implements Command {
         HttpSession session = req.getSession();
 
         String nome = req.getParameter("nome");
-        String email = req.getParameter("email");
         String senha = req.getParameter("senha");
         //ANIVERSÁARIO NÃO IMPLEMENTADO
         String aniversario = req.getParameter("dia")+"/"+req.getParameter("mes")+"/"+req.getParameter("ano");
@@ -40,12 +39,15 @@ public class CadastrarUsuario implements Command {
 
         Usuario u = (Usuario) session.getAttribute("usuario");
 
-        int id;
+        int id = 0;
+        String email = null;
 
         if (u == null){
             id = 0;
+            email = req.getParameter("email");
         }else{
             id = u.getId();
+            email = u.getEmail();
         }
         //int num = Integer.valueOf(numero)
 

@@ -54,7 +54,7 @@ public class UsuarioDaoBD implements UsuarioDao {
                 //conexao.close();
                 return inserted;
             } catch (SQLException e) {
-                throw new PersistenciaException(e);
+                return false;
             }
         } else {
             String sql = "UPDATE usuario(nome, profissao, aniversario, sexo, fotoPerfil, descricao, rua, numero, cidade," +
@@ -80,11 +80,10 @@ public class UsuarioDaoBD implements UsuarioDao {
                 //conexao.close();
                 return inserted;
             } catch (SQLException e) {
-                e.printStackTrace();
+                return false;
             }
 
         }
-        return false;
     }
 
     @Override
@@ -165,7 +164,7 @@ public class UsuarioDaoBD implements UsuarioDao {
             //conexao.close();
             return inserted;
         } catch (SQLException e) {
-            throw new PersistenciaException(e);
+            return false;
         }
     }
 

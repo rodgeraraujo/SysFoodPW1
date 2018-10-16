@@ -32,17 +32,17 @@
 
     <div style="height: 260px" scrollbar-container">
         <%--modelo inicio--%>
-        <div>
-            <div class="col-sm-3">
-                <p>
-                    <label>ID Usuário: 1</label>
-                </p>
-                <p><b>Nota: </b> <span class="badge">4.4</span></p>
-                <p class="chat-time">2018-10-15 02:02:40.662</p>
-                <p></p>
-            </div>
-        </div>
-        <br>
+        <%--<div>--%>
+            <%--<div class="col-sm-3">--%>
+                <%--<p>--%>
+                    <%--<label>ID Usuário: 1</label>--%>
+                <%--</p>--%>
+                <%--<p><b>Nota: </b> <span class="badge">4.4</span></p>--%>
+                <%--<p class="chat-time">2018-10-15 02:02:40.662</p>--%>
+                <%--<p></p>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<br>--%>
         <%--fim--%>
         <jsp:useBean id="dao" class="com.ifpb.pw1.sysfood.dao.impl.AvaliarEstabelecimentoDaoBD"/>
         <c:forEach var="avaliacao" items="${dao.buscar(sessionScope.estabelecimento.id)}">
