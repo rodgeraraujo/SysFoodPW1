@@ -78,11 +78,11 @@
         </ul>
     </div>
     <div class="second-icon menu-icon">
-                <span><a href="profile.jsp" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
+                <span><a href="/profile.jsp" title="Profile"><span class="hidden-xs hidden-sm">Perfil</span> <i class="fa fa-user" aria-hidden="true"></i></a>
                 </span>
     </div>
     <div class="second-icon menu-icon">
-                <span><a href="home.jsp" title="Wall"><span class="hidden-xs hidden-sm">Home</span> <i class="fa fa-database" aria-hidden="true"></i></a>
+                <span><a href="/home.jsp" title="Wall"><span class="hidden-xs hidden-sm">Home</span> <i class="fa fa-database" aria-hidden="true"></i></a>
                 </span>
     </div>
 </header>

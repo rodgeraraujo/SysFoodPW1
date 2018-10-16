@@ -14,20 +14,23 @@
     GerenciadorEstabelecimento gerencia = new GerenciadorEstabelecimento();
     Usuario u = (Usuario) session.getAttribute("usuario");
 
-//    if  (id !=null){
-//        Usuario usuarioAtual = gerencia.buscarId(Integer.valueOf(id));
-//        session.setAttribute("usuario", usuarioAtual);
-//
-//    } else{
-//        response.sendRedirect("login.jsp");
-//    }
+    String id = request.getParameter("id");
 
-
-//    byte bytearray[] = u.getFotoPerfil();
-//    Part part = new Part(u.getFotoPerfil());
-
+    if  (u != null) {
+        if  (id !=null){
+            Estabelecimento estabelecimentoAtual = gerencia.buscar_id(Integer.valueOf(id));
+            if (estabelecimentoAtual != null){
+                session.setAttribute("estabelecimento", estabelecimentoAtual);
+            }else{
+                response.sendRedirect("home.jsp");
+            }
+        }
+    } else{
+        response.sendRedirect("login.jsp");
+    }
 
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,10 +62,10 @@
 
     <!--Left Sidebar with info Profile -->
     <div class="sidebar-nav">
-        <a href="profile.jsp" title="Profile">
+        <a href="profile.jsp?id=${sessionScope.estabelecimento.id}" title="Profile">
             <img src="${sessionScope.estabelecimento.fotoPerfil}" alt="User name" class="img-circle img-user">
         </a>
-        <h2 class="text-center hidden-xs"><a href="./page/profile.jsp?id=${sessionScope.estabelecimento.id}" title="Profile">${sessionScope.estabelecimento.nome}</a></h2>
+        <h2 class="text-center hidden-xs"><a href="/page/profile.jsp?id=${sessionScope.estabelecimento.id}" title="Profile">${sessionScope.estabelecimento.nome}</a></h2>
         <p class="text-center user-description hidden-xs">
             <i>${sessionScope.estabelecimento.descricao}</i>
         </p>

@@ -22,20 +22,25 @@ public class BuscarEstabelecimento implements Command {
         HttpSession session = req.getSession();
         int id = Integer.valueOf(req.getParameter("id"));
 
-        try {
+        Usuario u = (Usuario) session.getAttribute("usuario");
+        if  (u != null) {
+            try {
 
-            GerenciadorEstabelecimento gerencia = new GerenciadorEstabelecimento();
-            //Usuario u = (Usuario) session.getAttribute("usuario");
+                GerenciadorEstabelecimento gerencia = new GerenciadorEstabelecimento();
 
-            Estabelecimento e = gerencia.buscar_id(id);
+                Estabelecimento e = gerencia.buscar_id(id);
 
-            session.setAttribute("estabelecimento", e);
+                session.setAttribute("estabelecimento", e);
 
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/page/profile.jsp?id="+ id);
-            dispatcher.forward(req, res);
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/page/profile.jsp?id="+ id);
+                dispatcher.forward(req, res);
 
-        } catch (SQLException | IOException ex) {
-            ex.printStackTrace();
+            } catch (SQLException | IOException ex) {
+                ex.printStackTrace();
+            }
+        }else {
+            res.sendRedirect("login.jsp");
         }
+
     }
 }
